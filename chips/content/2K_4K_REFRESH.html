@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>What's the Difference Between 1K, 2K and 4K Refresh?</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="AIXTT_SIMMS2.html">Previous</A>
+<A HREF="ADAPTER_SOCKEL.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>What's the Difference Between 1K, 2K and 4K Refresh?<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Introduction<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DRAM refresh is a topic often misunderstood due to the many ways re-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>fresh can be accomplished. This article addresses the most often <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>asked question about the difference between 1K, 2K and 4K DRAMs.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The Joint Electronics Design Engineering Council (JEDEC) has two <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>approved refresh types for 4MEG by x DRAMs. For example, one of <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>these JEDEC versions for a 4M x 4 DRAM requires 12 row-address bits<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>and 10 column-address bits for 4,096 (4K) cycle refresh in 64ms.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The next, for the same capacity DRAM, requires 11 row-address bits<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>and 11 column-address bits for 2,048 (2K) cycle refresh in 32ms. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The last, for the same capacity DRAM, for 1,024 (1K) cycle refresh<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in 16ms. Except for this addressing difference, the performance of<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>the DRAMs is the same.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Why Three Types of Refresh?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The main reason behind the addition of the 4K refresh version is de-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>creased power consumption. A DRAM device with 4K refresh draws less <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>current than the same capacity DRAM with 2K refresh. The current is <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>decreased by increasing the number of rows and decreasing the number<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>of columns in the DRAM array. The number of columns defines the <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;depth&quot; of a page. A 2K device has a page depth of 2,048 -- whereas<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>a 4K device has a page depth of 1,048. The DRAM controller in your <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>workstation/server determines the type of refresh it can support. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Some controllers only have 11 address drivers, so they are limited <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>to 2K refresh. Many newer DRAM controllers have been designed to <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>support both refresh standards. And still others support only 4K <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>refreshes.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DRAM Adressing Effects<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+----------------------------+----------+----------+----------------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DRAM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;</TT>Row<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>Column<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;</TT>Cell<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+-----+------------+---------+ Adresses | Adresses | Retention (ms) |<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|Depth|Organization|Adressing|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+-----+------------+---------+----------+----------+----------------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| 1Mb |<TT>&nbsp;&nbsp;</TT>1M*4 or<TT>&nbsp;&nbsp;&nbsp;</TT>| 10/10*<TT>&nbsp;&nbsp;</TT>| A0 - A9<TT>&nbsp;&nbsp;</TT>| A0 - A9<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>1M*16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+-----+------------+---------+----------+----------+----------------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| 2Mb |<TT>&nbsp;&nbsp;</TT>2M*8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| 11/10<TT>&nbsp;&nbsp;&nbsp;</TT>| A0 - A10 | A0 - A9<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>32<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+-----+------------+---------+----------+----------+----------------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| 4Mb |<TT>&nbsp;&nbsp;</TT>4M*1 or<TT>&nbsp;&nbsp;&nbsp;</TT>| 11/11*<TT>&nbsp;&nbsp;</TT>| A0 - A10 | A0 - A10 |<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>32 or 64<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>4M*4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| or 12/10| A0 - A11 | A0 - A9<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+-----+------------+---------+----------+----------+----------------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>* Also referred to as symetrical or square addressing.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Memory refresh problems will occur if all of the required row columns<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>are not refreshed. The memory system designer is advised to ensure <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>the memory refresh generation portion of the memory controller logic<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>correctly accommodates the requirements of all the SIMMs to be supp-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>orted.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>How Do I Know I'm Buying the Correct Memory?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Purchase memory from a reputable vendor that has the knowledge, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>experience, and support to design and manufacture memory upgrades<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>that are targeted for your particular system.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="DRAM_GLOSSAR.html">Das DRAM Glossar</A><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel What's the Difference Between 1K, 2K and 4K Refresh?, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

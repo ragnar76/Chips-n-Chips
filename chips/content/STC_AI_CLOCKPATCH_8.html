@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Clockpatch aus der ST-Computer Zeitschrift, Seite 8</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="STC_AI_CLOCKPATCH_7.html">Previous</A>
+<A HREF="STC_AI_CLOCKPATCH_9.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dieses Problem verstärkt sich dann erst recht, wenn der Bustakt von<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>32.084988MHz mit 31.25nS auf 36MHz mit 27.8nS, oder 40MHz mit 25ns<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zykluszeit (oder gar auf 48MHz mit knapp 21nS Zykluszeit mit dem <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>NEMESIS von Titan Designs U.K.) erhöht wird, hier muß man dann auch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>darauf achten, daß die Phasenlage bei allen Bustakten (auch den <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>erhöhten) wieder übereinstimmt.<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ergänzende Informationen zum Thema Bus und CPU Takterhöhung beim <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falcon030<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Spule L102, welche direkt hinter dem Ausgang vom Transistor Q107<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sitzt dient der Glättung des 32.084988MHz Taktes, was folgendermaßen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dann aussieht. <BR>
+<BR>
+ <BR>
+<IMG SRC="../images/chips_Index1416.png" ALIGN="TOP">
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Der 32.084988MHz Takt nach der Glättung durch die Spule L102<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Der 32.084988MHz Takt vor der Glättung durch die Spule L102<BR>
+ <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei einigen Beschleunigermodulen (zum Beispiel dem PowerUp2 oder dem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Skunk32), die ausschließlich den CPU Takt von 16.042494MHz auf <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>32.084988MHz verdoppeln, kann es notwendig sein, daß das neue CPU <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Taktsignal mittels einer Spule (ausgelötete Spule L102 und durch <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen Draht überbrückt) oder mehreren Ferritringen geglättet wird,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>da sonst kein einwandfreier Betrieb möglich ist. Das Problem bei <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>diesen Beschleunigermodulen liegt darin, daß der Takt nur dann auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>32.084988MHz hochgeschaltet wird, wenn die CPU keine Buszugriffe <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tätigt, also intern in ihrem Cache arbeitet. Dazu muß noch gesagt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden das genau dieser Vorgang auftritt wenn der Videochip auf das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RAM zugreift, das heißt: Greift der Videochip mit 75 Zugriffen pro <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sekunde auf das RAM zu, weil die Bildwiederholfrequenz 75Hz beträgt,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hat die CPU innerhalb einer Sekunde 75mal die Finger vom RAM zu <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lassen, in dieser Zeit wird die CPU also auf das doppelte hoch- und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wieder runtergetaktet. Ist diese Synchronisation nicht gegeben, kommt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>es ebenfalls zu unmotivierten Bombenwürfen auf dem Bildschirm. <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="STC_AI_CLOCKPATCH_9.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Clockpatch aus der ST-Computer Zeitschrift, Seite 8<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

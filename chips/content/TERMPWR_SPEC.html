@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Terminator Power by Single-ended SCSI devices</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="MSTE_SCSI.html">Previous</A>
+<A HREF="ACSI_ID_MSTE.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Terminator Power by Single-ended SCSI devices<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Spannung (TERMPWR) soll zwischen 4.25 und 5.25 Volt Gleichspan-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nung betragen. Minimal sollte ein Laststrom von 0.9 Ampere gewähr-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>leistet sein. Außerdem MUSS jedes Gerät eine Sicherung von 1.0 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ampere besitzen. Weiterhin muß jedes Gerät über eine Diode verfügen,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>damit keine Spannung vom SCSI Bus in die Geräteelektronik fließen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kann.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Und zum Termpowerproblem generell:<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Hostadapter (in diesem Fall der Computer mit seinem SCSI An-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schluß) muß Termpower einspeisen, weil der das sagen hat.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dies ist jedoch nicht immer gegeben und muß gegebenenfalls nach-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gerüstet werden (siehe entsprechende Artikel in Chips 'n Chips).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Rest darf/kann/soll Termpower liefern um einen Spannungsabfall<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf dem bis zu 6m langen Kabel zu vermeiden. Außerdem liefert eh <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nur das Gerät Termpower welches die höchste Spannung einspeist <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(darum auch die Dioden). Wenn das aktuelle Gerät welche einspeist <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(bspw. eine Festplatte) auf einmal längere Zeit belastet und das <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Netzteil schon fast aus dem letzten Loch pfeift und dadurch die +5V<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Spannungsversorgung in die Knie geht, würde es so zu einer Minder-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>versorgung der Terminatoren kommen wodurch die Pegel von ca. 2.85 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+- paarn ebbes Volt nicht mehr gewährleistet sind. In diesem Fall <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>würde jetzt ein anderes Gerät die einspeisung von Termpower über-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nehmen weil dieses Gerät jetzt eine höhere Spannung liefert als das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gerät welches am rödeln ist und durch die Dioden auf den SCSI <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Geräten ist so halt sichergestellt das immer nur das Gerät die +5V <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>liefert welches den höchsten Spannungspegel von allen beteiligten <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Geräten am SCSI Bus liefert.<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier eine kleine Übersicht über die verschiedenen Parameter:<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI-Typ<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Transferrate max. Geräteanzahl Kabellänge<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>----------------------------------------------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Async. SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>6m<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fast-SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>10MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3m<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wide-SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>20MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3m<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ultra-SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>20MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bis 4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3m<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ultra-SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>20MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1.5m<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ultra-Wide-SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>40MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bis 4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3m<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ultra-Wide-SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>40MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1.5m<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ultra2-SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>40MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>12m<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ultra2-Wide-SCSI<TT>&nbsp;&nbsp;&nbsp;</TT>80MB/s<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>12m<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Ultra2 = LVDS -&gt; Low Voltage Differential SCSI)<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Terminator Power by Single-ended SCSI devices, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>1 MegaBit Eprom Adaptersockel</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="2K_4K_REFRESH.html">Previous</A>
+<A HREF="sockel_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>gefunden in der ST-Computer 6/1990 Quick-Tip Seite 176</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gepatchtes TOS im Mega ohne viel Aufwand. Wenn Mega ST-Besitzer ein<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gepatchtes TOS verwenden wollen, waren sie bisher im Nachteil. Bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den meisten Megas (z.T. auch beim 1040) befindet sich das TOS in<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zwei Custom-Chips von ATARI. Da es keine pingleichen EPROMS gibt,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mußte man entweder mit dem Original ATARI TOS arbeiten oder seinen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Rechner umrüsten (siehe ST-Computer 1/90 &quot;Patch As Patch Can&quot;).<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Meist sind die übrigen vier Plätze für EPROMs nicht einmal<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gesockelt, so daß man auch diese nachträglich einbauen muß. Dieses<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Projekt verhilft nun allen Mega ST-Besitzern, ohne daß sie an Ihrem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Rechner herumlöten müssen, zur Möglichkeit ein gepatchtes TOS zu<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verwenden. Will man das Betriebssystem in zwei EPROMs packen,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden Chips mit 128 kByte Speicherkapazität benötigt. Diese gibt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>es, mit ungebanktem (linearem) Adreßraum als Typ 27010. Leider<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>besitzt dieser IC 32 Pins. Die Fassungen im ST sind aber nur für 28-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>polige Bausteine vorgesehen. Diese Tatsache ist jedoch nicht weiter<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tragisch, vor allem, wenn man sich die Pinbelegung der Sockel und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der EPROMs anschaut (Bild 1). Wie man sieht haben viele Pins die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gleiche Bedeutung, so daß man die EPROMs fast direkt in die Sockel<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stecken könnte. Aber eben nur fast, ohne ein klein wenig Tüftelei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kommt man nicht aus. Wenn man keine Möglichkeit hat das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>abgebildete Layout (Bild 2) auf eine Platine zu übertragen, kann<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>man sich auch mit einer Lochrasterplatine behelfen. Die meisten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Verbindungen sind einfach nur durchzuführen. Der Pin /OE vom<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>27010 muß mit Masse, Bit 16 der Adresse an den richtigen Pin und die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Stromversorgungsleitungen müssen extra gelegt werden. Wenn Sie beim<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Aufbau als Sockel für den 32-poligen 27010 nur Pinreihen nehmen und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>für den Anschluß im Mega ST Pinreihen mit langen Beinchen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verwenden, können Sie durch Umstecken der Chips (TOS-ROM und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>27010) das Original Betriebssystem neben dem gepatchten verwenden.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ein Anmerkung noch zum Aufbau der Platine. Im Mega ist recht wenig<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Platz zwischen den ROMs. Sie sollten deshalb die Länge der Platine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>so gering wie möglich halten. Für den Austausch benötigen Sie<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zweimal die gleiche Platine (für jedes TOS-ROM eine). Sie werden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sich jetzt sicherlich fragen, für was die drei einzelnen Lötpunkte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gedacht sind. Wenn Sie hier einen Umschalter anschließen und als<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EPROM-Typ einen 27020-Chip benutzen, können Sie ebenso wie bei der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>6-EPROM- Variante zwei Betriebssystemversionen in den EPROMs<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unterbringen. Der Umschalter dient zum wechseln zwischen den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Versionen (natürlich nur im ausgeschalteten Zustands des Rechners,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>es sei denn, Sie lieben den Anblick von Bomben auf dem Monitor des<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>STs). Zum Brennen der Mega Bit EPROMs (27010 bis 27040) bietet sich<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unser Junior Prommer mit dem neuem Mega-Modul (siehe ST-Computer<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EXTRA Nr. 3) an. Damit können Sie die neuen 32-poligen EPROM-Typen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>genauso elegant bearbeiten, wie die herkömmlichen 28-poligen Chips.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="sockel_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel 1 MegaBit Eprom Adaptersockel, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

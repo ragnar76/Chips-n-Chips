@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Pinbelegung der Midi In Buchse</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="MIDI_OUT_BUCHSE.html">Previous</A>
+<A HREF="NETZTEIL_BUCHSE.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Pinbelegung der Midi In Buchse<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 Not Connected<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B> MIDI-Kabel kann man wirk-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2 Not Connected<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>lich unbedenklich im Betrieb stecken<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3 Not Connected<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>oder ziehen!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4 In Receive Data <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5 In Loop Return<BR>
+<BR>
+<IMG SRC="../images/chips_Index1431.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Aber es gab hier schon eine Fehlinformation: Potentialtrennung sollte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zwar vorhanden sein, ist es bei den Ataris aber oft nicht, weil die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Abschirmung auf GND liegt. Stereo-Überspielkabel verbinden normaler-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>weise die metallischen Ringe der Stecker mit der Kabel-Abschirmung <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und damit miteinander - und schon gibt es keine Potentialtrennung <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mehr.<BR>
+<BR>
+<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MIDI - MUSICAL INSTRUMENT DIGITAL INTERFACE<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MIDI ist ein akronym für Musical Instrument Digital Interface.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MIDI verbindet Synthesizer, Sequencer, Homecomputer, Rhythmusmachi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nes, etc. über ein standardinterfaces miteinander, welches mit einer<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Geschwindigkeit von 31.25 (+/- 1%) Kbaud arbeitet. Die Datenübertra-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gung erfolgt asynchron mit einem Startbit, 8 Datenbits und einem Stop<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bit (das heißt, das insgesamt 10 Bits innerhalb einer Periode von<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>320 Microsekunden ein Serielles Byte sind). Die Hardware benutzt eine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Art von Stromschleife, um die Informationen vom Sender zum Empfänger<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zu transferieren. Auf der Empfängerseite wird ein Optokoppler einge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>setzt, der bei einem Strom von 5mA schaltet. Die Schaltzeiten dürfen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>maximal 2 Mikrosekunden dauern, was heißt das die Geschwindigkeit bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>31.25 (+/- 1%) Kbaud liegt. Die asynchrone Kommunikation gebraucht <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ein Start- und ein Stopbit und dazwischen liegen dann die 8 Datenbits.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mechanisch läuft die Verbindung über die Pins 4 und 5 des 5 poligen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DIN-Steckers (in 180 Grad Ausführung). Pin 4 ist über einen Wider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stand von 220 Ohm mit +5V verbunden. Pin 5 ist über einen eigenen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>220 Ohm Widerstand mit dem Ausgang des Treiber verbunden. Pin 2 kann<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>als Erde und Abschirmung des MIDI-Kabels eingesetzt werden. Die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Anschlüsse 1 und 3 bleiben ungenutzt. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es können entweder der Sharp PC-900 oder der Hewlett-Packard 6N138<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Optokoppler verwendet werden und die maximale Leitungslänge beträgt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>15 Meter oder 55 Fuß und es sollten nach möglichkeit verdrillte <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(twisted pair) Adern benutzt werden.<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>International Midi Association<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5316 West 57th Street<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Los Angeles, CA 90056<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(415) 321-MIDI <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Pinbelegung der Midi In Buchse, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

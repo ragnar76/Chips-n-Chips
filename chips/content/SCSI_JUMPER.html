@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE> Die Jumperleiste der SCSI Laufwerke </TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SD-M1002_2.html">Previous</A>
+<A HREF="ATAPI_JUMPER.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<U><TT>&nbsp;&nbsp;</TT>Die Jumperleiste der SCSI Laufwerke<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT></U><BR>
+<BR>
+<BR>
+ SCSI Device Identification Number<BR>
+<BR>
+<TT>&nbsp;&nbsp;</TT>SCSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Header<BR>
+<TT>&nbsp;&nbsp;</TT>ID#<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>ID1 ID2 ID3<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<BR>
+ '1' means place a short pin<BR>
+ '0' means remove a short pin<BR>
+ -----------------------------------------------<BR>
+ PRTY (Parity)<BR>
+ To enhanced bus reliability the Parity function can be used.<BR>
+ Open:<TT>&nbsp;&nbsp;</TT>Drive does not execute parity check<BR>
+ Short: Drive used parity check<BR>
+ -----------------------------------------------<BR>
+ PPV/ALW (Prevent / Allow)<BR>
+ Open:<TT>&nbsp;&nbsp;</TT>Allows media removal<BR>
+ Short: Does not allow media removal<BR>
+ -----------------------------------------------<BR>
+ TERMINATOR On/Off<BR>
+ Open: Active Terminator off<BR>
+ Short: Active Terminator on<BR>
+ -----------------------------------------------<BR>
+ Power Supply (for TERM resistors, pin 26)<BR>
+ Open: selects termination power to none<BR>
+ Short: selects termination power to share<BR>
+ -----------------------------------------------<BR>
+ TERM (Terminator)<BR>
+ Open:<TT>&nbsp;&nbsp;</TT>selects termination power share<BR>
+ Short: selects termination power none<BR>
+ -----------------------------------------------<BR>
+ TEST (audio disc reproduction)<BR>
+ Open:<TT>&nbsp;&nbsp;</TT>normal SCSI operation<BR>
+ Short: audio disc reproduction mode is selected.<BR>
+ <BR>
+ Pushing the Eject button for shorter than 1s allows proceeding to <BR>
+ beginning of the next track number. Pushing Eject for ~2s stops <BR>
+ playing and ejects the drawer. SCSI commands are not accepted in <BR>
+ this mode.<BR>
+<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

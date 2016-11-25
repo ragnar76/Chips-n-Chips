@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Rund um den IDE Port</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="Prozessor_Devices.html">Previous</A>
+<A HREF="ide_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Datei: AT_BUS.TXT<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>© Michael Ruge<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>Rüsselsheim, den 20.01.1995<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Email: Michael Ruge @WI2.MAUS.DE) <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>Der AT-Bus oder richtiger genannt IDE-Interface</U><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ein IDE-Festplattensystem (IDE - Integrated Drive Electronics) ver-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hält sich beim PC elektrisch und softwaremäßig wie das altehrwür-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dige Festplattengespann aus dem <A HREF="ADRESSE_IBM.html">IBM</A> AT03 von 1984, bestehend aus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einer Controllerplatine vom Typ <A HREF="ADRESSE_WESTERN.html">WD1003</A> und einer MFM-Festplatte.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Jedoch liegt mittlerweile die Controllerelektronik (WD1003) auf der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Festplatte selbst. Der simpel aufgebaute Hostadapter führt nichts<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>anderes als den 8 Bit breiten ISA-Bus per Kabel an die IDE-Fest-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>platte (die Festplatte ist also nichts anderes als eine Karte (bspw<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Grafikkarte) die an einem Kabel angeschlossen ist und nicht direkt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in einer ISA-Bus Buchse eingesteckt wird bzw. ist).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Elektronik der Festplatte ist dadurch zwar aufwendiger, ermög-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>licht aber dem Hersteller wesentlich mehr Möglichkeiten zur Steige-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>rung der Geschwindigkeit, der Kapazität (Zone Bit Recording z.B.).<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Mimik des WD1003 der IDE-Festplatte garantiert jedoch, daß jedes<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mainboard samt BIOS eines PC's (PC - Power Cruncher!) und jeder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Festplattentreiber, der MFM-Festplatten unterstützt, damit zurecht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kommt. Ebenso fremde Betriebssysteme wie Unix oder OS/2.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei Standard-IDE sind insgesamt ZWEI Festplatten (bis vor kurzer<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zeit Ende 1994 nichts weiteres) anschließbar. IDE-Festplatten wer-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den im sogenannten Master/Slave Konzept betrieben, das heißt aller-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dings nicht, daß jede IDE-Festplatte mit einer anderen IDE-Festplat-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>te sauber zusammenarbeitet, da das obengenannte Master/Slave Kon-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zept NICHT korrekt standardisiert worden ist, wie zum Beispiel die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Konkurrenz SCSI.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dann gibt es noch auf manchen IDE-Geräten den Jumper CSEL (Cable <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Select), dieser bedeutet:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das Gerät ist entweder als Gerät 0 oder als Gerät 1 eingestellt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Liegt das CSEL Signal auf Masse hat das Gerät die Adresse 0,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ist das CSEL Signal offen hat das Gerät die Adresse 1 (also entweder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den Jumper sofern vorhanden benutzen oder die Ader 28 am IDE-Kabel <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zwischen den IDE-Geräten durchtrennen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+------ CSEL Conductor -------------------------+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+---------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+---------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| Host |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| Drive 0 |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| Drive 1 |<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+---------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+---------+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+------ CSEL Conductor -------------------------+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+---------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+---------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| Host |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| Drive 1 |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| Drive 0 |<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+---------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+---------+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="ide_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Rund um den IDE Port, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

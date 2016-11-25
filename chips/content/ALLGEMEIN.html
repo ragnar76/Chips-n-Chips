@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Geschwindigkeit der Festplatten am ATARI</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="ide_6.html">Previous</A>
+<A HREF="EXTERNER_VERSTÄRKER.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dieses Kapitel ist mittlerweile als ungültig zu betrachten, dies <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>liegt alleine schon daran das sich innerhalb kürzester Zeit die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Modelle der Festplattenserien ändern und die Festplatten mittler-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>weile so schnell geworden sind, das sie die Atari Computer hinsicht-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lich der Leistungsfähigkeit voll ausreizen!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Für Atari ST und STE Computer liegt das Ende der Fahnenstange bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Datenübertragungsrate bei ~1500 Kilobyte pro Sekunde am ACSI<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>anschluß und bei ~2400 Kilobyte pro Sekunde am IDE Anschluß (sofern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vorhanden).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beim TT030 ist am ACSI Port ebenfalls bei ~1500 Kilobyte pro Sekunde<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>das Ende der Fahnenstange erreicht und am SCSI-Port ist maximale Da-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tentransferrate rund 2200 Kilobyte pro Sekunde.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Am Falcon030 SCSI Port sind ~1900 Kilobyte pro Sekunde drinnen und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>am IDE Port sind runde 2800 Kilobyte pro Sekunde erreichbar. Ist <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Computer mit einer Fastramkarte ausgerüstet sind leicht Werte <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>im Bereich von rund 3000 Kilobyte pro Sekunde drinnen. Allerdings<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wird der IDE Port beim Falcon030 durch I/O Polling betrieben und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beansprucht dadurch erhebliche Rechenzeit der 68LC030 CPU.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diese Geschwindigkeiten erreichen locker die heute aktuellen Modelle<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beziehungsweise übertreffen sie sogar.<BR>
+ <BR>
+ <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Hinweis für Harddiskrecording</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die maximale Transferrate ist nicht so wichtig, solange sie oberhalb<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von 1.8 Megabyte (oder 1800 Kilobyte) pro Sekunde liegt, das schaf-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>fen heutzutage die aktuellen Festplatten problemlos.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Leider besitzen die TOS kompatiblen Computer nur einen Asynchronen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI Port, dadurch sind die Datentransferraten erheblich niedriger<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>als bei Testläufen an PCs oder Apple Macintosh Computern.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Entscheidend für störungsfreies Digital-Audio ist die minimale Trans-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ferrate, also die, die die Platte bei zufälligen Zugriffen über die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ganze Oberfläche noch hinbekommt. Bei einer Blockgröße 8 oder 16 KB <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>müssen das noch deutlich mehr als die für 8 Spuren nötigen 1100 Kilo-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>byte pro Sekunde sein. Kleineren Sektorgrößen treten bei Harddiskre-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>cording am TT030 und Falcon030 eh nicht auf, weil dann auch die Par-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>titionsgrößer unterhalb 256 Megabyte liegen würde!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diesen Test kann man sehr schön mit dem Programm SCSITOOL von der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Firma <A HREF="ADRESSE_HARD&SOFT.html">Hard&amp;Soft Computerzubehör GmbH</A> durchführen.<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Hinweis!</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ganz auf der sicheren Seite ist man mit den Festplatten der AV-Serie<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>des Herstellers Micropolis. Micropolis garantiert daß ihre Festplat-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ten nie unter eine Datentransferrate von 3 Megabyte pro Sekunde kom-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>men, egal wie klein die Datenblöcke sind und wie durcheinander die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zugriffe kommen (bei fragmentierten Festplatten sehr oft der Fall)!<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Geschwindigkeit der Festplatten am ATARI, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Modifizierung des Atari Hostadapters im MegaSTE und der STACY</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="MEGAE_HA_TIP.html">Previous</A>
+<A HREF="Megaste_ha_tip3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Modifizierung des Atari Hostadapters im MegaSTE und der STACY<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Copyright 01.05.1995 Michael Ruge - 65428 Rüsselsheim)<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Hostadapter im MegaSTE und der STACY kann ab Werk nur EINE Fest-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>platte mit der Geräteadresse SCSI 0 ansprechen und abgeschalteter <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Paritätsprüfung. Mit dieser kleinen Modifizierung kann der Hostadap-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ter (Voll Atari-kompatibel) zwei Festplatten ansprechen (kompatibel<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zum Megafile 44 Hostadapter, also mit dem ganz normalen Harddisk-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>treiber!).<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es müssen dazu lediglich zwei Drähte verlegt und ein 1 KOhm Wider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stand verlötet werden!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der eine Draht führt vom Chip U4 Pin 12 zu Chip U8 Pin 1, der andere<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Draht führt von Chip U8 Pin 2 zu Pin 44 des SCSI-Kabels der zweiten <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(also neuen) Festplatte. <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beide Festplatten werden am selben SCSI-Kabel angeschlossen (hierzu <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>muß noch eine 50-polige Buchsenleiste aufgequetscht werden) und auf <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI ID 0 gejumpert (richtig gelesen: beide Festplatten auf ID 0!). <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das SCSI-Kabel zwischen der ersten und zweiten Festplatte nur und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ausschließlich an Pin 44 auftrennen (am besten direkt hinter der 50-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>poligen Buchse der ersten Festplatte). Von Chip U8 Pin 2 wird jetzt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der zweite Draht an diese aufgetrennte Ader angelötet (an die Ader <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die zur zweiten Festplatte geht)! Nachdem dies auch getan ist, wird<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nur noch der 1 Kiloohm Widerstand von Pin 1 des Widerstandsarrays RP3<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(der Pin 1 ist der, der zu der Schrift REV.2 oder REV.3 hinzeigt) an<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pin 2 von Chip U8 gelötet.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nun wird noch eine Kabelabzweigung (V-Kabel) für die Spannungsver-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sorgung der Festplatten benötigt um den Computer mit beiden Fest-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>platten in Betrieb nehmen zu können. Eventuell müssen Sie noch Ihren<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Harddisktreiber umkonfigurieren, damit er die neu hinzugekommene <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Festplatte auch beim Systemstart erkennt (Bitte sehen Sie dazu in<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Dokumentation nach!).<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B> Der Hostadapter ist ausschließlich für ein kurzes SCSI-Ka-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bel gebaut worden! Das Kabel darf unter keinen Umständen auch immer,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>länger als 20 Zentimeter werden. Für größere Kabellängen wird näm-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lich eine andere Terminierung verwendet als Sie der Hostadapter hat<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(umrüsten geht nicht!).<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Andererseits werden im MegaSTE und der STACY eh nur kurze Kabellän-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gen benötigt (zumal in der STACY eh nur eine Festplatte reinpasst, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wenn man noch das Diskettenlaufwerk nutzen will) und selbst beim <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Betrieb eines Caddys reicht das 20-Zentimeter Kabel locker aus! <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Weiterhin darf KEINE der Festplatten terminiert sein, also die Ab-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schlußterminatoren GRUNDSÄTZLICH abziehen, sonst werden die Treiber<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf dem Hostadapter überlastet und können Rauchzeichen von sich ge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ben (das ist kein Witz)!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ps: Wer unbedingt zwei Festplatten in der Butterdose unterbringen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>will, benötigt zwei Seagate ST51080N Festplatten. Die sind so flach<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in der Bauhöhe das daß nach dem erstellen von 4 zusätzlichen Befes-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tigungslöchern im Metallrahmen (für die zweite Festplatte) auch tat-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sächlich übereinander passt.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Megaste_ha_tip3.html">weiterblättern</A> <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Hostadapter im MegaSTE und der STACY, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

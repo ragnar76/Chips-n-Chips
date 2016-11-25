@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Unterschied zwischen PAL und GAL Chips, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="GALPAL_FAQ.html">Previous</A>
+<A HREF="galpal_3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Erklärung der Zeichen in PALASM - Notation<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/ = Invertierung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>* = UND-Verknüpfung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+ = ODER-Verknüpfung<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Je nach Logikfunktion kann es günstig sein, daß der Ausgang aktiv<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Low zur Verfügung steht, da dadurch eine Verminderung der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Produktterme möglich ist. Bei einfachen PAL-Bausteinen (z.B.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10L8, 10H8) wird die Polarität des Ausganges durch den Hersteller<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>festgelegt. Es sind jedoch auch Bausteine erhältlich, bei denen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Polarität programmiert werden kann. Es gibt mittlerweile eine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ganze Reihe verschiedener PALs, die sich entsprechend der Anzahl<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ihrer Eingänge, Ausgänge und der Ausgangspolarität unterschei-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den. Die Typenbezeichnung der PALs gibt Aufschluß über die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Struktur des Bausteins (Anzahl Eingänge, Ausgänge,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ausgangspolarität) :<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>z.B.: PAL 10L8<TT>&nbsp;&nbsp;</TT>=<TT>&nbsp;&nbsp;&nbsp;</TT>10 Eingänge, 8 aktiv LOW Ausgänge<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>PAL 12P6<TT>&nbsp;&nbsp;</TT>=<TT>&nbsp;&nbsp;&nbsp;</TT>12 Eingänge. 6 Ausgänge mit prog. Polarität<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eine Besonderheit ist dabei der TYP 16L8. Die 8 aktiv LOW Ausgänge<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>können durch entsprechende Programmierung in den hochohmigen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zustand geschaltet werden. Zu diesem Zweck ist dem Freigabeeingang<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>des Ausgangspuffers ein Produktterm der PAL-Matrix zugeordnet. Die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ausgangsanschlüsse sind über entsprechende Puffer als weitere<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Spalten in der PAL-Matrix verfügbar. Es können damit 3-State Ein-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und Ausgänge realisiert werden oder aber auch Zwischenlösungen,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die nicht direkt erhältlich sind (z.B. 13L5)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Alle diese bisher erwähnten Bausteine können nur für kombinato-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>rische Logikfunktionen verwendet werden. Für Anwendungen in denen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Flip-Flops notwendig sind (z.B. spezielle Zähler, Taktgeneratoren,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zeitsteuerungen etc.) gibt es PAL-Bausteine, die hinter den ODER-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gattern je ein D-Flip-Flop beinhalten. Darüberhinaus sind noch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>weitere PAL-Bausteine verfügbar, die asynchrone Flip-Flops, EX-OR<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Glieder, Register ohne Ausgangsanschlüsse (burried Registers) u.a.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>enthalten. Nähere Einzelheiten können den Unterlagen der Hersteller<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>entnommen werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Den vielen Vorteilen von PAL-Bausteinen stehen jedoch auch einige<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nachteile entgegen :<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- die Bausteine können nur einmal programmiert werden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- die Programmierbarkeit kann nicht 100 % getestet werden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- hoher Stromverbrauch bei Standard PALs (typ. 180 mA)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- viele verschiedene Bausteine für einfache Funktionen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- zur Programmierung sind spezielle, teure Geräte erforderlich<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Einsatz von PALs im Hobbybereich scheitert häufig am Fehlen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eines geeigneten Programmiergerätes. Der Selbstbau eines solchen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Programmiergerätes bedeutet jedoch einen beträchtlichen Aufwand.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ein Teil der Nachteile kann durch den Einsatz von löschbaren PLDs<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(EPLD= Erasable Programmable Logic Devices) beseitigt werden.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dabei sind die im PAL vorhandenen Sicherungen durch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Schalttransistoren ersetzt, die ähnlich wie die Speicherzellen von<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EPROMs aufgebaut sind. Das Löschen erfolgt durch Bestrahlung mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>UV-Licht (ca. 20 Min.). Diese EPLDs haben jedoch einen recht hohen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Preis, da zum Löschen ein keramisches Gehäuse mit Quarzfenster<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nötig ist. <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="galpal_3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Unterschied zwischen PAL und GAL Chips, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

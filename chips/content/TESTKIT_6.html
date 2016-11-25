@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Test- bzw. Diagnosekit von Atari, Seite 6</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TESTKIT_5.html">Previous</A>
+<A HREF="TESTKIT_7.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Timingtest Fehlercode:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>T0= MFP Timer error. MFP auswechseln.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>T1= Vertical Sync. Pin 37 am GLUE und eventuell vorhandenen Treiber <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>überprüfen, defektes Bauteil auswechseln.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>T2= Horizontal Sync. Pin 38 am GLUE und eventuell vorhandenen Treiber<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>sowie am Pin 51 der MMU überprüfen. Defektes Bauteil auswechseln.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>T3= Display Enable. GLUE Pin 39, MMU Pin 52 oder MFP generiert keinen<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Interrupt. Ausmessen und defekten Chip ersetzen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>T4= Video counter im Memory Controller. MMU defekt oder 16 MHz CPU <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>vorhanden. Kann auch ein defekter GLUE sein, wenn der Rechner <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>beim Blittertest ein paar Punkte über dem Schriftzug Testing <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Blitter setzt und anschliessend per Reset neu gestartet wird.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>T5= PSG Bus Error. Soundchip (PSG) auswechseln.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>T6= 1772 Bus Error. Floppycontroller auswechseln.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Testing MFP, Glue timing, Video<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>T5 PSG Bus Test<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>PassT6 1772 Bus Test <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EB Bus Error<TT>&nbsp;&nbsp;</TT>Access Address: FF8604 Program Counter: 004016<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EB Bus Error<TT>&nbsp;&nbsp;</TT>Access Address: 000392 Program Counter: FA2A7C<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pass<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Soundchiptest ist erfolgreich, während beim zugriff auf den <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Floppycontroller ein Bus Error auftritt. Bei diesem Beispiel wurde<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ein Rechner überprüft der OHNE Floppycontroller gestartet wurde.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Blitterchip Fehlercode:<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G1= Internes Ram des Blitterchips defekt<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G2= Endmaske defekt<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G3= Operationsfehler (Zugriff, Kommando falsch, etc.)<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G4= Interne Ramoperation schiefgegangen<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G5= Verarbeitungsfehler der Operation<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G6= Invertiertes Blitten schiefgegangen<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G7= Ausnahmeverarbeitung (force extra source read)<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G8= Verwischte Darstellung (gezeichnetes Muster stimmt nicht)<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G9= X Zähler fehlerhaft<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G10= Y Zähler fehlerhaft<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G11= Time Out aufgetreten<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G12= Adreßzähler falsch, etc.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>G13= Blitter Bus Error<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TESTKIT_7.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Test- bzw. Diagnosekit von Atari, Seite 6<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

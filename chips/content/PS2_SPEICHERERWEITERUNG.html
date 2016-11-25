@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		<META NAME="GENERATOR" CONTENT="WinGuide v0.5ﬂ / Modul HYP2TXT (Compiled Aug 16 2004, 13:41:20)">
+		<TITLE>4 Megabyte Speichererweiterung im Eigenbau</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="ADRESSE_ATARI_2.html">Previous</A>
+<A HREF="PS2_SPEICHERERWEITERUNG_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4 Megabyte Speichererweiterung im Eigenbau<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die alten, also vorhandenen Speicherbausteine am besten komplett<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auslˆten. Dann wird auch die Belastung des Netzteiles geringer.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Achja, einen Schaltplan zum Computer sollte man schon haben, da <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>diese Speichererweiterung gelˆtet wird und knapp 160 Lˆtstellen an-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>fallen! Entweder das PS/2 SIMM direkt mit F‰deldraht mit der Haupt-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>platine verbinden oder einen PS/2 Sockel benutzen, dann muﬂ der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sockel mechanisch befestigt werden und nicht das PS/2 SIMM!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es kˆnnen nur PS/2 SIMM Module verwendet die die Betriebsart Fast<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Page Mode (FPM) beherrschen, neuere Speichermodule die die Bezeich-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nung EDO tragen, sind fÅE eine Speichererweiterung des Atari Com-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>puters absolut ungeeignet.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Pinbelegung von PS/2 SIMM Modulen<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>---------------------------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>72 pin SIMM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>--|||||||||||||||/ \|||||||||||||||---<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>36 37<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>72<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>72 pin Fast Page Mode SIMM<TT>&nbsp;&nbsp;</TT>256k/512k/1M/2M/4M/8M x 32/36 bit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>pin<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>assignment|pin<TT>&nbsp;&nbsp;</TT>assignment|pin<TT>&nbsp;&nbsp;</TT>assignment|pin<TT>&nbsp;&nbsp;</TT>assignment<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Gnd<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|19<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A10<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|37<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MP1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|55<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ11<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|20<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ4<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|38<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MP3<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|56<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ27<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|21<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ20<TT>&nbsp;&nbsp;&nbsp;</TT>|39<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Gnd<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|57<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ12<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|22<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ5<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|40<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/CAS0<TT>&nbsp;&nbsp;</TT>|58<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ28<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ17<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|23<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ21<TT>&nbsp;&nbsp;&nbsp;</TT>|41<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/CAS2<TT>&nbsp;&nbsp;</TT>|59<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Vcc<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|24<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ6<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|42<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/CAS3<TT>&nbsp;&nbsp;</TT>|60<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ29<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ18<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|25<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ22<TT>&nbsp;&nbsp;&nbsp;</TT>|43<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/CAS1<TT>&nbsp;&nbsp;</TT>|61<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ13<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|26<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ7<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|44<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/RAS0<TT>&nbsp;&nbsp;</TT>|62<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ30<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>9<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ19<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|27<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ23<TT>&nbsp;&nbsp;&nbsp;</TT>|45<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/RAS1<TT>&nbsp;&nbsp;</TT>|63<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ14<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Vcc<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|28<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|46<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>N/C<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|64<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ31<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>11<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>N/C / PD5 |29<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A11<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|47<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/WE<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|65<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ15<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>12<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|30<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Vcc<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|48<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>N/C<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|66<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>N/C<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>13<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|31<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|49<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ8<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|67<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="PRESENCE_DETECT.html">PD1</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>14<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|32<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A9<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|50<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ24<TT>&nbsp;&nbsp;&nbsp;</TT>|68<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="PRESENCE_DETECT.html">PD2</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>15<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|33<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/RAS3<TT>&nbsp;&nbsp;</TT>|51<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ9<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|69<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="PRESENCE_DETECT.html">PD3</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|34<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/RAS2<TT>&nbsp;&nbsp;</TT>|52<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ25<TT>&nbsp;&nbsp;&nbsp;</TT>|70<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="PRESENCE_DETECT.html">PD4</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>17<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|35<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MP2<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|53<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ10<TT>&nbsp;&nbsp;&nbsp;</TT>|71<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>N/C<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>18<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|36<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MP0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|54<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQ26<TT>&nbsp;&nbsp;&nbsp;</TT>|72<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Gnd<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Pinbezeichnung MP0, MP1, MP2, MP3 gibt es nur bei PS/2 SIMM <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Modulen mit Paritybausteinen, diese sind etwas teurer und werden im<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Atari ST nicht benˆtigt.<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DQ 0 bis DQ 7 sind /CAS 0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DQ 8 bis DQ15 sind /CAS 1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DQ16 bis DQ23 sind /CAS 2<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DQ24 bis DQ31 sind /CAS 3<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DQ 0 bis DQ15 sind /RAS0 und /RAS1 (nur bei Doppelseitigen Modulen)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DQ16 bis DQ31 sind /RAS2 und /RAS3 (nur bei Doppelseitigen Modulen)<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="PS2_SPEICHERERWEITERUNG_2.html">weiterbl‰ttern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel 4 Megabyte Speichererweiterung im Eigenbau<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

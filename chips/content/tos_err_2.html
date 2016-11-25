@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Fehlermeldungen des TOS Betriebssystem, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TOS_FEHLERMELDUNGEN.html">Previous</A>
+<A HREF="MTOS_FEATURE.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>TOS Error #35, probably the most common error alert that is not<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>self explanatory, happens when a program you are trying to run has<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>somehow been corrupted.<TT>&nbsp;&nbsp;</TT>What it means is that TOS can not find<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>some magic numbers it expects to find either at the beginning or at<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>the end of the program file. This error is usually attributable to<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>operator error (as in trying to execute an archive or text file as<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>a program), or to bit rot.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Here are the BIOS &quot;Critical&quot; errors, and the alert text you see when<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>they happen:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Error description<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>TOS error Alert text (TOS 1.4 and later)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>-------------------------- --------- ------------------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Basic, fundamental error<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>Your output device is not<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>No paper<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-9<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>receiving data.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Unknown device<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-15<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Drive not ready<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-2<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>Drive X: is not responding<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Unknown commund<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-3<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>Please check the disk drive,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bad request (invalid length)<TT>&nbsp;&nbsp;&nbsp;</TT>-5<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>or insert a disk.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Seek error<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-6<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="ANHANG_GLOSSAR.html">CRC</A> error<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-4<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data on the disk in drive<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Unknown medium<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-7<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>X: may be damaged.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sector not found<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-8<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Write fault<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-10<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Read fault<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-11<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>General failure<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-12<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bad sectors on format<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-16<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Write protect<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-13<TT>&nbsp;&nbsp;&nbsp;</TT>The disk in drive X: is<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>physically write-protected.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Media change<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-14<TT>&nbsp;&nbsp;&nbsp;</TT>The application cannot read<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>data on the disk in drive X:.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Insert other disk<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-17<TT>&nbsp;&nbsp;&nbsp;</TT>Please insert disk X<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>into drive A:.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Fehlermeldungen des TOS Betriebssystem, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

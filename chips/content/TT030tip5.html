@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für den TT030, Seite 5</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TT030tip4.html">Previous</A>
+<A HREF="TT030tip6.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falls der Einstellbereich nicht ausreichen sollte, kann man noch <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen 15pf Kondensator von der oberen Seite (Lötpunkt vom Wider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stand der zu den Schnittstellen hinzeigt) des RD01 zur Masseumrun-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dung (mit Masseumrundung ist die dicke <A HREF="Leiterbahn.html">Leiterbahn</A> gemeint die den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>UD00 und die paar anderen Bauteile quadratisch umrahmt) löten.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>In einigen TT030 der neuen Produktion, wurden TT-RAM Karten nicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>richtig erkannt. Ursache war ein nachträglich gezogenes Kabel von<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R997 (unter dem VME Bus) zu R888 (links neben dem <A HREF="MC_68030.html">68030</A>, U100).Über<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>diesen Draht wurde das 32 MHz Taktsignal des <A HREF="MC_68030.html">68030</A> 'umgeleitet',<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>weil einige TT030 nicht mehr zuverlässig gebootet haben oder spo-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>radisch abgestürzt sind. Diese Änderung wurde zwischenzeitlich<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verbessert:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Entfernen Sie, falls vorhanden, das eingelötete rote Kabel. Löten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sie vorsichtig Pin 3 und Pin 17 von U210 (AC244 unter dem VME <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Blech) hoch. Verbinden Sie die linke, hochgezogene Seite von R888<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mit Pin 3 von U210. Löten Sie einen Draht rechts an R997 an und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verbinden Sie diesen mit Pin 17 an U210. Die Kabel sollten so kurz<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wie möglich sein und z.B. mit Heißkleber auf dem Board fixiert wer-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den, um Kurzschlüssen und Wacklern vorzubeugen.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Einfluß auf diese Sache nimmt auch das 50 pol. SCSI-Flachbandkabel.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bitte entfernen Sie es aus dem Rechner, falls keine Harddisk ange-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schlossen ist. Ansonsten auf die richtige Terminierung achten!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Bootverzögerung per Bootsector beim TT030 mit TOS 3.06</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wird der Bootsektor der DD-Diskette von Laufwerk A nicht ausge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>führt und ist ein physikalisches Laufwerk B mit einer eingelegten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>HD-Disketten vorhanden, wird der Bootsektor der Diskette in Lauf-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werk A nur dann ausgeführt, wenn dort eine HD-Diskette einge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>legt ist.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ist aber nur ein physikalisches Diskettenlaufwerk vorhanden dann <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tritt dieser Bug dort nicht auf, dann ist es egal, ob man eine DD- <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder HD-Diskette verwendet.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Towernetzteil angeschlossen und der DMA <A HREF="blues.html">Sound</A> geht nicht?</B><BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sowohl der MegaSTE als auch der TT030 benötigen folgende Spannungen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zwingend:<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+5V, +12V, -5V und -12Volt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Oder beim entfernen des Originalnetzteiles hast Du den 78L82 Span-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nungsregler umgeknickt der unmittelbar vor/unter dem Lüfter des<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Netzteiles befindet (es kann ohne Probleme auch ein 8 Volt Spannungs-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>regler statt dem 8.2 Volt Typen eingesetzt werden) oder knappe 15 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bis 20mm hinter dem Resettaster auf der Platine sitzt (Platinenbe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zeichnung ist Q803 oder U609).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Warum dröhnen die/der Lüfter des TT030 so?</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nimm ein scharfes Messer und trenne die Streben am Lüfter (der Ge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>häuserückwand) raus. Dann nimmste noch einen 7808 oder 7806 Span-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nungsregler (die 100mA Ausführung reicht auch; 78L06 oder 78L08)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und lötest ihn in die Lüfterzuleitung rein, ziehe KEINESFALLS den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Lüfter einfach ab, die MSTE/TT Netzteile nehmen das übel und machen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dann Harakiri!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TT030tip6.html">weiterblättern</A><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TT030_FPU_FEHLER.html">Der FPU Fehler bei Daughterboard TTs</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für den TT030, Seite 5<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

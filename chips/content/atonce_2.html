@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Vortex ATonce - DOS Emulator, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="VORTEX_ATONCE.html">Previous</A>
+<A HREF="atonce_3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Bauteileseite<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>=========<TT>&nbsp;&nbsp;</TT>&lt;-- Fassung<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>!<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>! ! ! ! !<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>! <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>--&gt;<TT>&nbsp;&nbsp;</TT>. . . . . . . . . . .<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>v<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>!<TT>&nbsp;&nbsp;&nbsp;</TT>===================================<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>!<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>! ! ! ! ! ! ! ! ! ! !<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>&lt;---- Stifte <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>!<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>!<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>hier verlöten<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diese Lötarbeiten müssen mit großer Sorgfalt durchgeführt werden. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es ist besonders darauf zu achten, daß keine kalten Lötstellen oder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ungewollte Verbindungen zwischen benachbarten Pins entstehen.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(2) Die so erweiterte ATonce Platine wird in den Sockel auf der ST <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mutterplatine eingesteckt. (Dieser Sockel wurde beim Aufrüsten mit <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>HyperCache anstatt der 68000 CPU eingebaut!)<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(3) HyperCache nun in den Sockel stecken, der wie bei (1) beschrie-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ben auf den ATonce aufgelötet wurde.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(4) Fertig.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Anmerkung: Wir haben festgestellt, daß es bei manchen ST's zwischen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dem HyperCache und dem Blitter Konflikte geben kann. Diese Probleme <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sind unabhängig von ATonce! Wir empfehlen, den Blitter abzuschalten,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>falls mit dem HyperCache gearbeitet wird.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B> DER ATONCE DARF NICHT AUF DIE 16 MHz 68000 CPU DES HYPER-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>CACHE AUFGESETZT WERDEN!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Da der ATonce als Coprozessor arbeitet und selbständig den Systembus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>übernehmen kann, bringt der HyperCache aufgrund seiner Konzeption <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unter DOS einen spürbaren Geschwindigkeitsvorteil. <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ATonce und Autoswitch OverScan<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der ATonce unterstützt auf dem Monochrome Monitor SM124 bei der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hercules Graphikemulation auch die AutoSwitch-OverScan Grafikerwei-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>terung der Firma OverScan GbR. Diese muß allerdings vor dem Start <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von ATonce bereits aktiv sein. Der ATonce schaltet OverScan unter <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DOS automatisch ein und aus.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Generelles Trouble-Shooting<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Einbau in einen 1040ST, bei dem die CPU unterhalb der Floppy<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>liegt.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wir haben beobachtet, daß es bei 1040ST Rechnern, bei denen die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CPU unter der Floppy liegt, speziell bei älteren Modellen zu<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Platzproblemen kommen kann. Bei diesen älteren 1040ST Versionen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wurden Floppy Laufwerke verbaut die relativ dick sind und zudem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unten noch mit einem ausgebuchteten Blech versehen wurden. Es gibt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nun zwei Möglichkeiten trotzdem den ATonce vernünftig und sicher<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einzubauen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="atonce_3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Vortex ATonce - DOS Emulator, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

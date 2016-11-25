@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Test- bzw. Diagnosekit von Atari, Seite 4</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TESTKIT_3.html">Previous</A>
+<A HREF="TESTKIT_5.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2,5 MB Ram und Testkit Rev.4.2<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn die Platinenrams als Bank 0 und die Speichererweiterung als Bank<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 addressiert sind, tritt beim Ramtest folgender Fehler auf:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R2 0FFC0 W:00FC R:F0FC bad bits: 12 13 14 15 <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EB Bus Error<TT>&nbsp;&nbsp;</TT>Access Address: FA09D4 Program Counter:FA09D4<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EB Bus Error<TT>&nbsp;&nbsp;</TT>Access Address: 0C0011 Program Counter:FA09CE<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dies ist normal, weil das Testmodul nur durchgehenden Speicher testen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kann und einen Fehler ausgibt wenn eine Bank anders bestückt ist als<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die andere.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fehlercodes des Testkit's:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ram Fehlercode:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R0= low memory failed while setting up to run test.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R1= failed walking 1s or 0s. An irgendeinem Ram hat eine bzw. mehrere<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adreßleitungen keinen Kontakt <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R2= failed address (counting pattern). An irgendeinem Ram hat eine <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bzw. mehrere Adreßleitungen keinen Kontakt zum Treiber. Ist <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>eventuell ein oxidierter Sockel bzw. der Massepin eines oder <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>mehrerer Ramchips hat keinen 100% Kontakt. <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R3= failed 64k boundary test. Probable failure im MMU. Unterste 64 <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kbyte Ram defekt. Diesen Bereich braucht der Prozessor für interne<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Erledigungsaufgaben (unter anderem beim Testkit).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R4= failed while displaying area tested (Video Ram). Fehler während<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>des Testens des Bildschirmspeichers.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MegaSTE<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Cache RAM= Defektes Cache RAM gefunden<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falcon030<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DSP4= SRAM Test Timeout (Test abgebrochen)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DSP5= SRAM Failure (Ramfehler gefunden)<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>O.S.test Fehlercode:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei diesem Test werden alle Byte's der Rom's gelesen und daraus die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Checksumme ermittelt. Es können die Checksummen für folgende Länder-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>spezifischen Versionen ermittelt werden: USA/Canada, England, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Frankreich, Deutschland und Spanien (PAL und NTSC Norm).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die TOS Version 1.4 ist noch nicht implementiert. <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TESTKIT_5.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Test- bzw. Diagnosekit von Atari, Seite 4<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

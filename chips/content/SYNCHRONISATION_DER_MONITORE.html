@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Synchronisationfrequenzen (Grenzwerte) der Monitore</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="monkauf_2.html">Previous</A>
+<A HREF="SYNCHRONISATION_DER_MONITORE_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ja! Die KHz bedeuten lediglich in welchem zeitlichen Abstand die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Synchronisationsimpulse kommen. Rückschlüsse auf die Auflösung und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bildwechselfrequenz können fatal sein.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Folgendes Diagramm soll die Zusammenhänge deutlicher machen:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+--+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+--+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Sync-Signale<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>---------+<TT>&nbsp;&nbsp;</TT>+-----------------------------+<TT>&nbsp;&nbsp;</TT>+------------<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>---+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+-------------------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+------<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;</TT>dunkel<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>hell<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+-------------+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+-------------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>^<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| vB<TT>&nbsp;&nbsp;</TT>|SI| hB |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Video<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| vB |SI| hB<TT>&nbsp;&nbsp;</TT>| usw.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vB= vorderer Blank / vordere Austastlücke / Front porch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SI= Sync-Impuls<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hB= hinterer Blank / hintere Austastlücke / Back porch<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Signale sehen für horizontal und vertikal prinzipiell gleich<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>aus, nur die Zeiten sind anders.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Spielen wir das ganze mal für 800*600 56 Hz durch. Da die 600 nicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>durch 16 teilbar ist, müssen wir 608 mehmen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1. Die Pixelfrequenz (Pixelclock) auf 36 MHz einstellen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2. Syncsignallänge eintragen. Horizontal=2µS, Vertikal=0,057mS<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3. Blankzeiten eintragen.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Horizontal: vorne = 0,67µS, hinten = 3,56µS<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Vertikal<TT>&nbsp;&nbsp;</TT>: vorne = 0,03mS, hinten = 0,63mS ==&gt; doch HALT, daß<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>waren die Zeiten für 600 Zeilen, also her mit dem Taschenrechner<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Da die 56Hz gerundet sind nehmen wir die echten 56,25Hz! Lt. VESA<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 / 56,25Hz = _0,01778S_ = _17,78mS_<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ziehen wir nun die &quot;dunklen&quot; Zeiten ab, bleiben für die Darstellung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der 600 Zeilen (17,78mS - 0,03mS - 0,63mS - 0,057mS) 17,063mS übrig.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>In der Zeit von 17,063mS werden 600 Zeilen dargestellt, also werden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>für 608 Zeilen (17,063 / 600 * 608) 17,29mS benötigt. D.h. es müssen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(17,29mS - 17,063mS) 0,227mS in den &quot;dunklen Zeiten eingespart&quot;<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die einzige Möglichkeit liegt im Beispiel in der hinteren Austast-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lücke, also: 0,63mS - 0,227mS = 0,403mS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Berichtigt für 608 Zeilen:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Vertikal<TT>&nbsp;&nbsp;</TT>: vorne = 0,03mS, hinten = 0,403mS<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="SYNCHRONISATION_DER_MONITORE_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Synchronisationfrequenzen (Grenzwerte) der Monitore, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

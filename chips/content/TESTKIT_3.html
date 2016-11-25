@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Test- bzw. Diagnosekit von Atari, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TESTKIT_2.html">Previous</A>
+<A HREF="TESTKIT_4.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Im Klartext: Ein RAM-Baustein (der, der D10 liefert) lässt sich <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nicht ansprechen, er ist unter umständen defekt, oder der darauf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>angelötete zweite Baustein funkt dazwischen (weil z.B. dauernd <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>selektiert oder kaputt). Ich würde erstmal einzelne RAMs abklemmen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Datenleitung trennen) und so nach dem defekten RAM suchen (wenn <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>durchs Abklemmen ein zweiter Defekt entsteht war es der falsche Chip)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und mir dessen Verbindungen genauer angucken und gegebenenfalls aus-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wechseln.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beim MegaST2 ist die bestückte Bank logischerweise Bank 0, bei einer<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Aufrüstung sind die Huckepack gelöteten oder nachträglich links ein-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gesetzten Rams Bank 1 (R71, R72 und R74). Für den Mega4 gilt dasselbe.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Zählfolge ist allerdings anders wie beim 520ST. Platine so hin-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>legen das die Floppy nach vorne und das Netzteil nach hinten zeigen.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es sind insgesamt beim Mega4 vier Ramreihen zu je 8 Stück zu sehen. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die ganz links liegenden Rams werden vom Netzteil aus beginnend mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0-7 der Bank 0 gezählt, dann kommt die von links gesehen dritte Ram-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>reihe dran diese wird allerdings vom Netzteil aus gesehen Rückwärts<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mit 15-8 gezählt. Für die Bank 1 gilt dasselbe nur das hier die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zweite und vierte Ramreihe abzuzählen sind.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kommt die Fehlermeldung &quot;R2 45603E W:603E R:613C bad bits: 1,8&quot; so <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bedeutet dies das in einem 1040STF die Chips 1 und 8 (Bit 1 und 8) in<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Bank 1 defekt sind. Es wird der Wert Hex 603E geschrieben und der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wert Hex 613C gelesen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ramadresse<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Computertyp<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>520<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1040<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ST2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ST4<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>000000-7ffff<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank 0<TT>&nbsp;&nbsp;&nbsp;</TT>bank 0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank 0<TT>&nbsp;&nbsp;&nbsp;</TT>bank 0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>800000-fffff<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank 1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank 0<TT>&nbsp;&nbsp;&nbsp;</TT>bank 0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>100000-1fffff<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank 0<TT>&nbsp;&nbsp;&nbsp;</TT>bank 0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>200000-3fffff<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank 1<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MegaSTE1 Bad Bits SIMM<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>000000-7ffff<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1-8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U703<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>9-16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U701<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>800000-fffff<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1-8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U704<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>9-16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U702<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MegaSTE2<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MegaSTE4 Bad Bits SIMM<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>000000-1fffff<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1-8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U703<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>9-16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U701<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2000000-3fffff<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1-8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U704<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>bank1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>9-16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U702<BR>
+ <BR>
+<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Allgemeines zur Speichererweiterung bei Computern neueren Datums.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn ihr einen Rechner habt der neueren Datums ist und ihr vorhabt <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen 1040STF auf 2.5 MByte aufzurüsten hört euch lieber erst mal um<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ob in eurer Nachbarschaft jemand ist der seinen Rechner umgebaut hat<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und er erfolgreich läuft. ATARI hat nämlich bei der letzten Überar-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beitung der MMU die Register geändert so daß nur noch Speicherbänke<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gleicher Größe anerkannt werden.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TESTKIT_4.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Test- bzw. Diagnosekit von Atari, Seite 3<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

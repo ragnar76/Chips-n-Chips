@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Vortex HDPlus Festplatte</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="atonce_5.html">Previous</A>
+<A HREF="hdplus_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>Einbau einer 2.ten Platte in ein HDplus-Subsystem</U><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Vortex hat Festplatten mit MFM/RLL und XT-Bus Schnittstelle in die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>HDplus eingebaut. Eine zweite Festplatte kann nur eingebaut werden,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wenn die vorhandene Festplatte über eine MFM/RLL (ST412/506)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Schnittstelle verfügt!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Nur möglich, wenn bereits eine 3 1/2&quot;-Festplatte mit externem<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Controller eingebaut ist.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Zweite Festplatte muß die gleichen physikalischen Parameter<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Cylinder, Köpfe, Codierung) wie die erste haben. Die Parameter<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>der verschiedenen HDplus-Subsysteme können der Tabelle entnommen<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das bedeutet, man kann noch eine Platte reinsetzen und kommt so auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die doppelte Kapazität.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wird eine Festplatte mit mehr Köpfen und Zylindern eingebaut, so<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>können diese nicht genutzt werden!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zusätzlich werden benötigt:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Spannungsversorgungskabel für zwei Festplatten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- 34-poliges Flachkabel mit zwei Festplatten-Anschlußsteckern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- 34-poliges Flachkabel für zweite Festplatte<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Verbindung Controller - Festplatte<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Controller J2 =&gt; 20-poliges Flachkabel auf Festplatte 0<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Controller J3 =&gt; 20-poliges Flachkabel auf Festplatte 1<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Controller J1 =&gt; 34-poliges Flachkabel auf Festplatte 0 und 1<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>durchgeführt<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Festplatte 0 auf Laufwerk 0 jumpern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Festplatte 1 auf Laufwerk 1 jumpern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- bei Festplatte 0 Abschlußwiderstände einschalten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- bei Festplatte 1 Abschlußwiderstände ausschalten/abziehen!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Blockschaltbild HDplus-Subsystem mit zwei Festplatten:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.--------------------------------------------.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>.----|--------------------------.<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.--------------.----|-----------.<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>--|------|---<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| | ---J2<TT>&nbsp;&nbsp;</TT>-----|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>--|----|---<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>--|-----|---<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>-|----J3<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>J1 |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| ----- --- |<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>| -----<TT>&nbsp;&nbsp;</TT>--- |<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| 34p.<TT>&nbsp;&nbsp;</TT>20p.|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>| 34p.<TT>&nbsp;&nbsp;&nbsp;</TT>20p.|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|Controller<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-------------<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| Platte 1<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>| Platte 0<TT>&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-----------<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>------------<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- auf Microboard ohne Festplattenabschaltung zusätzlich Jumper 5<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>setzen<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>auf Microboard mit Festplattenabschaltung<TT>&nbsp;&nbsp;</TT>zusätzlich Jumper 8<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>setzen<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Adapteradresse für zweite Festplatte mit Dip-Switches 4 und 5 auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Microboard einstellen<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="hdplus_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Vortex HDPlus Festplatte, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

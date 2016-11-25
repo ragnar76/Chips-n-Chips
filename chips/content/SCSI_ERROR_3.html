@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Fehlermeldungen aus dem SCSI Standardwerk, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SCSI_ERROR_2.html">Previous</A>
+<A HREF="SCSI_ERROR_4.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D - DIRECT ACCESS DEVICE (SBC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>device column key<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.T - SEQUENTIAL ACCESS DEVICE (SSC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>. L - PRINTER DEVICE (SSC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>blank = reserved<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>P - PROCESSOR DEVICE (SPC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>not blank = allowed<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.W - WRITE ONCE READ MULTIPLE DEVICE (SBC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. R - READ ONLY (CD-ROM) DEVICE (MMC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>S - SCANNER DEVICE (SGC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.O - OPTICAL MEMORY DEVICE (SBC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. M - MEDIA CHANGER DEVICE (SMC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>C - COMMUNICATION DEVICE (SSC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.A - STORAGE ARRAY DEVICE (SCC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. E - ENCLOSURE SERVICES DEVICE (SES)<BR>
+ASC/ASCQ DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>Description<BR>
+-------<TT>&nbsp;&nbsp;</TT>------------<TT>&nbsp;&nbsp;</TT>----------------------------------------------------<BR>
+<BR>
+00h/01h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>FILEMARK DETECTED<BR>
+09h/02h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>FOCUS SERVO FAILURE<BR>
+14h/02h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>FILEMARK OR SETMARK NOT FOUND<BR>
+31h/01h<TT>&nbsp;&nbsp;</TT>D L<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>FORMAT COMMAND FAILED<BR>
+3Bh/06h<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>L<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>FAILED TO SENSE TOP-OF-FORM<BR>
+3Bh/07h<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>L<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>FAILED TO SENSE BOTTOM-OF-FORM<BR>
+5Dh/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>FAILURE PREDICTION THRESHOLD EXCEEDED<BR>
+5Dh/FFh<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>FAILURE PREDICTION THRESHOLD EXCEEDED (FALSE)<BR>
+<BR>
+<BR>
+1Ch/02h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GROWN DEFECT LIST NOT FOUND<BR>
+58h/00h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GENERATION DOES NOT EXIST<BR>
+<BR>
+<BR>
+09h/04h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HEAD SELECT FAULT<BR>
+27h/01h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HARDWARE WRITE PROTECTED<BR>
+<BR>
+00h/06h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>I/O PROCESS TERMINATED<BR>
+10h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ID <A HREF="ANHANG_GLOSSAR.html">CRC</A> OR ECC ERROR<BR>
+11h/08h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>INCOMPLETE BLOCK READ<BR>
+20h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INVALID COMMAND OPERATION CODE<BR>
+21h/01h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR OM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>INVALID ELEMENT ADDRESS<BR>
+22h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ILLEGAL FUNCTION (USE 20 00, 24 00, OR 26 00)<BR>
+24h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INVALID FIELD IN CDB<BR>
+26h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INVALID FIELD IN PARAMETER LIST<BR>
+26h/04h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INVALID RELEASE OF ACTIVE PERSISTENT RESERVATION<BR>
+28h/01h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR OM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>IMPORT OR EXPORT ELEMENT ACCESSED<BR>
+2Ch/02h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>INVALID COMBINATION OF WINDOWS SPECIFIED<BR>
+30h/00h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR OM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>INCOMPATIBLE MEDIUM INSTALLED<BR>
+3Dh/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INVALID BITS IN IDENTIFY MESSAGE<BR>
+3Fh/03h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INQUIRY DATA HAS CHANGED<BR>
+44h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INTERNAL TARGET FAILURE<BR>
+48h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INITIATOR DETECTED ERROR MESSAGE RECEIVED<BR>
+49h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>INVALID MESSAGE ERROR<BR>
+5Eh/01h<TT>&nbsp;&nbsp;</TT>DTLPWRSO CA<TT>&nbsp;&nbsp;&nbsp;</TT>IDLE CONDITION ACTIVATED BY TIMER<BR>
+5Eh/03h<TT>&nbsp;&nbsp;</TT>DTLPWRSO CA<TT>&nbsp;&nbsp;&nbsp;</TT>IDLE CONDITION ACTIVATED BY COMMAND<BR>
+64h/00h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ILLEGAL MODE FOR THIS TRACK<BR>
+6Ah/00h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>INFORMATIONAL, REFER TO LOG<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="SCSI_ERROR_4.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Fehlermeldungen aus dem SCSI Standardwerk, Seite 3 <BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

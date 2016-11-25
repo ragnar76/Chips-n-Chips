@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Fehlermeldungen aus dem SCSI Standardwerk, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SCSI_ERROR.html">Previous</A>
+<A HREF="SCSI_ERROR_3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D - DIRECT ACCESS DEVICE (SBC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>device column key<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.T - SEQUENTIAL ACCESS DEVICE (SSC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>. L - PRINTER DEVICE (SSC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>blank = reserved<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>P - PROCESSOR DEVICE (SPC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>not blank = allowed<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.W - WRITE ONCE READ MULTIPLE DEVICE (SBC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. R - READ ONLY (CD-ROM) DEVICE (MMC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>S - SCANNER DEVICE (SGC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.O - OPTICAL MEMORY DEVICE (SBC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. M - MEDIA CHANGER DEVICE (SMC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>C - COMMUNICATION DEVICE (SSC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.A - STORAGE ARRAY DEVICE (SCC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. E - ENCLOSURE SERVICES DEVICE (SES)<BR>
+ASC/ASCQ DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>Description<BR>
+-------<TT>&nbsp;&nbsp;</TT>------------<TT>&nbsp;&nbsp;</TT>----------------------------------------------------<BR>
+<BR>
+0Ch/05h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DATA EXPANSION OCCURRED DURING COMPRESSION<BR>
+11h/07h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DATA RE-SYNCHRONIZATION ERROR<BR>
+11h/0Dh<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DE-COMPRESSION <A HREF="ANHANG_GLOSSAR.html">CRC</A> ERROR<BR>
+16h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DATA SYNCHRONIZATION MARK ERROR<BR>
+16h/01h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DATA SYNC ERROR - DATA REWRITTEN<BR>
+16h/02h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DATA SYNC ERROR - RECOMMEND REWRITE<BR>
+16h/03h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DATA SYNC ERROR - DATA AUTO-REALLOCATED<BR>
+16h/04h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DATA SYNC ERROR - RECOMMEND REASSIGNMENT<BR>
+19h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DEFECT LIST ERROR<BR>
+19h/01h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DEFECT LIST NOT AVAILABLE<BR>
+19h/02h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DEFECT LIST ERROR IN PRIMARY LIST<BR>
+19h/03h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DEFECT LIST ERROR IN GROWN LIST<BR>
+1Ch/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DEFECT LIST NOT FOUND<BR>
+29h/04h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>DEVICE INTERNAL RESET<BR>
+32h/01h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DEFECT LIST UPDATE FAILURE<BR>
+40h/NNh<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>DIAGNOSTIC FAILURE ON COMPONENT NN (80H-FFH)<BR>
+41h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DATA PATH FAILURE (SHOULD USE 40 NN)<BR>
+4Bh/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>DATA PHASE ERROR<BR>
+66h/02h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DOCUMENT JAM IN AUTOMATIC DOCUMENT FEEDER<BR>
+66h/03h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DOCUMENT MISS FEED AUTOMATIC IN DOCUMENT FEEDER<BR>
+69h/00h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>DATA LOSS ON LOGICAL UNIT<BR>
+70h/NNh<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DECOMPRESSION EXCEPTION SHORT ALGORITHM ID OF NN<BR>
+71h/00h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DECOMPRESSION EXCEPTION LONG ALGORITHM ID<BR>
+<BR>
+00h/02h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END-OF-PARTITION/MEDIUM DETECTED<BR>
+00h/05h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END-OF-DATA DETECTED<BR>
+03h/02h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>EXCESSIVE WRITE ERRORS<BR>
+0Ah/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>ERROR LOG OVERFLOW<BR>
+11h/02h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>W SO<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ERROR TOO LONG TO CORRECT<BR>
+14h/03h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END-OF-DATA NOT FOUND<BR>
+34h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>ENCLOSURE FAILURE<BR>
+35h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>ENCLOSURE SERVICES FAILURE<BR>
+35h/02h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>ENCLOSURE SERVICES UNAVAILABLE<BR>
+35h/03h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>ENCLOSURE SERVICES TRANSFER FAILURE<BR>
+35h/04h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>ENCLOSURE SERVICES TRANSFER REFUSED<BR>
+51h/00h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ERASE FAILURE<BR>
+63h/00h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END OF USER AREA ENCOUNTERED ON THIS TRACK<BR>
+67h/04h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>EXCHANGE OF LOGICAL UNIT FAILED<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="SCSI_ERROR_3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Fehlermeldungen aus dem SCSI Standardwerk, Seite 2 <BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

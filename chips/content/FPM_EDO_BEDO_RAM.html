@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Unterschied beim DRAM (FPM, EDO und BEDO)</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="CHILI_EFFEKT.html">Previous</A>
+<A HREF="ADRESSE_ATARI.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Unterschied beim DRAM (FPM, EDO und BEDO)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FPM - Fast Page Mode, normale DRAMs (256 Spalten, Pagegröße bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>16 Bit immerhin 512 Bytes) schreiben nach einem CAS den Inhalt <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Schreib/Leseverstärker zurück was viel Zeit kostet.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fast Page Mode DRAM Bausteine schreiben die Daten erst dann zurück<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wenn die Page gewechselt wird. Die Wirkung ist beachtlich: inner-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>halb einer Page (Seite) sind dann bei einem Page Hit rund dreimal<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>so schnelle Zugriffe möglich wie bei einem normalen RAS/CAS <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zugriff.<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EDO - Enhanced Data Out, hält die Daten eines Lesezugriffs gültig,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auch wenn die Spaltenadresse schon wieder ungültig geworden ist <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>also das CAS Signal bereits wieder weggenommen wurde. Das erlaubt <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beim Lesen, bereits die Reihenadresse für den nächsten Zugriff vor-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zubereiten, während die Daten noch eingelesen werden. Bei normalen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RAMs geht das nicht, da muß die Spaltenadresse anliegen, damit die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Daten gelesen werden können. Auf gut Deutsch: Das CAS Timing ist bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EDO Rams kürzer (25 versus 40 nanosekunden bei 60ns DRAM) als bei <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FPM Rams. Auf üblichen Systemen spart man damit beim Lesen jeweils<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen Taktzyklus (x-2-2-2 statt x-3-3-3 Burstrate).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Anmerkung vom Autor:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Intel-Chipsätze im PC-Bereich haben soweit ich weiss extra dafür<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen Testmodus, in dem ein Faktor 1000 langsameres EDO-Timing gefah-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ren wird. Bei einem EDO-Modul liegen dann noch gültige Daten auf dem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bus, bei einem FPM-Modul sind die Treiber längst abgeschaltet -&gt; das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bios kann mit einfachen Schreib/Lesetests feststellen, ob das Modul<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EDO kann.<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BEDO - Burst Edo, ist schon wieder gestorben (ein Danke an die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Firma Intel) obwohl es die derzeit schnellste existierende DRAM <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Technologie ist/war.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="DRAM_GLOSSAR.html">Das DRAM Glossar</A><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Unterschied beim DRAM (FPM, EDO und BEDO), Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Standardtransistor im ATARI und der Ersatztyp</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="EXTERNER_VERSTÄRKER.html">Previous</A>
+<A HREF="ANSCHLUßKABEL_ZUM_MODEM.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Transistortyp 2N3904 wird von ATARI als Standardtransistor<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>überall eingebaut (Soundchip, Treibertransitoren der Videosignale,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>etc). Als Europäischen Ersatztyp eignet sich z.B. der BC546B, al-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lerdings sind dort Emitter und Collector vertauscht (die beiden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>äusseren Beinchen).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>2N3904</B> von unten:<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>-----------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| C<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>B<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>E |<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>\<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>\<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-----------<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>BC546B</B> von unten:<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>-----------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| E<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>B<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>C |<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>\<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>\<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-----------<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falls mal garkein Austauschexemplar aufzutreiben sein sollte, gibt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>es nach &quot;Edgar Fuß&quot; noch einen Algorithmus der helfen könnte:<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>IF Unbekannt(Transistor) THEN BEGIN<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>IF Transistor[2] IN ['0'..'9'] THEN CASE Transistor[1] OF<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>'A','B','J','K': BEGIN<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Insert('2S',Transistor,1);<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Lookup(Transistor,Japan);<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END;<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>'F': BEGIN<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Insert('B',Transistor,1);<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Lookup(Transistor,Europa);<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END;<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>'C','D': BEGIN<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>IF HatSchlitzaugen(Transistor) THEN BEGIN<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Insert('2S',Transistor,1);<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Lookup(Transistor,Japan);<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END ELSE BEGIN<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Insert('B',Transistor,1);<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Lookup(Transistor,Europa);<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END;<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END;<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ELSE Fail;<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>END;<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>END;<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Bezeichnungen europäischer Transistoren beginnen fast immer mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;BC&quot; oder &quot;BD&quot;, gefolgt von einer meist dreistelligen Zahl und einem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>optionalen Kennbuchstaben für die Stromverstärkung (A, B oder C). <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gelegentlich wird das führende &quot;B&quot; beim Aufdruck auf dem Bauteil <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>weggelassen. Die Bezeichnungen für japanische Standard-Transistoren<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beginnen immer mit &quot;2S&quot;, gefolgt von einem der Buchstaben 'A','B',<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>'C','D','J','K' und einer meist vierstelligen Zahl. Sehr häufig wird<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>das Präfix &quot;2S&quot; beim Aufdruck der Bauteile weggelassen. Nur bei den <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Buchstaben 'C' oder 'D' kann dies zu Zweideutigkeiten mit europä-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ischen Transistoren führen, die allerdings so gut wie nie vierstel-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lige Zahlen benutzen. Notfalls muß man beide Typen versuchen, in <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Tabellen zu finden. Amerikanische Transistoren werden mit &quot;2N&quot;, ge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>folgt von einer meist vierstelligen Zahl bezeichnet.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Standardtransistor im ATARI und der Ersatztyp, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Eagle - der erste Atari TT030 Clone</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="IBP_190_ST3.html">Previous</A>
+<A HREF="MEDUSA.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eagle - der erste Atari TT030 Clone<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der GE Soft Eagle war 1993 der erste Atari TT030 Clone, dem aber <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kein langes Leben nach der Geburt beschieden war. Ausgeliefert wur-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den nur wenige Hauptplatinen und die auch nur mit der 68030 CPU <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Prozessorkarte. Der CPU Takt beträgt 33MHz für die MC68030 CPU und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die MC68882 FPU beide in PGA Version auf der Prozessorkarte sitzend.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Eagle Channel besteht aus 8 Sockeln und war ursprünglich dafür<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ausgelegt auch andere CPUs aufnehmen zu können. Die Speicherkarte <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kann bis zu 12 Megabyte ST-RAM kompatiblen Speicher aufnehmen und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zusätzlich mit bis zu 256 Megabyte TT-RAM bestückt werden, dazu sind<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ingesamt 20 SIMMsockel in 30 Pin Ausführung auf der Platine vorhan-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den. Weiterhin gab es auch eine VME Bus Steckkarte für den Eagle um<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eine ET-4000 kompatible Grafikkarte anzuschliessen. An Schnittstellen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hat(te) der Eagle alles zu bieten was auch ein Atari TT030 zu bieten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hat mit ausnahme des DMA-Soundsystemes. 1995 stellte die Firma <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>GE Soft dann den Geschäftsbetrieb mehr oder weniger ein.<BR>
+<BR>
+<IMG SRC="../images/chips_Index1407.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ein bischen zur Hardware des Eagle:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Bedeutung der 7 Jumper zwischen den Slots:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es ist die XBG (-BusGrant) Daisy-Chain, etwa nach VME Bus Vorbild. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Aber doch unvollkommen, da der untere Slot, der die höchste Priorität<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hat, Pin D10 (XBG-IN) nicht auf Masse gelegt hat. Aber die 68030 CPU<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Karte wertet XBG-IN sowieso nicht aus.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Weiter ist bekannt daß die Slots, die natürlich prinzipiell alle<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unterschiedlich sind, was Arbitrierung angeht, in 2 Gruppen geteilt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sind: 1 bis 4 sind logisch vor der DMA Logik angeordnet und die Slots<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4 bis 8 dahinter. Diese haben also niedrigere Prioritäten in der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Arbitrierung. Die 68030 CPU Karte kann nur auf Slot 1 bis 4 betrieben<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden, auch wenn zumindest noch der Festplattentreiber geladen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden kann wenn die CPU Karte im Slot 5 sitzt. Die Ram Karte und der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>VME Adapter brücken XBG-IN und XBG-OUT übrigens nicht. Der Jumper <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unter ihren Slots sollte/muß gesteckt sein, wenn sie zwischen 2 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mastern sitzen. Generell sollten wohl alle 7 BG-Jumper gesteckt sein.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Eagle - der erste Atari TT030 Clone, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

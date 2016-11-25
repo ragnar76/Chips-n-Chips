@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>LOGIC SCSI Controller und nicht von NCR oder AMD !</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="wd1772_2.html">Previous</A>
+<A HREF="DIE_CENTRONICS_SCHNITTSTELLE.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>LOGIC SCSI Controller und nicht von NCR oder AMD !<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>L5380/L53C80 CMOS SCSI Bus Controllers, Data Manual, July 1987, S.4:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;I. General Information<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>[...] It is pin and functionally compatible with the NMOS NCR 5380<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>while offering up to a 2.5x performance improvement, 10x power reduc-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tion, and lower cost. Replacement of the NMOS 5380 by the LOGIC Devi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ces L5380/L53C80 will result in an immediate transfer rate improvement<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>due to REQ/ACK and DRQ/DACK handshake response times up to 5 times <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>faster than previous devices. While remaining firmware compatible with<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>the NCR5380, the L5380/L53C80 provides bug fixes and state machine en-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hancements allowing even larger throughput gains for new designs.&quot;<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Weiter hinten ist dann noch detailliert aufgeführt, welche Bugs im<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>rechnerseitigen Busverhalten von NCR im Logic nicht drin sind, und wo<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Verbesserungen liegen - der Logic setzt einige Bussignale selbst <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zurück, wo der NCR noch Extrazugriffe braucht etc. <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zusammengefaßt heißt das:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wo ein NCR drin war, geht auch ein LOGIC. Umgekehrt nicht unbedingt. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ein System, das die Verbesserungen in der State Machine voraussetzt, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kann mit dem NCR-Chip nicht gehen. Atari hat im TT und Falcon immer <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die LOGIC-Teile dringehabt und nutzen ihn auch - NCR bzw. AMD Chips <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gehen in beiden Maschinen nicht.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Weiterhin gibt es Unterschiede zwischen dem LOGIC 5380 und dem LOGIC<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>53C80, welche sich bereits in der unterschiedlichen Pinbelegung ver- <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>deutlichen und der 53C80 hat noch weitere Features.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Achtung</B>, die Chips vom AMD sind NCR und NICHT Logic Kompatibel !<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gemeinsame Features vom 5380 und dem 53C80 sind:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Asynchronous Transfer Rate Up to 4 MBytes/sec<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Low Power CMOS Technology<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Replaces: NCR 5380 and AMD Am5380 Controllers<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>On-Chip SCSI Bus Drivers<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Supports Arbitration, Selection/Reselection, Initiator or Target <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Roles, Programmed or DMA I/O, Handshake or Wait State DMA Interlock<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel LOGIC SCSI Controller und nicht von NCR, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

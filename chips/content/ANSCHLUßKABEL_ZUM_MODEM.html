@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Anschlußkabel zum Modem</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="ERSATZTRANSISTOR.html">Previous</A>
+<A HREF="MANTELSTROMFILTER.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Belegung eines korrekten RS232-Kabels, welches am einen Ende<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen 9 pol. SUB-D Stecker (für den Computer) sowie am anderen Ende<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen 25 pol. SUB-D Stecker (für das Modem) besitzt:<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>DB25<TT>&nbsp;&nbsp;</TT>DB9<TT>&nbsp;&nbsp;</TT>Abkürzung<TT>&nbsp;&nbsp;</TT>Bedeutung</B> <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Shield<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Erdung<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>TxD<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Sendedaten (Transmit Data)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>RxD<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Empfangsdaten (Receive Data)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>RTS<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Sendeteil einschalten (Request To Send)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>CTS<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Sendebereitschaft (Clear To Send)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>6<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>6<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>DSR<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Betriebsbereitschaft (Data Set Ready) <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Signalerde (Masse)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>DCD<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Empfangssignalpegel (Carrier Detect)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>20<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>DTR<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DTE (Rechner) betriebsbereit<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>22<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>9<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>RI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ankommender Ruf (Ring Indicator)<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Das Problem ist folgendes:</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Atari TT030 hat an der Modem-2 Schnittstelle ein DSR-Signal als<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eingang. Das ist nicht schlimm, weil kein Atari Computer den bisher<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hatte und daher keinerlei Software den auch nutzen würde. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dafür liegt aber am Pin 9 ordnungsgemäß das Signal 'RING INDICATOR' <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>an, welches z.b. Fax- oder eine Mailboxsoftware benötigt. Am TT030<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>langt es also ein sauber verbundenes Kabel nach der obigen Belegungs-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tabelle zu fertigen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beim Mega STE muß eine kleine Modifikation im RS232-Kabel gemacht <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden. Dazu gibt es zwei Möglichkeiten.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1. RS232-Kabel ohne Adapter, also an einem Ende den 9-pol. SUB-D, am<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>anderen Ende den 25-pol. SUB-D<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Gehäuse des 25-pol. SUB-D (der, der ins Modem gesteckt wird) öffnen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Pin 6 lokalisieren (sind meistens beschriftet) und zugehörige Ader<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Leitung) ablöten, NICHT abschneiden!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Die abgelötete Leitung von Pin 6 nun an Pin 22 anlöten. An Pin 22<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>wird sich ebenfalls eine Leitung angelötet befinden. Es muß also<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>die 'neue' Leitung zur bestehenden Leitung an Pin 22 festgelötet<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>werden.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Gehäuse verschließen. Fertig.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2. 'Standard'-RS232-Kabel, an beiden Enden je ein 25-pol. SUB-D Stecker,<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>dazu ein Adapter (meist in Nil-Delta-Form) von 25-pol. auf 9-pol.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Gehäuse des 25-pol. SUB-D männlich (mit Stiften, der Stecker, der<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ins Modem gesteckt wird) öffnen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Pin 6 lokalisieren (sind meistens beschriftet) und zugehörige Ader<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Leitung) ablöten, NICHT abschneiden!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Die abgelötete Leitung von Pin 6 nun an Pin 22 anlöten. An Pin 22<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>wird sich ebenfalls eine Leitung angelötet befinden. Es muß also<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>die 'neue' Leitung zur bestehenden Leitung an Pin 22 festgelötet<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>werden.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Gehäuse verschließen. Fertig.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ein derart modifiziertes Kabel arbeitet nun sowohl an Modem 1 als auch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>an Modem 2 oder jeder anderen Seriellen Schnittstelle. Ebenso arbeitet<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>es SOWOHL mit Faxprogrammen, Mailboxsoftware als auch mit JEDEM Termi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nalprogramm zusammen (es ist ja nichts entfernt worden!)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Anschlußkabel zum Modem, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

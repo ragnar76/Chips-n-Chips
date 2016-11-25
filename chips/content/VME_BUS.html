@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		<META NAME="GENERATOR" CONTENT="WinGuide v0.5ﬂ / Modul HYP2TXT (Compiled Aug 16 2004, 13:41:20)">
+		<TITLE>Der VME Bus im MegaSTE und TT030</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="ISDN_INFO.html">Previous</A>
+<A HREF="VME_BUS_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der VME Bus im MegaSTE und TT030<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der VME Bus Expansionslot ist vorbereitet fÅE eine das Europaformat<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>umfassende Platine mit 24 Adressleitungen und 16 Datenleitungen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder einer Platine mit 16 Adressleitungen und 16 Datenleitungen. Es<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden ausschliesslich SLAVE Karten unterstÅEzt! Der Anschluﬂ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Steckverbinder) sowie die Platinenabmessungen entsprechen der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>VITA C.1 VME bus specification (See rules 7.14, 7.15, 7.34 and 7.35<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sowie der Suggestion 7.12 of The VMEbus Specification, Rev. C.1).<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der <A HREF="VME_BUS_6.html">Steckverbinder</A> (Europaformat P1 Stecker)<BR>
+ <BR>
+<IMG SRC="../images/chips_Index1192.png" ALIGN="TOP">
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Reihe A<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Reihe B<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Reihe C<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+5 Volt<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+5 Volt<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+5 Volt<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+12Volt<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+5V STDBY<TT>&nbsp;&nbsp;&nbsp;</TT>-12Volt<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 8<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>/IRQ 1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 1<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 9<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>/IRQ 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 2<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 10<TT>&nbsp;&nbsp;&nbsp;</TT>/IRQ 3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 3<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 11<TT>&nbsp;&nbsp;&nbsp;</TT>/IRQ 4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 4<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 12<TT>&nbsp;&nbsp;&nbsp;</TT>/IRQ 5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 5<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 13<TT>&nbsp;&nbsp;&nbsp;</TT>/IRQ 6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 6<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 14<TT>&nbsp;&nbsp;&nbsp;</TT>/IRQ 7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 7<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 15<TT>&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>AM4<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 16<TT>&nbsp;&nbsp;&nbsp;</TT>/Serdat<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/IAckOut<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 17<TT>&nbsp;&nbsp;&nbsp;</TT>Serclk<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/IAckIn<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 18<TT>&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/IAck<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 19<TT>&nbsp;&nbsp;&nbsp;</TT>AM3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 20<TT>&nbsp;&nbsp;&nbsp;</TT>AM2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/AS<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 21<TT>&nbsp;&nbsp;&nbsp;</TT>AM1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 22<TT>&nbsp;&nbsp;&nbsp;</TT>AM0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/DTack<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adress 23<TT>&nbsp;&nbsp;&nbsp;</TT>/BR3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>AM5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BR2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/Write<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/Lword<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BR1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/DS0<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/Sysreset<TT>&nbsp;&nbsp;&nbsp;</TT>/BR0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/DS1<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/Berr<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BG3Out<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/Sysfail<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BG3In<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>SysClk<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BG2Out<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 15<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BG2In<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 7<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 14<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BG1Out<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 6<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 13<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BG1In<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 5<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 12<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BG0Out<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 4<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 11<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BG0In<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 3<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 10<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/ACFail<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 2<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 9<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BClr<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 1<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/BBsy<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Data 0<BR>
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="VME_BUS_2.html">weiterbl‰ttern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der VME Bus im MegaSTE und TT030, Seite 1 <BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

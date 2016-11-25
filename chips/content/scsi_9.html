@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Rund um den SCSI BUS, Seite 9</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="scsi_8.html">Previous</A>
+<A HREF="scsi_10.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>Bus-Arbitration</U><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Jetzt höre ich hier ständig von Bus-Arbitrierung, aber: Was ist das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>genau?<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn mehrere <A HREF="INITIATOR_TOS.html">Initiator</A> auf einem SCSI-Bus aktiv sind, müssen sie<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sich verständigen, wer den Bus gerade benutzen darf.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dazu gibt es die Arbitraton-Phase (Schiedsrichter-Phase), in der ent-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schieden wird, wer als nächstes den Bus bekommt. Wollen mehrere Ini-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tiatoren gleichzeitig den Bus benutzen, bekommt der mit der höchsten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI-ID den Bus.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Bus gehört diesem dann, bis er ihn wieder freigibt (Bus-Free<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>signalisiert)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Damit können tatsächlich mehrere Geräte gemeinsam ein Gerät benut-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zusätzlich können die Rechner sich auch untereinander unterhalten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und damit eine Netzverbindung aufbauen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="INITIATOR_TOS.html">Initiator</A> können Rechner sein (mehrere Rechner auf einer Platte),<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder auch Streamer (selbsttätiges Copy einer Festplatte) oder auch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fälle von Reselektion (Gerät hat sich wegen einer lang dauernden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Aktion abgemeldet und meldet sich mit Vollzug zurück)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ach ja, wesentliche Voraussetzung: echte SCSI-Ports! Mit einem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ACSI-Hostadapter geht das nicht!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei mehreren Geräten am SCSI-Bus gibt es verschiedene Dinge, die zu<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beachten sind oder erfüllt sein müssen:<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1. Wollen mehrere <A HREF="INITIATOR_TOS.html">Initiator</A> <U>gleichzeitig</U> den Bus benutzen, so<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>müssen</U> sie selbst eine ID haben und bei Benutzung des Bus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>arbitrieren.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Desweiteren müssen sie zwingend Informationen austauschen, wenn<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einer die Daten auf einem Laufwerk verändert, damit der andere das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mitbekommt.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2. So muß zB. arbitriert werden, wenn man zwei TTs hat, die auf der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gleichen Platte Linux und TOS fahren. Austausch von Informationen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ist dann nicht nötig, aber dennoch ist Arbitrierung nötig.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3. Ist ein <A HREF="INITIATOR_TOS.html">Initiator</A> aktiv, so darf dies bei keinem anderen Inita-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tor zu Reaktionen führen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4. Mit ACSI-Hostadaptern ist eine Arbitrierung und Identifikation<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(siehe 1.) nicht möglich. Eine auf dem Adapter fest verdrahtete<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Identifikation wäre zwar möglich, mir ist aber kein Hostadpater<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bekannt, der dies tut.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5. ACSI-Hostadapter bestätigen selbsttätig den Empfang eines Msg-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bytes (wird nach jedem Kommando verschickt). Vermutlich machen alle<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hostadapter dies auch dann, wenn sie vorher gar nicht aktiv waren,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>also eigentlicher Empfänger des Msg-Bytes sind. Damit funken sie<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dem aktiven <A HREF="INITIATOR_TOS.html">Initiator</A> in den Empfang des Msg-Bytes rein, was dazu<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>führt, daß der echte SCSI-Port in seinem Betrieb gestört wird.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="scsi_10.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Rund um den SCSI BUS, Seite 9<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

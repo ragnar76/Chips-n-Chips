@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Pinbelegung der internen SCSI-Stiftleiste der ATW800</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SCSI_TT030_BILD.html">Previous</A>
+<A HREF="SCSI_MEDUSA.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Pinbelegung der internen SCSI-Stiftleiste der ATW800<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 bis 23 Ground<TT>&nbsp;&nbsp;&nbsp;</TT>14 Datenbit 6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>40 Reset<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>25 Not Connected<TT>&nbsp;&nbsp;&nbsp;</TT>16 Datenbit 7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>42 Message<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>27 bis 49 Ground<TT>&nbsp;&nbsp;&nbsp;</TT>18 Paritybit<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>44 Select<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 Datenbit 0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>20+28+30+34 Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>46 Command/Data<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 Datenbit 1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>22+24+28 Not Connected<TT>&nbsp;&nbsp;</TT>48 Request<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>6 Datenbit 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>26 Not Connected *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>50 I/O<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>8 Datenbit 3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>32 Attention<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10 Datenbit 4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>36 <A HREF="SCSI_BUSY_LED.html">Busy</A><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>* normal liegt <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>12 Datenbit 5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>38 Acknowledge<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>hier Termpower! <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>Nachrüsten von Termpower an der internen 50 poligen Stiftleiste</U><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ATW800 I/O Platine auf den Kopf legen (also ICs zur Tischplatte)!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Schnittstellenseite)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>--------------------------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * &lt;- Pin 1 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Den Pin 26 der Stiftleiste mit der Seite der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Diode verbinden die einen grauen/weissen Strich <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>trägt, nun etwas Schrumpfschlauch oder die Isolie-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>rung eines dickeren Kabels über die Diode ziehen bis<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>die Anschlußdrähte der Diode fast vollständig iso-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>liert sind. Nun den anderen Anschlußdraht mit dem <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ersten Pin der Fassung für den eine (der drei) 8-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * &lt;- Pin 25<TT>&nbsp;&nbsp;</TT>poligen Terminatoren verbinden. Kriegt man ohne <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Probleme auf die Unterseite der Platine.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Wer die <A HREF="INFO_SICHERUNG.html">Sicherung</A> miteinbaut (<A HREF="TERMPWR_SPEC.html">eigentlich Pflicht</A>)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>sollte sich vorher eine sogenannte Microfuse besor-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>gen (hat erheblich kleinere Abmessungen als die Glas<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>röhrensicherungen) und braucht dann natürlich etwas<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>mehr Isoliermaterial!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Die Reihenfolge der Leitung-Diode-Sicherung-Stecker<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ist egal!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * &lt;-Pin 49<TT>&nbsp;&nbsp;&nbsp;</TT>Die Terminatoren haben 8 Beinchen, davon werden 2 <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Stück für +5V und Ground (Masse) benötigt, die rest-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>lichen 6 Beinchen sind über Widerstandskombinationen<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 50<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(220 und 330 Ohm) mit den Datenleitungen verbunden.<BR>
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Pinbelegung der internen SCSI-Stiftl. der ATW800, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

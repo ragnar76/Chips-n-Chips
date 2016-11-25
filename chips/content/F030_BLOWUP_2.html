@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die FX-Karte der Firma Blow UP GbR, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="F030_BLOWUP.html">Previous</A>
+<A HREF="F030_BLOWUP_3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei manchen Falcons (meist Revision C/D) kann es (muß aber nicht) <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zu Problemen mit dem DMA-System (also SCSI-Probleme, Sound-Proble-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>me) führen, wenn der Einbau so wie in der Anleitung beschrieben <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vollzogen wird. Bei diesen Falcons hat sich folgende Änderung <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bewährt:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>-Ohne FPU:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es führt ein Draht vom oberen Anschluß von R221 zum Clockpatch-IC<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>74F04. Löten Sie diesen Draht _am_ IC ab und löten Sie ihn an den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oberen Anschluß von R217 an (da, wo auch die gelbe Litze weggeht!).<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es besteht dann also eine Verbindung von R221/oben zu R217/oben.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>-Mit FPU:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dort führt eine Litze vom 74F04 direkt zum DMA-Chip. Löten Sie diese<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>_am_ 74F04 ab und am oberen Anschluß von R217 an (dort geht schon <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die gelbe Litze weg). Es besteht dann also eine Verbindung R217/oben<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zum SDMA-Chip.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sollten (insbesondere bei 40 MHz-CPU-Takt) immer noch Probleme auf-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>treten, könnte folgende Änderung evtl. helfen:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>-Wiederherstellung der Verbindung R221/oben zum 74F04 bzw. 74F04 zum<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SDMA-Chip. (Rückgängigmachen des obigen Patches :-)<TT>&nbsp;&nbsp;</TT>)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Mit/ohne FPU:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es führt eine Litze vom unteren Anschluß von R221 zum 74F04. Löten <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sie diese an den oberen Anschluß von R217 (gelbe Litze...)<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Für den Interessierten:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Alle diese Modifikationen verändern das Timing des Taktes, mit dem <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der SDMA-Chip läuft. Dies ist die empfindlichste Stelle im Falcon-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Design, so daß brutale Timing-Änderungen (wie z.B. Beschleuniger ;-)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hier die stärksten Auswirkungen zeigen...<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MiNT und das FX-RAM...<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Aus noch nicht geklärten Gründen arbeitet MiNT nur ohne Memory-Pro-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tection (MINTNP.PRG) mit dem FX-RAM zusammen. Mit Memory-Protection<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wird es entweder nicht akzeptiert (FXDRIVE nach MINT gestartet) oder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Computer stürzt ab.<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hinweis zum Betrieb der NOVA mit FX:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Aufgrund eines kleinen Designfehlers (kein Open-Collector-Ausgang <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>des EXPAND-Signals) der NOVA-Adapterkarte arbeitet die NOVA unter<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Umständen (bei höheren Temperaturen) nicht mit der FX-Karte zusam-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>men:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nach dem Start von FXDRIVE.PRG stürzt der Rechner ab und auf dem <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bildschirm entsteht Pixelmüll. Wir empfehlen Ihnen nicht, damit <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zu arbeiten, da selbst bei scheinbarer Fehlerlosigkeit des RAMs <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schwerste Fehler in Programmen und auch auf der Festplatte ent-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stehen können.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Um dieses Problem zu beseitigen, ist folgende kleine Änderung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf der NOVA-Adapterkarte notwendig:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es muß eine Schottky-Diode BAT41 (oder ähnlich) in die Expand-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>leitung eingefügt werden, die in folgender Skizze markiert ist:<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="F030_BLOWUP_3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die FX-Karte der Firma Blow UP GbR, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

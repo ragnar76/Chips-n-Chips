@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Pinbelegung der externen SCSI-Buchse am TT030</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SCSI_F030.html">Previous</A>
+<A HREF="SCSI_TT030_50.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Pinbelegung der externen SCSI-Buchse am TT030<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 Request<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>11 Datenbit 5<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>23 Datenbit 4 <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 Message<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>12 Datenbit 6<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>25 Not Connected <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 I/O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>13 Datenbit 7 <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 Reset<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>15 Command/Data<TT>&nbsp;&nbsp;</TT>An Pin 25 liegt<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>5 Acknowledge<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>17 Attention<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>normal Termpower! <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>6 <A HREF="SCSI_BUSY_LED.html">Busy</A><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>19 Select<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>7+9+14+16+18+24 Ground<TT>&nbsp;&nbsp;</TT>20 Paritybit<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Beim TT030 ab Werk<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>8 Datenbit 0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>21 Datenbit 1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>NICHT belegt, d.h.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10 Datenbit 3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>22 Datenbit 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>KEIN Termpower!<BR>
+<BR>
+ <BR>
+<IMG SRC="../images/chips_Index1381.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>Nachrüsten von Termpower an der 25 poligen DSub-Buchse des externen</U><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>SCSI-Ports</U><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>TT030 Platine auf den Kopf legen (also ICs zur Tischplatte)!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Schnittstellenseite)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>----------------------------------------------------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;</TT>* * * * * * * * * * * *<TT>&nbsp;&nbsp;</TT>\_____ Lötpunkte der 25er Dsub SCSI Buchse<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| *|* * * * * * * * * * * * /<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>* * * * * * * * * ------ Lötpunkte des Sockels für den einen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8-poligen SCSI-Terminator<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>^<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|___~__|<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Den Pin 25 der SCSI DSub Buchse mit der Seite der Diode verbinden die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen grauen/weissen Strich trägt, nun etwas Schrumpfschlauch oder <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Isolierung eines dickeren Kabels über die Diode ziehen bis die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Anschlußdrähte der Diode fast vollständig isoliert sind. Nun den an-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>deren Anschlußdraht mit dem ersten Pin der Fassung für den eine (der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>drei) 8-poligen Terminatoren verbinden. Kriegt man ohne Probleme auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Unterseite der Platine. <A HREF="SCSI_TT030_BILD.html">Eine Farbbilddarstellung des ganzen.</A><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wer die <A HREF="INFO_SICHERUNG.html">Sicherung</A> miteinbaut (<A HREF="TERMPWR_SPEC.html">eigentlich Pflicht</A>) sollte sich<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vorher eine sogenannte Microfuse besorgen (hat erhebliche kleinere <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Abmessungen als die Glasröhrensicherungen) und braucht dann natürlich<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>etwas mehr Isoliermaterial!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Reihenfolge der Leitung-Diode-Sicherung-Stecker ist egal!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Terminatoren haben 8 Beinchen, davon werden 2 Stück für +5V und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ground (Masse) benötigt, die restlichen 6 Beinchen sind über Wider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>standskombinationen (220 und 330 Ohm) mit den Datenleitungen verbun-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Pinbelegung der externen SCSI-Buchse am TT030, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Ein unentdecktes Feature in MultiTOS</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="tos_err_2.html">Previous</A>
+<A HREF="TOS_UMSCHALTUNG_260.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gestern wurde von meinem Expeditionsteam eine neue undokumentierte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Funktion im MultiTOS von Atari gefunden. Sie beruht auf der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schlichten Tatsache, daß man Ordnern einen Namen geben kann oder <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>muß. Wem ist es schließlich nicht bekannt, daß auf der Diskette/<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Festplatte ein Ordner, der den Namen AUTO trägt, Programme beim <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Booten wie von Geisterhand startet?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nachdem es schon nicht gelungen war, durch anlegen eines Ordners,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>öffnen des Ordners, anlegen eines weiteren Ordners im Ordner, öff-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nen des Ordners im Ordner,usw usf. bis ins Betriebsystem vorzudrin-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gen, haben wir es dann auf eine viel simplere Art und Weise <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>geschafft. Man kann durch einen Trick vom Desktop(!) aus auf alle <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ins System eingebundenen Hardware-Komponenten zugreifen. Um diesen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Effekt zu erreichen legt man einfach einen Ordner mit dem Namen des<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>entsprechenden Chips an. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Eine kleine Liste: &quot;68000&quot;, &quot;68030&quot;, &quot;FPU&quot;, &quot;WD1772&quot;, &quot;Ajax&quot;, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;GLUE&quot;, &quot;DMA&quot;, &quot;Videl&quot;, &quot;Combel&quot;, &quot;68901&quot;, &quot;YM2149&quot;, &quot;MMU&quot;, etc.)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ist ein Bauteil nicht im System vorhanden, so ist der Ordner leer <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und kann so behandelt werden, wie jeder andere Ordner auch. Ist der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Chip jedoch vorhanden, so sieht man im Ordner jedes einzelne <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Register mit seinem Kürzel und Wert.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ich habe mir mal den 68000 angeschaut, dabei sieht man folgendes:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>NAME:<TT>&nbsp;&nbsp;</TT>LÄNGE: DATUM:<TT>&nbsp;&nbsp;&nbsp;</TT>UHRZEIT:<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>A4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>-------------------------------<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>D5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>D4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>D3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>D2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>D1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D9<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>D0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D10<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>AS_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D11<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>UDS_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D12<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>LDS_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D13<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00-00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R/W_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D14<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DTACK_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BGACK_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A23<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Vcc<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A22<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CLK<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A21<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A20<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>HALT_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A19<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RESET_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A18<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>VMA_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A17<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>E<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>VPA_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A15<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BERR_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A14<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IPL2_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A13<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IPL1_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A12<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IPL0_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A11<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FC2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A10<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FC1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A9<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FC0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>A1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>A2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>A3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nnnnn 00-00-00 00-00<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>n gibt hierbei den jeweils aktuellen Zustand an, um nun Manipula-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tionen durchführen zu können, wurde der Menuepunkt &quot;zeige Info&quot; er-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>weitert. Man öffnet jeden betreffenden Ordner (hier 68000) und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>klickt einfach das Register an, welches man ändern möchte und gibt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nun bei &quot;Länge&quot; den neuen (Register) Wert ein.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Ein unentdecktes Feature in MultiTOS, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Zusätzliche Informationen zu Integrierten Schaltungen</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="CMOS_IC_40000.html">Previous</A>
+<A HREF="IC_INFO_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zusätzliche Informationen zu Integrierten Schaltungen<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Logik Definition<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die logischen Funktionen der Integrierten Schaltungen werden mit den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ausdrücken der &quot;positiven Logik&quot; beschrieben, wobei folgende Defini-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tionen weltweit gelten:<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Niedrige Spannung = logische &quot;0&quot;<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hohe Spannung<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>= logische &quot;1&quot;<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eingangsstrombedarf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Eingangsstrombedarf der integrierten Schaltugen bezieht sich auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die jeweils ungünstigen Betriebsbedingungen innerhalb des empfohlenen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Umggebungstemperatur- und des Betriebsspannungsbereiches. Aus jedem <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eingang der Multi-Emitter-Transistoren, die einen Basiswiderstand von<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4 Kiloohm besitzen, fließt ein Strom von maximal -1.6 Milliampere, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wenn der Eingang auf logisch &quot;0&quot; Potential liegt: daher der Strom für<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eine Lasteinheit (N=1) von -1.6 Milliampere. Ebenso fließt in jeden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eingang, der auf logisch &quot;1&quot; Potential liegt, ein Strom von 40 Mikro-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ampere pro Emitter eines Eingangstransistors. Ströme, die in einen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Schaltkreis hineinfließen, haben ein positives Vorzeichen. In den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gleichspannungstestschaltungen wird die jeweilige Stromrichtung <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>durch einen Pfeil angegeben.<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ausgangsbelastbarkeit (Fan Out)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Ausgangsbelastbarkeit besagt, von wieviel Lasteinheiten (N) der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Schaltkreis bei &quot;0&quot; Potential einen Strom zu ziehen vermag bezie-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hungsweise an wieviel Lasteinheiten er bei &quot;1&quot; Potential einen Strom<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>liefern kann. Jeder Standardausgang ist in der Lage, 10 Eingänge bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>TTL ICs anzusteuern (N=10). Das Puffer Gatter kann 30 Lasteinheiten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(N=30) treiben. Lastströme (aus einem Ausgang) haben ein negatives<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Vorzeichen. In den Gleichspannungstestschaltungen geben Pfeile die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>jeweilige Stromrichtung an.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Unbenutzte Eingänge<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Um höchste Schaltgeschwindigkeit und größte Störunempfindlichkeit zu<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>erreichen, sollten unbenutzte Eingänge an ein festes Potential ange-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schlossen werden (je nach Gatter entweder an &quot;0&quot; oder &quot;1&quot; Potential).<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diese Maßnahme eliminiert die Schaltkapazitäten, die der offene <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Emitter des Eingangstransistors mit den Anschlüssen des Schaltkreises<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bildet und verhindert so eine vergrößerung der Übertragungsverzöge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>rung.<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Unbenutzte Eingänge von AND- und NAND Gattern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn sichergestellt ist, daß die Versorgungsspannung immer kleiner<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5.5 Volt ist, können unbenutzte Eingänge direkt an die Versorgungs-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>spannung angeschlossen werden. Ist dieses nicht sichergestellt, so<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>müssen die Eingänge über einen Widerstand größer 1 Kiloohm an die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Versorgungsspannung angeschlossen werden. Maximal 25 Eingänge können<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>an einen Widerstand für die Funktion angeschlossen werden. Die unbe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nutzen Eingänge können mit einem benutzten Eingang desselben Gatters<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verbunden werden, sofern der maximale Fan Out für logisch &quot;1&quot; Poten-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tial der treibenden Schaltung nicht überschritten wird. Die unbe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nutzten Eingänge können an den Ausgang eines unbenutzten invertie-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>renden Gatters, dessen Eingang auf &quot;0&quot; Potential liegt, verbunden <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="IC_INFO_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Zusätzliche Informationen zu Integrierten Schaltungen, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

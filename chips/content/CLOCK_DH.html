@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Clockpatch-Versuchsaufbau von Dieter Hönig</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="Speed_Resolution_Card.html">Previous</A>
+<A HREF="CLOCK_DH_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Clockpatch-Versuchsaufbau von Dieter Hönig<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Du brauchst dazu ein schnelles, ein langsameres Gatter und einen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>500 Ohm-Trimmer. Den Lötkolben setze ich mal voraus.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ich habe als Gatter ein 74F08 und ein 74LS08 verwandt. Es gibt dabei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>insgesamt 24 Kombinationsmöglichkeiten, um das Clocksignal für den <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DMA Chip zu verzögern, womit zwar nicht alle Zeitpunkte innerhalb <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eines Buszyklus lückenlos zu erreichen sind, aber bestimmt was dabei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ist, was den DMA-Clock-Impuls an einen Zeitpunkt setzt, an der die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DMA ungestört arbeiten kann. Wenn das erst im nächsten Buszyklus der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fall ist, ist es der DMA auch völlig wurscht. Die Hauptsache, sie <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wird nach dem Impuls beim werkeln nicht gestört (meine Hypothese).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das Problem bei dieser Art von Verzögerung ist, daß bei wechselndem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Systemtakt (25nS bei 40MHz, 27.8nS bei 36MHz und 31.25 bei 32MHz <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Systemtakt) die Verzögerung bei allen Buszyklen passen muss. Falls<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>das nicht möglich ist, sollte man sich darauf beschränken, daß der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falcon030 beim Original-Takt und dem höchsten Takt fehlerfrei läuft.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Meiner läuft mit der Nova bei allen und ohne Nova noch bei 32MHz und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>36Mhz Systemtakt fehlerfrei, weshalb ich derzeit wenig geneigt bin <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mit anderen Gatter-Typen noch weiter zu experimentieren. Es ist auch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>durchaus möglich, daß die DMA vor dem System-Clock getriggert werden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>müsste. Damit würden sich die gerade eben beschriebenen Probleme mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dem unterschiedlichen Systemtakt erübrigen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Da z.B. das MO4 von Soundpool bei Taktraten über 20MHz nicht mehr <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>arbeitet (jedenfalls bei mir mit 36MHz CPU-Takt nicht mehr, 32MHz <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nicht getestet), ist für den Cubase-Anwender die 40MHz Systemtakt-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Einstellung optimal. Oder man müsste dann den MO4.DRV-Treiber von<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Steinberg patchen, da die Loops bei verdoppelten CPU-Takt demnach<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nur noch halb solange am Centronics-Port das MO4 ansprechen (Durch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>diese kurze Ansprechzeit ist das MO4 dem ATARI MIDI-Port vom Timing<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>her natürlich deutlich überlegen und sollte bevorzugt benutzt werden.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CAF kann sich dadurch auch eher wieder der Grafikausgabe widmen).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mögliche Verzögerungen durch Kombination: F=Fast-Gatter, LS=Low Shottky<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 F + 0 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0 F + 1 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0 F + 2 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0 F + 3 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0 F + 4 LS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2 F + 0 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 F + 1 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 F + 2 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 F + 3 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 F + 4 LS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3 F + 0 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 F + 1 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 F + 2 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 F + 3 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 F + 4 LS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4 F + 0 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 F + 1 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 F + 2 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 F + 3 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 F + 4 LS<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 F + 1 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 F + 2 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 F + 3 LS<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 F + 4 LS<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei dem normalen Clockpatch sitzt der 74F08 auf dem IC U63. Der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bleibt da sitzen. Dann lötest Du den 74LS08 oder was Du zu nehmen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gedenkst auf dieselbe Art und Weise auf den IC davor (ich hab jetzt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kein Bock nochmal den F030 aufzuschrauben und nachzusehen welche <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Unit das ist, wohl U61). Der LS-Typ hat weniger Ausgangs-Leistung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>als der F-Typ, weshalb der DMA keinen Schaden zugefügt werden kann.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Den 500 Ohm-Trimmer lötest Du schaltungstechnisch zwischen das <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>letzte Gatter und der DMA (Lötpunkt oben R221) am besten an Pin 8 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>des 74LS08 bzw 74F08 bei den ersten 4 Kombinationen.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="CLOCK_DH_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Clockpatch-Versuchsaufbau, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

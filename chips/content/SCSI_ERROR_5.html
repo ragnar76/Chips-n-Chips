@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Fehlermeldungen aus dem SCSI Standardwerk, Seite 5</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SCSI_ERROR_4.html">Previous</A>
+<A HREF="SCSI_ERROR_6.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D - DIRECT ACCESS DEVICE (SBC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>device column key<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.T - SEQUENTIAL ACCESS DEVICE (SSC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>. L - PRINTER DEVICE (SSC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>blank = reserved<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>P - PROCESSOR DEVICE (SPC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>not blank = allowed<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.W - WRITE ONCE READ MULTIPLE DEVICE (SBC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. R - READ ONLY (CD-ROM) DEVICE (MMC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>S - SCANNER DEVICE (SGC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.O - OPTICAL MEMORY DEVICE (SBC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. M - MEDIA CHANGER DEVICE (SMC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>C - COMMUNICATION DEVICE (SSC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.A - STORAGE ARRAY DEVICE (SCC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. E - ENCLOSURE SERVICES DEVICE (SES)<BR>
+ASC/ASCQ DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>Description<BR>
+-------<TT>&nbsp;&nbsp;</TT>------------<TT>&nbsp;&nbsp;</TT>----------------------------------------------------<BR>
+<BR>
+3Fh/01h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>MICROCODE HAS BEEN CHANGED<BR>
+43h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>MESSAGE ERROR<BR>
+53h/00h<TT>&nbsp;&nbsp;</TT>DTL WRSOM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MEDIA LOAD OR EJECT FAILED<BR>
+53h/02h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR OM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MEDIUM REMOVAL PREVENTED<BR>
+67h/03h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>MODIFICATION OF LOGICAL UNIT FAILED<BR>
+69h/01h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>MULTIPLE LOGICAL UNIT FAILURES<BR>
+<BR>
+00h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>NO ADDITIONAL SENSE INFORMATION<BR>
+00h/15h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>NO CURRENT AUDIO STATUS TO RETURN<BR>
+01h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>NO INDEX/SECTOR SIGNAL<BR>
+02h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>WR OM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>NO SEEK COMPLETE<BR>
+03h/01h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>NO WRITE CURRENT<BR>
+06h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>WR OM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>NO REFERENCE POSITION FOUND<BR>
+11h/09h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>NO GAP FOUND<BR>
+28h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>NOT READY TO READY CHANGE, MEDIUM MAY HAVE CHANGED<BR>
+32h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>NO DEFECT SPARE LOCATION AVAILABLE<BR>
+<BR>
+<BR>
+00h/16h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>OPERATION IN PROGRESS<BR>
+2Dh/00h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>OVERWRITE ERROR ON UPDATE IN PLACE<BR>
+4Eh/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>OVERLAPPED COMMANDS ATTEMPTED<BR>
+5Ah/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>OPERATOR REQUEST OR STATE CHANGE INPUT<BR>
+5Ah/01h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR OM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>OPERATOR MEDIUM REMOVAL REQUEST<BR>
+5Ah/02h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>OPERATOR SELECTED WRITE PROTECT<BR>
+5Ah/03h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>OPERATOR SELECTED WRITE PERMIT<BR>
+61h/02h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>OUT OF FOCUS<BR>
+<BR>
+03h/00h<TT>&nbsp;&nbsp;</TT>DTL W SO<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>PERIPHERAL DEVICE WRITE FAULT<BR>
+15h/02h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>POSITIONING ERROR DETECTED BY READ OF MEDIUM<BR>
+1Ah/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>PARAMETER LIST LENGTH ERROR<BR>
+1Ch/01h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>PRIMARY DEFECT LIST NOT FOUND<BR>
+1Fh/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>PARTIAL DEFECT LIST TRANSFER<BR>
+26h/01h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>PARAMETER NOT SUPPORTED<BR>
+26h/02h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>PARAMETER VALUE INVALID<BR>
+27h/04h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>PERSISTENT WRITE PROTECT<BR>
+27h/05h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>PERMANENT WRITE PROTECT<BR>
+29h/00h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>POWER ON, RESET, OR BUS DEVICE RESET OCCURRED<BR>
+29h/01h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>POWER ON OCCURRED<BR>
+2Ah/00h<TT>&nbsp;&nbsp;</TT>DTL WRSOMCAE<TT>&nbsp;&nbsp;</TT>PARAMETERS CHANGED<BR>
+3Bh/05h<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>L<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>PAPER JAM<BR>
+3Bh/0Bh<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>POSITION PAST END OF MEDIUM<BR>
+3Bh/0Ch<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>POSITION PAST BEGINNING OF MEDIUM<BR>
+42h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>POWER-ON OR SELF-TEST FAILURE (SHOULD USE 40 NN)<BR>
+50h/02h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>POSITION ERROR RELATED TO TIMING<BR>
+69h/02h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>PARITY/DATA MISMATCH<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="SCSI_ERROR_6.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Fehlermeldungen aus dem SCSI Standardwerk, Seite 5<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

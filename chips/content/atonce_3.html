@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Vortex ATonce - DOS Emulator, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="atonce_2.html">Previous</A>
+<A HREF="atonce_4.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>o<TT>&nbsp;&nbsp;</TT>Abschrauben des auf die Floppy unten aufgeschraubten Blechs.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dadurch entsteht in der Regel zwar ein knapper, aber dennoch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ausreichender Einbauraum.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>o<TT>&nbsp;&nbsp;</TT>Die zweite Möglichkeit erfordet weitergehende Kenntnisse im<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Umgang und im Auslöten von &quot;vielbeinigen&quot; Bauteilen. Außerdem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wird eine Entlötpumpe, oder noch besser eine Entlötstation<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>benötigt. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es wird hierzu die MC68000 CPU ausgelötet und danach eine Fassung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in die Mutterplatine des 1040ST eingelötet. Auf den ATonce wird<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ebenfalls eine Fassung gelötet. ATonce nun in die leere Fassung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf der 1040ST Mutterplatine stecken und die MC68000 CPU in die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf den ATonce aufgelötete Fassung stecken. Unbedingt darauf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>achten, daß der ATonce und die MC68000 CPU richtig orientiert<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eingesteckt werden. <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Entfernen der kleinen Zusatzplatine bei manchen Mega ST Computern.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei manchen Mega ST Computern wurde an die MC68000 CPU eine kleine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zusatzplatine gelötet, die einen Design-Fehler beseitigt. Es ist<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zweckmäßig diese Platine zuerst von ihren Stiften abzulöten und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>an die Stifte von der MC68000 CPU. Eine Entlötpumpe oder Entlöt-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>station leisten hier gute Dienste.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Probleme, die durch die Hardware des Atari ST Computer entstehen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Vorab ist festzustellen, daß das Design des ST Computers zwar her-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vorragend erdacht wurde, doch z.T. alles andere als hervorragend in<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Realität umgesetzt wurde. Dadurch können, wenn nun Peripherie-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Geräte, oder andere Zusätze angeschlossen werden Probleme entstehen.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es ist natürlich einfach zu sagen, daß der ST ohne Zusatz &quot;X&quot; geht <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und mit Zusatz &quot;X&quot; nicht mehr richtig geht, also liegts am Zusatz <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;X&quot;. (Mancher Händler wird diese Argumentation gerne benutzen, um <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sich einen lästigen Kunden vom Hals zu schaffen). Diese Aussage ist<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in aller Regel falsch. Denn die Ursache - und auf die kommt es hier<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>an - liegt nicht im Zusatz, sondern im Rechner selber, der an ent-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>scheidenden Stellen Schwächen aufweist. <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Mega ST läuft manchmal nicht hoch und der Bildschirm bleibt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dunkel.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wir haben beobachtet, daß speziell bei Mega STs, deren CPU mit der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kleinen Leiterplatte ausgerüstet sind, manchmal der Rechner nach<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dem Einbau des ATonce nicht mehr hochläuft. Hier hilft ein Wider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stand von ca. 40 Ohm zwischen PIN 12 (MC68000 CPU/ATonce) und dem <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ersten Anschluß-Beinchen der kleinen Leiterplatte, d.h. dieses<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beinchen geht nicht mehr direkt zur MC68000/ATonce, sondern wird<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>über diesen Widerstand geführt.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Mega ST bleibt beim Speichertest des ATonce hängen, oder stürzt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unter GEMDOS und/oder MSDOS unkontrolliert ab. In manchen Mega STs <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wurden an einer ganz bestimmten Stelle der Mutterplatine Bauteile <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;fragwürdiger&quot; Qualität eingesetzt. Die dort verwendeten Bauteile<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>entsprechen nicht den original Texas Instruments Spezifikationen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und laufen auch ohne (!) ATonce in einem, von der technischen Seite<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>her gesehen, unzulässigen Bereich. Dies sind zwei 20-polige Bauteile<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die zwischen den ROMs und dem RAM der Mutterplatine liegen. Sie tra-<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="atonce_4.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Vortex ATonce - DOS Emulator, Seite 3<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für 260/520/1040/MegaST, Seite 10</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="Tips260st9.html">Previous</A>
+<A HREF="Tips260st11.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn man in die Versorgungsleitung des DMA-Chips (C025913-38) eines<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1040STF eine Diode einschleift, streikt das Diskettenlaufwerk.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn man die Diode weglässt, so funktioniert das Diskettenlaufwerk<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wieder, aber der Rechner hängt sich bei größeren Kopieraktionen auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Platte weg und macht einen Reset.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>A) Die Diode hilft nur bei den IMP Chips (DMA C100110-001) und beim<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IMP Shifter (hier nicht von betroffen).<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>B) Man sollte die sechs Terminierungwiderstände RP1 bis RP6 (4,7 Kilo<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ohm und 10 Kiloohm gegen 3,3 Kiloohm typen ersetzen (am besten gleich<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sockeln), sowie die Bustreiber 74LS373 und 74LS244 gegen die Typen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>74F373 und 74F244. Und an den Widerstand R4 einen weiteren 1k Wider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stand parallel anlöten (Das hat bis jetzt immer zum Erfolg geführt.)<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diese Karte ist die Blitterchip Erweiterungskarte von Rolf Rocke <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Computer für alle unverblitterten ST-Computer. <BR>
+<BR>
+<IMG SRC="../images/chips_Index1467.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Blitter-Nachrüstsatz besteht aus einer Platine, einem ,Spezial-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sockel' und einem 3 adrigen Kabel mit Buchse. Der Blitter ist ein <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DMA-fähiger Baustein, und als solcher muß er sich den Bus mit dem <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DMA-Baustein für ACSI-DMA und Floppy sowie dem Prozessor teilen. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Deswegen muß erstmal der originale Prozessor ausgelötet werden und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Pins 11 und 12 des 68000 (BG und BGACK) müssen nun mit dem MFP <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und dem GLUE verschaltet werden. Aus diesem Grunde liegtjener <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>,Spezialsockel' bei. An besagten Pins (11 und 12) fehlen die Bein-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>chen, die nötigen Verbindungen werden über das 3adrige Kabel herge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stellt. Dazu müssen 3 Lötpads auf der Platine ausfindig gemacht wer-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den, was aber aufgrund der bebilderten Anleitung nicht allzu schwer<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>fallen dürfte.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Interessant wird der Einbau aber erst, wenn man schon diverse Erwei-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>terungen eingebaut hat wie zum Beispiel die PAK-68 mit Umschaltpla-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tine, die ja auch auf den 68000 aufgelötet oder in einen entprechen-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den Sockel gesteckt wird. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nur mit der PAK funktioniert der Blitter, aber die PUK-Umschaltpla-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tine verträgt sich nicht so ohne weiteres mit ihm. Es ist nötig, auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Umschaltplatine zwischen Pin 15 von IC 2 und +5 V einen 2.2 bis<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3.3 kOhm Widerstand einzulöten.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ATARI empfiehlt bei Erweiterungen, die über den Systembus der neuen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MEGA STs angeschlossen werden, die Signale BR und BGACK über 4,7 kOhm<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pull-up-Widerstände abzuschließen. Vielleicht bringt diese Maßnahme <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auch in Ihrem Rechner eine verbesserung.<BR>
+ <BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Tips260st11.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für 260/520/1040/MegaST, Seite 10<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

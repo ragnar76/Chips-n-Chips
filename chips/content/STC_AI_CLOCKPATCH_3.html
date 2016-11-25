@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Clockpatch aus der ST-Computer Zeitschrift, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="STC_AI_CLOCKPATCH_2.html">Previous</A>
+<A HREF="STC_AI_CLOCKPATCH_4.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R217 und wird dann an den Filter- beziehungsweisen Dämpfungswider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ständen R216, R221 und R222 an die 4 mit 16.042494MHz getaktenen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Komponenten auf der Hauptplatine verteilt. So weit, so gut. Anfang <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1994 stellte sich dann heraus, nachdem die Festplattenindustrie immer<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schnellere Festplatten produzierte, das der SDMA Chip bei schnellen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI Datentransfers probleme bekam wenn die angeschlossene Festplatte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schneller als 1400 Kilobyte pro Sekunde Daten liefern beziehungsweise<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schreiben konnte. Die Ursache fand sich dann schnell und nach einigem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>anderen Patches einigte man sich dann auf die Lösung mit dem 74F04 IC<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>im 16.042494MHz Taktpfad. Wie in der Digitaltechnik üblich, haben ICs<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen vom Hersteller garantierten Funktionsbereich wie man dem dazu-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gehöri gen Datenblatt entnehmen kann. Auszug aus dem Datenblatt zum<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>74F04 IC von Motorola und Philips Semiconductors: <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Symbol<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Parameter<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Min<TT>&nbsp;&nbsp;&nbsp;</TT>Typ<TT>&nbsp;&nbsp;&nbsp;</TT>Max<TT>&nbsp;&nbsp;&nbsp;</TT>Größe<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Vcc<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Versorgungsspannung<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4.5<TT>&nbsp;&nbsp;&nbsp;</TT>5.0<TT>&nbsp;&nbsp;&nbsp;</TT>5.5<TT>&nbsp;&nbsp;&nbsp;</TT>Volt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ta<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Temperaturbereich<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>25<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>70<TT>&nbsp;&nbsp;&nbsp;</TT>Grad<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IoH<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ausgangsstrom Highpegel<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-1.0<TT>&nbsp;&nbsp;&nbsp;</TT>Milliampere<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IoL<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ausgangsstrom Lowpegel<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>20<TT>&nbsp;&nbsp;&nbsp;</TT>Milliampere<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tplh<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Gatterlaufzeit Highpegel 2.4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5.0<TT>&nbsp;&nbsp;&nbsp;</TT>Nanosekunden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tphl<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Gatterlaufzeit Lowpegel<TT>&nbsp;&nbsp;</TT>1.5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4.3<TT>&nbsp;&nbsp;&nbsp;</TT>Nanosekunden<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nanosekunden Auszug aus dem Datenblatt zum DM7404 von Fairchild <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Semiconductors <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Symbol<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Parameter<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Min<TT>&nbsp;&nbsp;&nbsp;</TT>Typ<TT>&nbsp;&nbsp;&nbsp;</TT>Max<TT>&nbsp;&nbsp;&nbsp;</TT>Größe<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Vcc<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Versorgungsspannung<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4.5<TT>&nbsp;&nbsp;&nbsp;</TT>5.0<TT>&nbsp;&nbsp;&nbsp;</TT>5.5<TT>&nbsp;&nbsp;&nbsp;</TT>Volt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>TA<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Temperaturbereich<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>25<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>70<TT>&nbsp;&nbsp;&nbsp;</TT>Grad<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IoH<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ausgangsstrom Highpegel<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-0.4<TT>&nbsp;&nbsp;</TT>Milliampere<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IoL<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ausgangsstrom Lowpegel<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>16<TT>&nbsp;&nbsp;&nbsp;</TT>Milliampere<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tplh<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Gatterlaufzeit Highpegel<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>22<TT>&nbsp;&nbsp;&nbsp;</TT>Nanosekunden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tphl<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Gatterlaufzeit Lowpegel<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>25<TT>&nbsp;&nbsp;&nbsp;</TT>Nanosekunden<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Funktion dieses 74F04 ICs ist folgende: Der 16.042494MHz Takt, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wird am Pin 1 eingespeist und in diesem Gatter invertiert und kommt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>an Pin 2 wieder heraus. Der Pin 2 ist mittels einer Drahtbrücke mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den Pins 9, 11 und 13 verbunden. In diesen 3 Gattern wird das Signal<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wieder invertiert und damit wieder &quot;richtig herumgedreht&quot; an die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verschiedenen Komponenten auf der Hauptplatine weitergeleitet. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dadurch daß das 16.042494MHz Signal auf seinem Weg durch das 74F04 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IC durch zwei Gatter geführt wird, ergibt sich somit eine Gatter-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>laufzeit von über den Daumen gepeilt 7 Nanosekunden (weil der Her-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>steller auch nur einen gewissen Bereich garantiert aufgrund der Fer-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tigungstoleranzen während der Chipproduktion). Diese 7 Nanosekunden <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sind zwar eigentlich nicht viel und viele Falcon030 kommen auch damit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zurecht und arbeiten dann auch zur Zufriedenheit ihrer Besitzer, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>leider gibt es aber auch bei den Cus omchips von Atari (hier Combel,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SDMA und Videl Chip) Fertigungstoleranzen. Diesen Problemrechnern muß<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>man dann leider mit einen Oszilloskop (das sind diese kleinen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schnuckligen Geräte mit dem Grünen Bildschirm und diesen &quot;komischen&quot;<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kurven auf der Bildröhre) zuleibe rücken. <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dazu gibt es zwei möglichkeiten:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Entweder man findet wirklich einen 74F04 IC mit der angegeben <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mindestgatterlaufzeit von 1.5 Nanosekunden und kann so die Phasen-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verschiebung (siehe auch Abbildung PHASENVERSCHIEBUNG) der Signale <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf ein minimum reduzieren oder man trennt den FPU/SDMA Signalpfad<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf und führt das Signal welches für den SDMA Chip zuständig ist <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>über weitere Gatter, diese würde dann so aussehen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="STC_AI_CLOCKPATCH_4.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Clockpatch aus der ST-Computer Zeitschrift, Seite 3<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

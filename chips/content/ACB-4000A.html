@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der ACB-4000A MFM-zu-SCSI-Controller von Adaptec</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SH204_2.html">Previous</A>
+<A HREF="SH_205.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der ACB-4000A MFM-zu-SCSI-Controller von Adaptec<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Note: This board does not connect directly to the host's bus. <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Instead, it allows a SCSI host adapter to control up to 2 MFM<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>drives. The SCSI host adapter connects to this board, which <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>in turn is connected to up to 2 MFM drives.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Drives:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 MFM drives (see note above).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>J0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Drive 0 data connector.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>J1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Drive 1 data connector.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>J2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HD control connector.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>J3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DC power connector.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>J4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Internal SCSI connector (to SCSI host adapter).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>P - K<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pulse select protocol used by SASI standard.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>K - L<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Default)<TT>&nbsp;&nbsp;</TT>Level select protocol use by SCSI standard.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>PU - R<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Precomp disabled for both drives.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R<TT>&nbsp;&nbsp;</TT>- S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Precomp begins at RWC cylinder for both drives.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R<TT>&nbsp;&nbsp;</TT>- T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Precomp enabled on all tracks for both drives.<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>J5 -1 Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>SCSI ID 0.<TT>&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI ID 1.<TT>&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>SCSI ID 2.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-2 Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-3 Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI ID 3.<TT>&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>SCSI ID 4.<TT>&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI ID 5.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>SCSI ID 6.<TT>&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;</TT>(Default)<TT>&nbsp;&nbsp;</TT>SCSI ID 7.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-4 Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DMA xfer rate = DATACLOCK / 2.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;</TT>DMA xfer rate = SYSCLOCK<TT>&nbsp;&nbsp;</TT>/ 4.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-5 Closed<TT>&nbsp;&nbsp;&nbsp;</TT>Extended command set enabled (should be used only<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>when replacing SASI controllers).<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Default)<TT>&nbsp;&nbsp;</TT>Extended command set disabled.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Reserved.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-7 Closed<TT>&nbsp;&nbsp;&nbsp;</TT>Support for drives that drop the SEEK COMPLETE signal<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>when switching heads (ie. Syquest 312 and DMA 360).<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Default)<TT>&nbsp;&nbsp;</TT>SEEK COMPLETE supported not necessary.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-8 Open<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Default - Diagnostic mode disabled (normal operation)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Closed<TT>&nbsp;&nbsp;&nbsp;</TT>Manufacturer diagnostic mode enabled.<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Terminators:<TT>&nbsp;&nbsp;&nbsp;</TT>Default is installed. If this is not the 1st or last<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>in a series of SCSI devices, or if inline terminators<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>are in use, remove both terminating resistor packs.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der ACB-4000A MFM-zu-SCSI-Controller von Adaptec, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

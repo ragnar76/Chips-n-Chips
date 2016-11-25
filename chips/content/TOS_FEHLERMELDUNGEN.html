@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Fehlermeldungen des TOS Betriebssystem</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="patch_6.html">Previous</A>
+<A HREF="tos_err_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Here is John Townsend's famous TOS error list.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>==================================================================<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>EVERYTHING YOU NEVER WANTED TO KNOW ABOUT TOS ERROR NUMBERS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>==================================================================<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The GEM function which displays &quot;TOS Error #...&quot; does not display<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in the alert box the actual error value returned by GEMDOS or BIOS.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Those return values are negative numbers (e.g. GEMDOS error -66 is<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;Invalid program load format&quot;). Negative GEMDOS error returns are<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>translated nach MS-DOS error numbers for the form_error() alert box<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>you see. BIOS errors result in a &quot;Critical Error&quot; alert, which gi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ves you a chance to retry the disk access that caused the error.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>For those of you with a furniture fetish, here's a table:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GEMDOS<TT>&nbsp;&nbsp;</TT>MS-DOS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Error description<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>error<TT>&nbsp;&nbsp;&nbsp;</TT>error<TT>&nbsp;&nbsp;&nbsp;</TT>Alert text (TOS 1.4 or &gt;)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>------------------------- ------<TT>&nbsp;&nbsp;</TT>------<TT>&nbsp;&nbsp;</TT>-------------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Invalid function #<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-32<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>TOS Error #1.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>File not found<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-33<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>This application cannot<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Path not found<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-34<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>find the folder or file<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>No more files<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-49<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>18<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>you just tried to access.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Too many open files<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-35<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>This application does not<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>have room to open another<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>document. To make room,<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>close any document that<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>you do not need.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Access denied<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-36<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>An item with this name<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>already exists in the<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>directory, or this item<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>is set to Read Only status<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Invalid handle<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-37<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>TOS Error #6.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Insufficient memory<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-39<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>There is not enough memory<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Invalid memory block addr. -40<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>9<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>in your computer for the<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>application you just tried<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>to run.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Invalid drive<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-46<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>15<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>The drive you specified<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>does not exist.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Not same drive (on rename) -48<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>17<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>TOS Error #17.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Seek out of range<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-64<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n/a<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>TOS Error #33.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Internal error<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-65<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n/a<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>TOS Error #34.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Invalid prg load format<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>-66<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n/a<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>(infamous) TOS Error #35.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Setblock failed<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-67<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>n/a<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>TOS Error #36.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Note that some MS-DOS error codes do not have equivalent GEMDOS er-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>rors, and some GEMDOS error codes do not exist in MS-DOS.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="tos_err_2.html">weiterblättern</A> <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Fehlermeldungen des TOS Betriebssystem, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

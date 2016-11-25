@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Clockpatch-Versuchsaufbau, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="CLOCK_DH_2.html">Previous</A>
+<A HREF="CLOCK_DH_4.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>-------erste Tests--------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mach die Tests am besten bei Nutzung der NOVA-Karte, da Du ja <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sowieso in erster Linie nur damit arbeiten wirst. Ein Monitor am <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falcon-VGA-Ausgang ist sehr nützlich, um Probleme sofort erkennen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und den Rechner fix abzuschalten zu koennen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falls Du den Rechner mit XBOOT bootest, so konfiguriere Dir Deine <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Konfiguration und schalte nachher XBOOT mittels (z.B.) PRX im Auto-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ordner ab, damit nach dem Experiment beim Booten nicht auf die Fest-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>platte geschrieben wird!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nachdem Du ein Totalbackup Deiner Festplatten gemacht hast(!) kannst<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Du nach umfangreichen Kopieraktionen mittels TREE_CHK.PRG aus der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kobold-Dreingabe die Fehlerrate beim SCSI-Kopieren ermitteln. Mach <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>diese Test bei allen System-Taktraten, zumindes aber auch bei 32MHz! <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn alle Dateien fehlerhaft sind, kannst Du gleich ein Gatter dazu-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nehmen. Prüfe dann mit CORRECT.PRG die SCSI-HD und repariere gege-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>benenfalls die FAT damit.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ist nur ein Prozentsatz fehlerhaft, dann mach nach Erhöhung des Wi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>derstands mittels Trimmer nochmals Kopieraktionen und prüfe erneut <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bei allen System-Taktraten. Tritt eine Verbesserung der Fehlerrate<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ein, jedoch keine Fehlerfreiheit, kann bereits die Zunahme eines <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schnellen Gatters der Volltreffer sein (oder leider schon übers Ziel<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hinausschiessen).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Übrigens empfiehlt es sich über einen Kobold-Job die immer wieder-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kehrenden Kopieraktionen zu automatisieren. TREE_CHK kann man in ein<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ACC umbenennen, was die ständige Pfadauswahl erübrigt. Als letzten <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Härtetest empfiehlt sich der Belastungstest von SCSITools.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fallst Du MEMTEST hast (in FXTOOLS), könntest Du damit auch einen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dauertest machen (liest ewig 2 mal gleiche Datenbereiche von Platte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und vergleicht diese). Ich hatte aber das Problem, dass das Lesen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von SCSI OK war, das Schreiben aber nicht. Somit ist SCSITools <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>besser.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn Du beim Einschalten des F030 nur drei senkrechte Streifen auf <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Deinem Monitor am VGA-Ausgang des Falcon siehst, kriegt die DMA <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>keinen Clockimpuls (kalte Lötstelle oder so).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mach bei allen Gatterkombinationen über alle Fehlerraten und das <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Verhalten bei Aufnahmen mit Cubase Notizen (Knackser). Diese Tests <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sind das Aufwendigste an der ganzen Sache.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>--------Cubase-Check--------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Läuft der SCSI-Transfer fehlerfrei, dann starte Cubase mit Nova bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>40MHz Systemtakt mit einem DEF.ALL, das bereits eine Aufnahme und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die gleich beschriebenen Locator-Positionen beinhaltet.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Öffne den Monitor. Siehst Du hier schon Knackser, probier nochmal bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>laufendem Rechner den Trimmer-Widerstand etwas zu erhöhen. Vorher <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Deine statische Aufladung beseitigen (Masse beruehren).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sind die Knackser weg, so setze den Position-Pointer mittels 1 und 2<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Zehnertastatur wechselweise auf den Left- und Right-Locator. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diese müssen (natürlich) an Stellen sitzen, wo eine Audio-Part vor-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>handen ist (am besten schon im DEF.ALL vorinstallieren). Dabei macht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die SCSI-HD Leseoperationen. <BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="CLOCK_DH_4.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Clockpatch-Versuchsaufbau, Seite 3<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

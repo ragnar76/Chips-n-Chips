@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>ATM - Asynchronous Transfer Mode</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="FDDI.html">Previous</A>
+<A HREF="DIE_KABELTYPEN.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ATM - Asynchronous Transfer Mode<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Asynchronous Transfer Mode basiert auf einer Zell-orientierten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Übermittlungstechnik. Die erforderlichen Übertragungskapazitäten kann<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>jeder Teilnehmer individuell bestimmen. Ein ATM-Cell-Strom kann theo-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>retisch mehr als 200 Millionen verschiedene Verbindungen enthalten. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Daten in diesen Kanälen werden mittels sogenannter Zellen über-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tragen. Die 53 Byte langen Zellen bestehen aus einem 5 Byte langen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kopf mit Verwaltungsinformation und einem 48 Byte langen Feld zum <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Transport von Nutzinformation. Die Zellen einer Verbindung werden <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unregelmäßig (asynchron) in den ATM-Strom eingefügt.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Übertragungsstandard ATM ermöglicht es, alle Arten von Informa-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tionen (Daten/Texte, Bild, Ton und Video) nebeneinander auf allen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Arten von Kabeln (Ausnahme: einfache Telefonleitungen) und Funk-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>strecken von hausinternen Computernetz bis zur weltumspannenden <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Telekummunikation durchgängig zu transportieren. ATM hilft, Hochge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schwindigskeitsnetze besser auszulasten und schafft die voraussetzun-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gen für vernetzte Multimedia-Anwendungen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die im Standard festgelegte Übertragungsgeschwindigkeit beträgt für<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Glasfasern/Multimode 155,52 Mbit/s und bei Kupferkabel der Kategorie<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5 für 100 Mbit/s.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Auf einem Netz mit einer Ausstattung sind unterschiedliche Übertra-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gungsgeschwindigkeiten möglich. In der heutigen synchronen Welt ist <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>für jedes Tempo (Bandbreite, gemessen in Bit pro Sekunde) ein eigenes<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Netz mit speziellen Anschlüssen, Endgeräten und Umsetzern nötig:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Telefonate (und Faxe) gehen - leitungsvermittelt - über das normale <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fernsprechnetz der Deutschen Telekom (oder auch nicht :-) ), für <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Videokonferenzen müssen spezielle Leitungen geschaltet werden. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sprach- und Videosignale brauchen nämlich während der Übertragung <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ständig freie Bahn, weil Ton und Bild sich verändern, wenn sie un-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>terwegs gebremst werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>In Computernetzen kommt es dagegen darauf an, die Daten absolut zu-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verlässig beim Empfänger abzuliefern und den typischen Stoßverkehr <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Burst) zu bewältigen. Deshalb werden hier einzelne, unterschiedlich<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>große Datenpakete übermittelt - ob im hausinternen lokalen Netzwerk<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(LAN) oder aber über den Datex-P-Dienst der Telekom.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ATM vereinigt die Vorteile der leitungs- und der paketvermittelten <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Techniken - dank einer ebenso simplen wie genialen Grundidee: <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Alle Arten von Informationen - ob Daten, Ton oder Bilder - werden in<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kompakte digitale Normcontainer (Zellen) geladen, die jeweils 48 Byte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Inhalt fassen. Jede Zelle hat außerdem einen Kopf von fünf Byte, um <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Absender, Empfänger und Art des Inhalts identifizieren zu können. So<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lassen sich in bunter Folge Daten und Dokumente, Audio- und Video-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>signale über dieselbe Schnelltrasse schicken. Für verzögerungsem-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>pfindliche und daher vorfahrtberechtigte Dienste - wie zum Beispiel<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Videokonferenzen - werden einfach Kolonnen von mehreren Containern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gebildet und durchgeschleust.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Erdacht wurde ATM für die integrierten Glasfaser-Breitbandnetze <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(B-ISDN), die Telefongesellschaften der führenden Industrienationen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>planten. Der weltweit erste ATM-Versuch fand 1989 im Berliner DeTe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Berkom-Projekt der Deutschen Bundespost Telekom statt.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel ATM - Asynchronous Transfer Mode, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

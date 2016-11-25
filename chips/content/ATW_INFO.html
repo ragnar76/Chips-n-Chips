@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Innenleben der ATW800, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="ATW_I_O_2.html">Previous</A>
+<A HREF="BLOSSOM.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Prozessor:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>INMOS T800 Transputer mit 20 MHz (externer Takt 5 MHz)<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I/O Board:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Neudesigntes MegaST Mainboard mit <A HREF="PS2_SPEICHERERWEITERUNG.html">1MB Ram</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ohne Blitterchip aber mit SCSI Controller <A HREF="ATW800_SCSI.html">L5380LP-2</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>und Ansteuerlogikchip Morpheus on Board <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RAM:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4MB (70ns) erweiterbar auf 16MB Hauptspeicher mit 4<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Megabit RAMchips auf bis zu 64 Megabyte erweiterbar<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1MB (100ns) Dual Port-Video-RAM (Farbblitter <A HREF="BLOSSOM.html">BLOSSOM</A>)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Massenspeicher: DD-Floppy, 20/40/80/100/150 Megabyte große Harddisk<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Tastatur:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="MEGA_KEY.html">Mega ST Tastatur</A> mit 96 Tasten<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Monitor:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Analog RGB<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Grafikmodi:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1280 x 960<TT>&nbsp;&nbsp;</TT>4 Bit (16 Farben oder Monochrom)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1024 x 768<TT>&nbsp;&nbsp;</TT>8 Bit (256 Farben)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>640 x 480<TT>&nbsp;&nbsp;</TT>8 Bit (256 Farben)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>512 x 480 32 Bit (True Color)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Schnittstellen: <A HREF="SCSI_ATW_50.html">SCSI</A>, <A HREF="ACSI_DMA_BUCHSE.html">ACSI DMA</A>,<A HREF="MIDI_IN_BUCHSE.html">Midi In</A>, <A HREF="MIDI_OUT_BUCHSE.html">Midi Out</A>, <A HREF="MODEM_1_BUCHSE.html">RS232 (Modem 1)</A>,<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="CENTRONICS_BUCHSE.html">Centronics</A>, <A HREF="MAUS_BUCHSE.html">Maus</A>/<A HREF="JOYSTICK_BUCHSE.html">Joystick</A>, <A HREF="FLOPPY_INTERN_ST.html">DD-Floppy</A>, Ethernet <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(sofern Steckkarte vorhanden), Diagnosekarte<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Erweiterungen:<TT>&nbsp;&nbsp;</TT>4 20 MHz-INMOS-Links für 12 weitere Transputer mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>je 1 MB RAM, 32-Bit-Video-Erweiterungsbus<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Peripherie:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Laserdrucker, CD-ROM<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Betriebssystem: Helios, XWindows<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Farmcard:<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 T800 Transputer mit je 1 MB eigenem Hauptspeicher<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das Blockdiagramm der ATW800 und dem (<A HREF="I_O_BLOCK.html">I/O SUBSYSTEM</A>)<BR>
+<BR>
+<IMG SRC="../images/chips_Index1410.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+ <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Innenleben der ATW800, Seite 3<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

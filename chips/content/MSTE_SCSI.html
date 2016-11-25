@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Belegung der SCSI-Stiftleiste am MegaSTE Host.</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SCSI_MEDUSA.html">Previous</A>
+<A HREF="TERMPWR_SPEC.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Belegung der SCSI-Stiftleiste am MegaSTE Hostadapter<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 bis 23 Ground<TT>&nbsp;&nbsp;&nbsp;</TT>14 Datenbit 6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>40 Reset<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>25 Not Connected<TT>&nbsp;&nbsp;&nbsp;</TT>16 Datenbit 7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>42 Message<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>27 bis 49 Ground<TT>&nbsp;&nbsp;&nbsp;</TT>18 Not Connected *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>44 Select<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 Datenbit 0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>20+28+30+34 Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>46 Command/Data<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 Datenbit 1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>22+24+28 Not Connected<TT>&nbsp;&nbsp;</TT>48 Request<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>6 Datenbit 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>26 Not Connected *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>50 I/O<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>8 Datenbit 3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>32 Attention<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10 Datenbit 4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>36 <A HREF="SCSI_BUSY_LED.html">Busy</A> <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>12 Datenbit 5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>38 Acknowledge <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>Nachrüsten von Termpower an der 50 poligen Stiftleiste</U><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hostadapterplatine auf den Kopf legen (also ICs zur Tischplatte)!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Schnittstellenseite)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>----------------------------------------------------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>* * * * * * * * * * * * * * * \___ ACSI Buchse<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>* * * * * * * * * * * * * * * /zur Hauptplatine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * &lt;- Pin 1<TT>&nbsp;&nbsp;&nbsp;</TT>Den Pin 26 der SCSI Stiftleiste mit der Seite der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Diode die einen grauen/weissen Strich trägt verlö-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ten und anschließend etwas Schrumpfschlauch drüber-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ziehen, wir wollen ja keinen Kurzschluß bauen!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Nun den anderen Anschluß der Diode mit der Siche-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>rung (oder auch nicht) verbinden und dann eine <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>verbindung zu +5 Volt herstellen, das geht am ein-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>fachsten indem man eine Verbindung mit Pin 14 von <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U11 (SCSI Aufkleber auf dem Chip) herstellt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Wer die <A HREF="INFO_SICHERUNG.html">Sicherung</A> miteinbaut (<A HREF="TERMPWR_SPEC.html">eigentlich Pflicht</A>)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * &lt;- Pin 25<TT>&nbsp;&nbsp;</TT>sollte sich vorher eine sogenannte Microfuse besor-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>gen (hat erheblich kleinere Abmessungen als die Glas<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>röhrensicherungen) und braucht dann natürlich etwas<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>mehr Isoliermaterial!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Die Reihenfolge der Leitung-Diode-Sicherung-Stecker<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ist egal (hauptsache auf den Widerständen der Haupt-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>platine zeigen alle Toleranzringe gleichmäßig nach<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Süden).<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B> An Pin 18 wird kein Paritybit generiert, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * *<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>dieses kann aber <A HREF="MSTE_HOSTADAPTER.html">nachgerüstet</A> werden!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>| * * &lt;-Pin 49 <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>^ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 50 <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Desweiteren ist der Hostadapter <B>ausschließlich</B> für Kabellängen von<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>maximal 18 bis 20 cm gebaut, längere Kabel führen zu Datenverlusten!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Belegung der SCSI-Stiftleiste am MegaSTE Host., Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

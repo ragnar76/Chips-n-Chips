@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Wartung und Reparatur der Laserdrucker, Seite 8</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="laser_7.html">Previous</A>
+<A HREF="F030_BLOWUP.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Datenübertragung zwischen dem SLMC und dem Drucker selbst <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>basiert auf reinen Videodaten!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DMA<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>SLMC Interface<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Druckerelektronik<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>__<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>_______<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>_________<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|____________|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| &lt;-- Horizontal Sync ---- |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|____________|<TT>&nbsp;&nbsp;</TT>LPC<TT>&nbsp;&nbsp;</TT>| --- Videodaten --------&gt; |<TT>&nbsp;&nbsp;</TT>Daten<TT>&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>|____________|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| &lt;-- Videotakt ---------&gt; |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|__|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|_______|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|_________|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| | |<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>_|_|_|_<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>___________<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| &lt;-- Print Ready -------- |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;</TT>MCU<TT>&nbsp;&nbsp;</TT>| --- Vertikal Sync -----&gt; |<TT>&nbsp;&nbsp;</TT>Control<TT>&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>| --- Kommandos ---------&gt; |<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>|_______| &lt;-- Status ------------- |___________|<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der SLM 804 hat plötzlich die Macke, in der unteren Hälfte des Blat-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tes ein Schattenbild der oberen Hälfte des Blattes zu unterlegen. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diese Ausdrucke sind, weil im unteren Bereich verschmutzt, nicht <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>brauchbar.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das ist mit ziemlicher Sicherheit die Abstreiflippe:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ich kann nicht beurteilen, ob Du, wenn Du das machst, was ich jetzt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beschreibe, Deine Trommeleinheit ruinierst, indem Du die Trommel <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zerkratzt oder sonstwas beschädigst.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Also die Trommeleinheit aus dem Drucker nehmen, Sprengring auf der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Achse auf einer der beiden Seiten entfernen, Achse rausziehen, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Trommel rausnehmen und die Abstreiflippe rausnehmen. Die Trommel <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vorsichtig halbwegs lichtgeschützt deponieren.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Jetzt müßtest Du im Inneren einen gelblich-milchig--durchsichtigen,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>über die Trommelbreite gehenden, etwa einen Zentimeter breiten und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zwei Millimeter dicken Plastikstreifen sehen (das Teil kann natür-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lich total schwarz aussehen): Das ist die Abstreiflippe, die den <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Resttoner von der Trommel streift. Das Teil mußt Du säubern, gegebe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nenfalls auch hart klebende Klumpen entfernen, aber nicht die Ab-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>streifkante beschädigen.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Wartung und Reparatur der Laserdrucker, Seite 8<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

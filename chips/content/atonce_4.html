@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Vortex ATonce - DOS Emulator, Seite 4</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="atonce_3.html">Previous</A>
+<A HREF="atonce_5.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gen die Leiterplatten-Bezeichnung U33 und U36 und sind vom Typ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>74LS373. In aller Regel kann die beschriebene Problematik dadurch <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beseitigt werden, daß hier 74AS373 Bauteile, oder 74LS373 Bauteile<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von Texas Instruments oder Motorola eingesetzt werden. Auf keinen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fall Bauteile von SGS, ST, oder GoldStar verwenden !<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>An den ST Computer sind mehrere Harddisks und/oder ein SLM804<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Laserdrucker angeschlossen. Es treten Probleme beim Betrieb des<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Druckers und/oder der Harddisk(s) auf.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dieses Problem tritt auch ohne ATonce auf !<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ähnlich wie oben beschrieben befinden sich in einigen ST Computern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Atari Custom Chips vom Hersteller IMP. Diese Bauteile spe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ziell der DMA-Port-Controller &quot;bescheren&quot; manchmal einen fehlerhaf-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ten Betrieb. Die erste Möglichkeit hier Abhilfe zu schaffen besteht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>darin, daß so kurz als mögliche DMA-Kabel eingesetzt werden (einige<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hersteller, auch wir, bieten solche Kabel an). Wenn das nicht hilft<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dann muß der DMA-Port-Chip getauscht werden. Dieser Chip hat 40 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pins und heißt, wenn er von IMP kommt &quot;C100110-001&quot;. Es wird nun <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zum Austausch ein entsprechender Chip mit der Bezeichnung <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;CO25913-38&quot; benötigt!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der ST kommt nach einem &quot;Absturz&quot; trotz kurzem Ausschalten nicht <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mehr hoch oder bringt den sogenannten &quot;POST MORTEM DUMP&quot;<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Selbst wenn der ST Computer ausgeschaltet wird, bleibt der Inhalt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der RAM-Zellen noch eine ganze Weile erhalten. Da der ATonce den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Reset des STs im Betrieb übernimmt, kann es durchaus passieren,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>das nach einem &quot;Absturz&quot;, also einem unkontrollierten Verlassen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>des Emulators und darauf folgendem kurzen Aus- und Einschalten,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Bildschirm dunkel bleibt, oder der &quot;POST MORTEM DUMP&quot; ausgege-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ben wird. Zur Abhilfe soll im ersten Fall der Rechner für ca. 60 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sekunden ausgeschaltet bleiben und im zweiten Fall die &quot;ESC&quot; Taste<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gedrückt werden. Abschließend soll kurz noch der sogenannte <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;POST MORTEM DUMP&quot; erwähnt werden, der für eine technische Fern-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Analyse wichtige Daten enthält und als Folge von Problemen resul-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tierend aus (siehe weiter oben) nach dem &quot;Total-Absturz&quot; des ST <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Computers unter bestimmten Bedingungen noch ausgegeben werden kann. <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Probleme, die durch Software-Installationsfehler entstehen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Autoboot bei Atari Harddisks.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei Harddisk Subsystemen der Firma Atari ist bei der Zuordnung der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>GEMDOS Partitionen zu logischen MSDOS-Laufwerken (mit dem Programm<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>INSTALL.PRG) folgende Besonderheit zu berücksichtigen: Wenn die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Harddisk unter GEMDOS autobootfähig bleiben soll, darf MSDOS nicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf Partition 0 (also Icon C) installiert werden. Die Begründung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>für diese Eigenheit ist, daß sowohl der Atari Autoboot Mechanismus,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>als auch MSDOS den Boot-Sektor der Partition 0 verändern.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Abhilfe ist ganz einfach dadurch gegeben, daß mit INSTALL.PRG z.B.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die GEMDOS Partition 1 (also Icon D) dem MSDOS-Laufwerk C zugewie-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sen wird und Partition 0 (also Icon C) z.B. dem MSDOS Laufwerk D.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="atonce_5.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Vortex ATonce - DOS Emulator, Seite 4<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

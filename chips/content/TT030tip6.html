@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für den TT030, Seite 6</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TT030tip5.html">Previous</A>
+<A HREF="TT030tip7.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Warum? Die Lüfter hängen im -12V Zweig des Netzteiles und sorgen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>für eine immerwährende Grundlast, zieht man die Lüfter ab wird<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der -12V Zweig nicht mehr belastet und im Übertrager entstehen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wirbelströme! Das ist auch der Grund, warum die Netzteile meist 2<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Stunden mit abgezogenen Lüfter arbeiten und dann mit fast glühendem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Übertrager plötzlich aus dem Leben scheiden!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="DIE_LÜFTERREGELUNG.html">Der Einbau der Lüfterregelung</A><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Probleme beim SCSI Datentransfer in das Fast-Ram</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kippen vereinzelt Bits um während ein Datentransfer von/zum Fastram<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zu einer angeschlossenen SCSI Einheit stattfindet, sollte man zuerst<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mal die gesteckte ST-RAM rausziehen. Treten die Fehler jetzt nicht <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mehr, sollte man mal die Lötverbindungen der VG-Leisten der ST-RAM<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Karte nachlöten.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sind die Fehler jedoch noch immer auf, sollte man den Computer ganz<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>aufschrauben (sofern ausgeschlossen ist, das die TT oder Fastram-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Karte der Übeltäter ist) und nachsehen welche der folgenden Chips <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gesockelt sind:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der DMAC<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(DMA-Controller, Platinenbezeichnung UA00)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der DCU<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Bus-Sizing<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>, Platinenbezeichnung UA01)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der SCSI Controller (Logic 5380, Platinenbezeichnung UA02)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sind diese Chips gesockelt, können Sie diese vorsichtig aus den Fas-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sungen heraushebeln - aber nur dann wenn Sie über das richtige Werk-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zeug dazu verfügen (wie z.b. einen PLCC-Extractor) und können dann<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die <A HREF="KONTAKTBELASTUNGEN.html">Kontakte</A> der ICs und der Fassungen reinigen - dazu jedoch KEIN <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kontaktspray verwenden (die Rückstände des Kontaktspray sorgen nach<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kurzer Zeit wieder für Probleme), am besten einen Pinsel aus Glas-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>faser (Fiberglaspinsel) verwenden und die Kontakte säubern.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sind die Chips jedoch nicht gesockelt, bleibt einem nur der Gang zum<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Händler oder einer anderen Fachkundigen Person (welche über entspre-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>chendes Testequipment verfügt)!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Bootversuch von SCSI scheitert, aber die Geräte lassen sich problem-</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>los ansprechen wenn der/die Treiber vom Desktop gestartet werden?</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nachschauen ob folgende ICs gesockelt sind:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>C301838-001<TT>&nbsp;&nbsp;&nbsp;</TT>= PAL16R4-7PC Chip (Anpassung der 32 MHz CPU an 16 MHz)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>C301837-001<TT>&nbsp;&nbsp;&nbsp;</TT>= PAL16L8-7PC Chip (Anpassung der 32 MHz CPU an 16 MHz)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn ja, Beinchen der ICs nachbiegen oder gleich die Sockel gegen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bessere austauschen!<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Bootversuch von ACSI und SCSI sowie der Floppy scheitert, Programme</B> <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>werden auch im Desktop nicht korrekt gestartet (Fehlermeldung, Bom-</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>ben, bzw. Fehlermeldung beim Ordner öffen von Diskette)</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CPU falls gesockelt abziehen (auch bei der Daughterboard Version) und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eine andere CPU einsetzen.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TT030tip7.html">weiterblättern</A> <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für den TT030, Seite 6<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

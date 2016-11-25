@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Asus SC200 SCSI Hostadapter, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="ASUS_SC200.html">Previous</A>
+<A HREF="ASUS_SC200_3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die vorbereitung des EEPROMs:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die oberen 4 Pins nach oben biegen und die unteren 4 Pin's miteinan-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der verbinden durch entsprechende umbiegen der entsprechenden <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Anschlußbeinchen.<BR>
+<BR>
+<IMG SRC="../images/chips_Index1048.png" ALIGN="TOP">
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Der Pin 48 am 53C810(A) ist SDA und der Pin 49 ist<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>SCL. Der Pin 1 ist auf der Ecke mit dem Punkt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Zur Kontrolle: Pin 46 und Pin 50 ist GND (Vss).<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Zumindest beim Asus SC200 Hostadapter ist die Pin-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>nummer in weißer Farbe auf der Platine aufgedruckt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Die Pin's 50/51 sind die auf der Ecke gegenüber von<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>dem Punkt bei Pin 1.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das EEPROM 24C16 im 8-poligen DIL oder SO-Gehäuse ist wie folgt <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>belegt:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 = A0<TT>&nbsp;&nbsp;&nbsp;</TT>-&gt; GND (Vss)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5 = SDA<TT>&nbsp;&nbsp;</TT>-&gt; 53C810 an Pin 48<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2 = A1<TT>&nbsp;&nbsp;&nbsp;</TT>-&gt; GND (Vss)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>6 = SCL<TT>&nbsp;&nbsp;</TT>-&gt; 53C810 an Pin 49<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3 = A2<TT>&nbsp;&nbsp;&nbsp;</TT>-&gt; GND (Vss)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>7 = WP<TT>&nbsp;&nbsp;&nbsp;</TT>-&gt; GND (Vss)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4 = GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8 = Vcc<TT>&nbsp;&nbsp;</TT>-&gt; +5V<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Im Klartext: Die Pin's 1, 2, 3, 4 und 7 des EEPROM müssen miteinander<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verbunden werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das EEPROM kann man mittels des Pin 4 in der Masselocation des nicht-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bestückten 74F04 ICs auf der Platine befestigen. Die restlichen Pin's<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>müssen dann mittels Fädeldraht auf der Platine verlötet werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>So sieht das ganze dann in der Aufsicht aus:<BR>
+ <BR>
+<IMG SRC="../images/chips_Index1047.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ps.: Über den Schalter im Slotblech wird bei meinem SC200 die aktive<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Terminierung ein- oder ausgeschaltet und die entsprechende Funk-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>tion (Terminierung An oder Aus) über die rote LED samt Vorwider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>stand angezeigt. <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="ASUS_SC200_3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Asus SC200 SCSI Hostadapter, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

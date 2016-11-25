@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die SCSI BUSY LED</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="CONNER_ERROR.html">Previous</A>
+<A HREF="AFTERBURNER_040.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die SCSI BUSY LED<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Für Festplatten die über keine Anschlußmöglichkeit für eine Aktivi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tätsled verfügen, kann man auch folgende Lösung in betracht ziehen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Busy Leitung vom SCSI Bus über ein Gatter eines 7414 ICs führen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und am Gatterausgang eine Leuchtdiode (<A HREF="LEUCHTDIODE.html">LED</A>) samt dazugehörigen Vor-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>widerstand anlöten, dann hat man die gewünschte Funktion zwar für <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den kompletten SCSI Bus (aber das sollte ja keine allzugroße Ein-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schränkung sein).<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Anmerkung:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Da der Spannungspegel auf der Termpower zwischen 4.0 Volt und 5.25<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Volt variieren darf (nach der SCSI Spezifikation), kann es durchaus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>passieren das im schlechtesten Fall die Schaltung nicht funktioniert<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und den SCSI Bus blockiert. In diesem Fall muß die Spannungsversor-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gung des 7414 ICs von der +5V Spannungsversorgung des Netzteils <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>übernommen werden und die Verbindung zum Pin 26 des SCSI Bus unter-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>brochen werden.<BR>
+<BR>
+ <BR>
+<IMG SRC="../images/chips_Index1368.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die SCSI BUSY LED, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

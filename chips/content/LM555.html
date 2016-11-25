@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der LM555 und der LM556 Timer IC</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="LF347.html">Previous</A>
+<A HREF="LM386.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der 555 Single Timer IC<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+----------+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND |1<TT>&nbsp;&nbsp;</TT>+--+<TT>&nbsp;&nbsp;</TT>8| VCC<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>TR |2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>7| Dis<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Q |3<TT>&nbsp;&nbsp;</TT>555<TT>&nbsp;&nbsp;&nbsp;</TT>6| Thr<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/RST |4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5| CV<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+----------+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>General Description<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The 555 is a highly stable device for generating accurate time <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>delays or oscillation. Additional terminals are provided for trig-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gering or resetting if desired. In the time delay mode of operation,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>the time is precisely controlled by one external resistor and capa-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>citor. For astable operation as an oscillator, the free running fre-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>quency and duty cycle are accurately controlled with two external <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>resistors and one capacitor. The circuit may be triggered and reset<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>on falling waveforms, and the output circuit can source or sink up<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>to 200 mA or drive TTL circuits.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Features<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Direct replacement for SE555/NE555/LM555<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Timing from microseconds through hours<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Operates in both astable and monostable modes<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Adjustable duty cycle<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Output can source or sink 200 mA<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Output and supply TTL compatible<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Temperature stability better than 0.005% per Grad Celsius<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Normally on and normally off output<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Available in 8 pin MSOP package<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der 556 Dual Timer IC<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+----------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1Dis |1<TT>&nbsp;&nbsp;</TT>+--+ 14| VCC<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1Thr |2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>13| 2Dis<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1CV |3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>12| 2Thr<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/1RST |4<TT>&nbsp;&nbsp;</TT>556<TT>&nbsp;&nbsp;</TT>11| 2CV<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1Q |5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>10| /2RST<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1TR |6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>9| 2Q<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND |7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8| 2TR<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+----------+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>General Description<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The 556 Dual timing circuit is a highly stable controller capable<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>of producing accurate time delays or oscillation. The 556 is a dual<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>555. Timing is provided by an external resistor and capacitor for <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>each timing function. The two timers operate independently of each <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>other sharing only Vcc and ground. The circuits may be triggered and<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>reset on falling waveforms. The output structures may sink or source<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>200 mA.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Features<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Direct replacement for SE556/NE556/LM556<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Timing from microseconds through hours<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Operates in both astable and monostable modes<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Replaces two 555 timers<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Adjustable duty cycle<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Output can source or sink 200 mA<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Output and supply TTL compatible<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Temperature stability better than 0.005% per Grad Celsius<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Normally on and normally off output<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der LM555 und der LM556 Timer IC, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

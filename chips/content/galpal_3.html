@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Unterschied zwischen PAL und GAL Chips, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="galpal_2.html">Previous</A>
+<A HREF="galpal_4.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es gibt zwar Ausführungen im Kunststoffgehäuse, diese<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>können dann aber nicht mehr gelöscht werden. Die Architektur<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dieser Bausteine erlaubt es, daß die Ein- und Ausgangsfunktion<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in gewissen Grenzen frei gewählt werden kann und damit viele ver-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schiedene PAL-Bausteine ersetzt werden könnten (programmierbare<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ausgangszellen).<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>GAL-Bausteine<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Einen anderen Weg hat die Firma Lattice bei der Entwicklung der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>GAL-Bausteine (Generic Array Logic) eingeschlagen. Die Sicherun-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gen der PALs wurden durch EEPROM-ähnliche Schalter ersetzt, die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>elektrisch gelöscht werden können. Wie bei den UV-löschbaren Ty-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>pen kann die Ausgangskonfiguration fast beliebig gewählt werden.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dadurch reichen nur zwei Bausteine, um 42 Standard-PALs ersetzen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zu können.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>20-poliger GAL 16V8 ersetzt :<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10L8<TT>&nbsp;&nbsp;</TT>12L6<TT>&nbsp;&nbsp;</TT>14L4<TT>&nbsp;&nbsp;</TT>16L2<TT>&nbsp;&nbsp;</TT>16L8<TT>&nbsp;&nbsp;</TT>16R8<TT>&nbsp;&nbsp;</TT>16R6<TT>&nbsp;&nbsp;</TT>16R4<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10H8<TT>&nbsp;&nbsp;</TT>12H6<TT>&nbsp;&nbsp;</TT>14H4<TT>&nbsp;&nbsp;</TT>16H2<TT>&nbsp;&nbsp;</TT>16H8<TT>&nbsp;&nbsp;</TT>16RP8 16RP6 16RP4<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10P8<TT>&nbsp;&nbsp;</TT>12P6<TT>&nbsp;&nbsp;</TT>14P4<TT>&nbsp;&nbsp;</TT>16P2<TT>&nbsp;&nbsp;</TT>16P8<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>24-poliger GAL 20V8 ersetzt :<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>14L8<TT>&nbsp;&nbsp;</TT>16L6<TT>&nbsp;&nbsp;</TT>18L4<TT>&nbsp;&nbsp;</TT>20L2<TT>&nbsp;&nbsp;</TT>20L8<TT>&nbsp;&nbsp;</TT>20R8<TT>&nbsp;&nbsp;</TT>20R6<TT>&nbsp;&nbsp;</TT>20R4<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>14H8<TT>&nbsp;&nbsp;</TT>16H6<TT>&nbsp;&nbsp;</TT>18H4<TT>&nbsp;&nbsp;</TT>20H2<TT>&nbsp;&nbsp;</TT>20H8<TT>&nbsp;&nbsp;</TT>20RP8 20RP6 20RP4<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>14P8<TT>&nbsp;&nbsp;</TT>16P6<TT>&nbsp;&nbsp;</TT>16P4<TT>&nbsp;&nbsp;</TT>20P2<TT>&nbsp;&nbsp;</TT>20P8<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eigenschaften des GALs<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- CMOS-Baustein, dadurch geringer Stromverbrauch (typ. 90mA)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- hohe Geschwindigkeit (typ. 15-25ns)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- konfigurierbare Ausgangsstruktur (akt. HIGH, akt. LOW,<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Register, 3-STATE)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Ersatz von 42 PAL Typen durch zwei GAL-Typen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Wiederverwendbarkeit durch elektrische Löschung (50ms)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- GAL-Matrix voll kompatibel zu Standard-PAls<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gerade in der Entwicklungphase kommt es häufig vor, daß eine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Logikfunktion nicht auf Anhieb funktioniert. Bei Verwendung eines<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EPLDs (zu denen das GAL ja gehört) wird der alte Inhalt einfach<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gelöscht und der Baustein kann erneut programmiert werden. Nach<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Herstellerangaben kann ein GAL bis zu 100mal neu programmiert<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden, wobei ein Datenerhalt von 20 Jahren garantiert wird. Das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bedeutet jedoch nicht, daß der Baustein durch häufigeres<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Programmieren zerstört wird, sondern vielleicht &quot;nur noch&quot; 10<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Jahre die Daten behält, was in den meisten Fällen (Entwicklung)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wohl nicht stören dürfte.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Die interne Struktur von GALs</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die interne Struktur von GALs und PALs ist weitgehend identisch.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Logikmatrix hat den gleichen Aufbau wie bei einem PAL.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Darüberhinaus sind im GAL zusätzliche Programmierbits zur Festle-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gung der Struktur vorhanden. Die universellen Möglichkeiten sind<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in erster Linie durch die sog. OLMC (Output Logic Macro Cell)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vorgegeben. Diese Ausgangsstufen können für die verschiedenen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Architekturen programmiert werden. Das sind :<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="galpal_4.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Unterschied zwischen PAL und GAL Chips, Seite 3<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

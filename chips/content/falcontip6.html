@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für den Falcon030, Seite 6</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="falcontip5.html">Previous</A>
+<A HREF="falcontip7.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es sollte dann an Pin 5 des Sub-D-Stecker noch Masse angeschlossen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das Blockbild des <A HREF="MAX233.html">MAX233</A> stammt aus einem Datenblatt - die Schal-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tung selber ist bei mir noch _nicht_ in Betrieb (kommt aber bald).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Alternativ kann man natürlich auch die <A HREF="RS232_TREIBER.html">MC1488/1489</A> verwenden - es<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>muss dann allerdings für eine Versorgungsspannung von +/- 12 Volt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gesorgt werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Genauso gut kann auch ein <A HREF="MAX232.html">MAX232</A> benutzt werden - dann stimmt das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Blockbild aber nicht und es müssen zudem noch vier Kondensatoren<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>untergebracht werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diese Prob's gibt's beim <A HREF="MAX233.html">MAX233</A> nicht, da er intern seine +/- 12<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Volt erzeugt und darüberhinaus die Kondensatoren auch noch einge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>baut hat - dafür ist er etwas teurer...<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier noch die Lösung mit den bekannten <A HREF="RS232_TREIBER.html">1488</A> und <A HREF="RS232_TREIBER.html">1489</A> ICs!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="RS232_TREIBER.html">MC1488</A><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="RS232_TREIBER.html">MC1489</A><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 Vee (-12V)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 Input A<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 Input A<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 Response Control A (100pf Kon. gegen Ground)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 Output A<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 Output A<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 Input B1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 Input B<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>5 Input B2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5 Response Control B (100pf Kon. gegen Ground)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>6 Output B<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>6 Output B<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>7 Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>7 Ground<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>8 Output C<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8 Output C<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>9 Input C2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>9 Response Control C (100pf Kon. gegen Ground)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10 Input C1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>10 Input C<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>11 Output D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>11 Output D<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>12 Input D2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>12 Response Control D (100pf Kon. gegen Ground)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>13 Input D1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>13 Input D<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>14 Vcc (+12V)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>14 Vcc (+5V)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MFP Pin 9 (Serial Out) an Pin 4 + 5 vom <A HREF="RS232_TREIBER.html">1488</A> und Pin 6 an Pin 3 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(bei 9-poliger Dsub Buchse)!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MFP Pin 10 (Serial In) an Pin 3 vom <A HREF="RS232_TREIBER.html">1489</A> und Pin 1 an Pin 3 (bei 9-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>poliger Dsub Buchse) sowie Pin 2 mit einen 100pf Kondensator gegen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Masse beschalten!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>+12V an Pin 14 vom 1488, -12V an Pin 1 vom <A HREF="RS232_TREIBER.html">1488</A> und die Pins 7+12+13<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mit Ground verbinden vom 1488.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das ansprechen der so realisierten Modem 1 (Dreidraht-)Schnittstelle<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>geht über Bconmap 6, dann hat man die wunderschönen alten MFP-Routi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nen am Laufen, die die oberfaulen Programmierer bei Atari natürlich <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nicht aus dem TOS 4.0x entfernt haben. Sinnigerweise sind die seriel-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>len Interrupts des MFP Chips ja erlaubt!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="HAGENUK_SPD.html">Die Belegung für das Verbindungskabel zur Hagenuk Speed Dragon</A><BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="falcontip7.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für den Falcon030, Seite 6<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

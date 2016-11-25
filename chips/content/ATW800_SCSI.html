@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Pinbelegung des ATW800 SCSI-Chips Logic L5380LP-2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="FALCON030_SCSI.html">Previous</A>
+<A HREF="HADES_SCSI.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Pinbelegung des ATW800 SCSI-Chips Logic L5380LP-2<BR>
+<BR>
+<BR>
+<IMG SRC="../images/chips_Index1327.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Warum nicht jede Software auf dem ATW I/O Board läuft, liegt unter<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>anderem in der Ansteuerung und der Adreßlage des SCSI-Controllers<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>begründet (weder Falcon030 noch TT030 kompatibel).<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gemeinsame Features vom 5380 und dem 53C80 sind:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Asynchronous Transfer Rate Up to 4 MBytes/sec<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Low Power CMOS Technology<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Replaces: NCR 5380 and AMD Am5380 Controllers<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>On-Chip SCSI Bus Drivers<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Supports Arbitration, Selection/Reselection, Initiator or Target <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Roles, Programmed or DMA I/O, Handshake or Wait State DMA Interlock<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eine SCSI Aktivitätskontrolle an der ATW800 ?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Da es mittlerweile einige Festplatten gibt, die keinen Anschluß mehr<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>für eine <A HREF="LEUCHTDIODE.html">LED</A> besitzen, kann man folgende Lösung nehmen:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eine Drahtverbindung von Pin 17 (des SCSI Controllers) zum Pin 1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eines 74F04 ICs führen, die Pins 2 und 3 mit etwas Lötzinn verbinden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und zwischen Pin 4 des 74F04 IC und Vcc (Pin 14 des 74F04 IC) eine <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Leuchtdiode einlöten, fertig.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Pinbelegung des ATW800 SCSI-Chips, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

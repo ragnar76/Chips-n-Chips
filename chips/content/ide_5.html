@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		<META NAME="GENERATOR" CONTENT="WinGuide v0.5ﬂ / Modul HYP2TXT (Compiled Aug 16 2004, 13:41:20)">
+		<TITLE>Rund um den IDE Port BUS, Seite 5</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="ide_4.html">Previous</A>
+<A HREF="ide_6.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Laut den E-IDE-Gurus darf das Verbindungskabel nur noch 12 Zoll<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lang sein wenn auch nur eine Platte mit PIO-Mode 4 betrieben wird.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sind zwei Festplatten im System angeschlossen darf jedes einzelne<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kabel nur 6 Zoll! lang sein, beide zusammen dÅEfen ebenfalls die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vorher genannten 12 Zoll nicht ÅEerschreiten.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>PIO 0:<TT>&nbsp;&nbsp;</TT>3,3 Megabyte pro Sekunde<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>PIO 1:<TT>&nbsp;&nbsp;</TT>5,2 Megabyte pro Sekunde<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>PIO 2:<TT>&nbsp;&nbsp;</TT>8,3 Megabyte pro Sekunde<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>PIO 3: 11,1 Megabyte pro Sekunde<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>PIO 4: 16,6 Megabyte pro Sekunde<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Multiword-DMA sowie UltraDMA/33 werden nicht benutzt, da daﬂ notwen-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dige Interface nicht existiert.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hinweis: Ich habe mich nach dem Text ATA-R4.TXT gerichtet, sollte <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mittlerweile eine aktuellere Fassung verfÅEbar sein, bitte ich um<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eine Benachrichtigung mit Angabe der Mailbox oder des FTP-Servers!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ANMERKUNG: Die aktuelle Version in Englisch liegt unter ATA-R4C.LZH<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in den Mailboxen (Original von FTP.SYMBIOS.COM)<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zum Ende mit Schrecken, nun noch die Belegung des AT-Bus Interface<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(IDE) der Festplatten und Kabelverbindungen:<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><B>2,5&quot; Platten</B><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><B>3,5&quot; - und 5.25&quot; - Platten</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><U>Rastermaﬂ 2 mm</U><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><U>Rastermaﬂ 2,54 mm</U><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(wie im Falcon030)<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>NC<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>NC<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>SLAVE<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>NC<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 2 Pin<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 2 Pin<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/HOST RESET<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/HOST RESET<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 7<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 8<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 7<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 8<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 6<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 9<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 6<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 9<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 5<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 10<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 5<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 10<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 4<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 11<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 4<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 11<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 3<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 12<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 3<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 12<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 2<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 13<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 2<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 13<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 1<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 14<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 1<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 14<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 0<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 15<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST DATA 0<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST DATA 15<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;</TT>o o<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DMARQ<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DMARQ<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/HIOW<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/HIOW<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/HIOR<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/HIOR<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>IORDY<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>SPSYNC/CSEL<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>IORDY<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>SPSYNC/CSEL<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DMACK<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DMACK<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>IRQ 14<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>/Host IO/16<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>IRQ 14<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>/Host IO/16<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST ADDR 1<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>/PDIAG<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST ADDR 1<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>/PDIAG<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST ADDR 0<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST ADDR 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HOST ADDR 0<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>HOST ADDR 2<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/HOST CS0<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>/HOST CSI<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/HOST CS0<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>/HOST CSI<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/DASP<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/DASP<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>GND<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>+5V LOGIC<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>+5V MOTOR<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>39 40 Pin<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>GND<TT>&nbsp;&nbsp;</TT>o o<TT>&nbsp;&nbsp;</TT>XT/AT<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>43 44 Pin<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="ide_6.html">weiterbl‰ttern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Rund um den IDE Port, Seite 5<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

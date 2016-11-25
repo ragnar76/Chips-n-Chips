@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Falcon030 Clockpatch</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="STC_AI_CLOCKPATCH_10.html">Previous</A>
+<A HREF="falconclk2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>UMBAUANLEITUNG für das CPU Taktsignal</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei einigen Falcon030 gibt es Probleme im Soundsystem. Diese treten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>entweder als Knacken und Kratzen oder beim aufnehmen langer Sound-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>files auf der Festplatte (SCSI-Fehler) in Erscheinung.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das 16Mhz Taktsignal, welches aus dem <A HREF="COMBEL.html">COMBEL</A>-Chip herauskommt, bricht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>im Zweig für den SDMA-Chip (Sound DMA und SCSI DMA) zusammen, wenn<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der SCSI Chip einen schnellen Datentransfer durchführt und/oder das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Soundsystem aktiv ist. Weiterhin treten Fehler beim Betrieb von<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schnellen SCSI Festplatten auf wenn die Busbelastung größer wird,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zum Beispiel 800*600 Pixel Auflösung in 256 Farben.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die endgültige Lösung ist die Patchvariante 3 (DREI), diese Lösung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wird von Atari ab Werk eingebaut, die anderen Lösungen hat Atari<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zwar auch in der Serienproduktion aber vorher eingebaut, um dem Feh-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ler auf die Spur zu kommen und hat dann in der Serienproduktion die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="falconclk6.html">Patchvariante 3</A> genommen (mit dem 74F04 Chip)! <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sollten nach dem Einbau einer Speichererweiterung Pixel auf dem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bildschirm anfangen zu flimmern, hat dies NICHTS mit dem 16 MHz Takt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und dieser Umbauanleitung zu tun. Die flimmernden Pixel auf dem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bildschirm kommen daher, daß die RAM-Chips das Timing des Rechners<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nicht gebacken bekommen!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Für die Falcon-Wings von <A HREF="ADRESSE_H&N.html">Heyer</A> und Neumann in Aachen, empfiehlt der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hersteller selbst, NUR SIMM-Moduln der Hersteller <A HREF="ADRESSE_HYUNDAI.html">HYUNDAI</A> oder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="ADRESSE_MOTOROLA.html">MOTOROLA</A> zu verwenden.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wer nicht weiß, an welcher Stelle der Lötkolben heiß wird, sollte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>das ganze jemanden übertragen der<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>A.) weiß, an welcher Stelle der Lötkolben heiß wird und nicht gerade<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>tot umfällt, wenn er Lötzinn riecht<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>B.) Erfahrung mit Multilayerplatinen hat<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>C.) Die Telefonnummer des Notarztes parat hat, falls der Besitzer<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>beim Anblick der Platine umfällt (Okay, ist ein Insiderwitz!).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Wichtiger Hinweis!</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ich habe zwar diese fünf Schaltungen nach bestem Gewissen gezeich-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>net, übernehme natürlich keinerlei Funktionsgarantie (Bauteiletole-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ranzen oder neuere Board-, Chiprevisionen von ATARI), noch für ge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schrottete Platinen, weil jemand unbedingt Großvaters Dachpfannen-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>löteisen dafür verwenden mußte!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Patchvariante 3 ist die offizielle Version, die auch die Serien<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falcon030 aus der Produktion haben, die anderen Varianten hat ATARI<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zum Test in frühere Boards eingebaut und dann in der Serienproduktion<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>durch die Patchvariante 3 ersetzt!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Michael Ruge @WI2.Maus.De<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Rüsselsheim, den 20.06.1994<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ein Tip für die Musiker unter uns:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Cubase Audio auf 48 KHz Samplingrate im geöffneten Monitor-Fenster <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einstellen. Ist auch nach Stunden in der Pegelanzeige kein einziger<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ausschlag zu sehen ist die DMA Taktlage jetzt richtig.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="CLOCK_DH.html">Clockpatch-Versuchsaufbau</A> Beschreibung vom 25.4.97 von Dieter Hönig<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="falconclk2.html">weiterblättern</A> <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Falcon030 Clockpatch, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Modifying of the Atari hostadaptors in the MegaSTE and the STACY</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="Megaste_ha_tip3.html">Previous</A>
+<A HREF="Megaste_ha_tip3_englisch.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Modifying of the Atari hostadaptors in the MegaSTE and the STACY<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Copyright 01-05-1995 Michael Ruge - 65428 Rüsselsheim)<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Translation 07-10-1995 Frank Szymanski - 45889 Gelsenkirchen)<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The hostadaptor in the MegaSTE and STACY is only able to use one <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>harddisc with unit number SCSI 0 without parity. With this little <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>modification the hostadaptor (fully Atari-compatible) is able to <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>adress two harddiscs (compatible to the Megafile 44 hostadaptor,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>which means that you can use the regular harddiscdriver!).<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>All you have to do is to add two wires and a 1 KOhm resistor!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The one wire goes from chip U4 pin 12 to chip U8 pin 1, the other <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>from chip U8 pin 2 to pin 44 of the seconds (the new one!) harddisc<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI cable.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Both harddiscs are connected to the same SCSI cable (therefore you <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>have to squeeze a second 50 pin liner onto it) and the second hard-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>disc has to be jumpered onto SCSI ID 0 (yes, you are right: both <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>harddiscs have ID 0!).<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Cut the SCSI-cable between the first and the second harddisc, only <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>and exclusive at pin 44 (directly behind the 50 pin wide socket of <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>the first harddisc is recommended). Now the second wire from chip U8<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>pin 2 has to be soldered at this vein (to the vein which goes to <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>harddisc no. 2)! After you have done this, solder the 1 kiloohm <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>resistor from pin 1 of the resistorarray RP3 (pin 1 is the one which<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>points to the inscription REV. 2 or REV. 3) to pin 2 of chip U8.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Now you need a Y-cable for the harddiscs voltage and to put the com-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>puter into operation with the two harddiscs. If necessary you must <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>reconfigure your harddiscdriver so it can find the new harddisc on <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>system-bootup (Please refer to the drivers documentation).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beware: The hostadaptor has only been built for short SCSI cables! <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>The cable should never (!!!) be any longer than 20 centimetres/7.8 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Inch. For larger cablelengths there is another termination used than<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>the hostadaptor has impossible to change!). On the other hand you <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>only need short cablelengths in the MegaSTE and the STACY (particu-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>larly in the STACY there is only room for one harddisc when you also<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>want to use the discdrive) and even when you use a caddy 20 centime-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tres/7.8 Inch are more than enough!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Furtheron NONE of the harddiscs is allowed to be terminated, so <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FUNDAMENTALLY remove the ending terminators otherwise the drivers on<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>the hostadaptor were overloaded and may disappear in a cloud of <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>smoke (no joke!).<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Megaste_ha_tip3_englisch.html">Forward</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Hostadapter im MegaSTE und der STACY, Seite 4<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

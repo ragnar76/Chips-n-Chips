@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Pinbelegung der SCSI-Buchse am Falcon030</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="DSP_F030.html">Previous</A>
+<A HREF="SCSI_TT030_25.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Pinbelegung der SCSI-Buchse am Falcon030<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>11 10 Kiloohm Pullup!<TT>&nbsp;&nbsp;</TT>32 Datenbit 6<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>45 Reset<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>12-14 Not Connected<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>33 Datenbit 7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>46 Message<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>15-25 und 1-10 GND<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>34 Datenbit Parity<TT>&nbsp;&nbsp;&nbsp;</TT>47 Select<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>26 Datenbit 0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>35+36+40+42 Ground<TT>&nbsp;&nbsp;&nbsp;</TT>48 Command/Data<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>27 Datenbit 1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>37+39 Not Connected<TT>&nbsp;&nbsp;</TT>49 Request<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>28 Datenbit 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>38 Termpower<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>50 I/O<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>29 Datenbit 3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>41 Attention<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>30 Datenbit 4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>43 <A HREF="SCSI_BUSY_LED.html">Busy</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>31 Datenbit 5<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>44 Acknowledge<BR>
+ <BR>
+ <BR>
+<IMG SRC="../images/chips_Index1374.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+ <BR>
+ <BR>
+ <BR>
+ <BR>
+ <BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>Probleme beim Betrieb von SCSI-Geräten?</U><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ob der Falcon030 über eine interne (IDE/AT-BUS) Festplatte verfügt,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ist für den sicheren Betrieb des SCSI-Ports belanglos, da der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IDE/AT-BUS Port nichts mit dem SCSI-Port zu tun hat.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Falcon ist grundsätzlich das erste/letzte Gerät am SCSI-BUS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(jenachdem, aus welcher Seite man den Bus betrachtet), daher ist der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falcon030 auch standardmäßig auf dem Mainboard terminiert und zwar <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in <A HREF="scsi_12.html">passiver</A> Ausführung. Es muß nur noch das letzte Gerät am SCSI-Bus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>terminiert werden, im Gegensatz zum TT030 liefert der Falcon030<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>jedoch die benötigte Speisespannung für TermPwr an Pin 38 der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI-2-Buchse.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Achtung: Die internen Terminatoren werden über eine andere Diode<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(D6 - 1N4001) mit Spannung aus dem Falcon030 Netzteil versorgt! Für<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den SCSI-BUS ist beim Falcon030 die Diode (D5 - 1N4001) und die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="INFO_SICHERUNG.html">Sicherung</A> F1 - 1 Ampere) zuständig!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wird der Falcon030 zusammen mit einen anderen Computer an den SCSI-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bus angeschlossen (was auch erlaubt ist), muß er ZWINGEND einge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schaltet sein wenn man nicht eine kleine Modifikation am SCSI-Port<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>durchgeführt hat!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Diode D6 auslöten und von der Kathodenseite (der Diode) eine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Drahtverbindung ENTWEDER zu Pin 38 des SCSI-Ports führen ODER eine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Drahtverbindung zu der Kathode von Diode D5 (oder zu der <A HREF="INFO_SICHERUNG.html">Sicherung</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>F1) ziehen und verlöten.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Pinbelegung der SCSI-Buchse am Falcon030, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

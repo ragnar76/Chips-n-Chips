@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Problem mit dem ACSI DMA Chip, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="PROBLEM_DMA_CHIP.html">Previous</A>
+<A HREF="SM_124.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zur not kann man noch die Widerstandsnetzwerke (Reihenwiderstände<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zur Strombegrenzung) von 68/33 Ohm gegen 10 Ohm Typen (direkt am/<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hinter dem ACSI-Stecker) auszutauschen, ohne das der DMA Controller<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schaden nimmt.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sollte beim 1040STE der Festplattenbetrieb trotzdem fehlerhaft sein,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sollten die untengenannten Punkte beachtet werden (war auch ein Rund-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schreiben von Atari Deutschland an alle Händler)!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(1) Überprüfen, ob zwischen Pin 9 des Widerstandsnetzwerkes P105<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und Pin 1 des Videoshifters U401 eine Verbindung besteht (Daten-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bit DB7). Ggfs. zusätzlichen Draht einziehen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(2) Widerstandsnetzwerk P100 (2.2K) durch eines mit 8*1.2 KOhm<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ersetzen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(3) Einen Kondensator von 30pf zwischen Pin 5 des Widerstands-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>netzwerkes P100 und Masse einlöten (XBR).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sollten die Schwierigkeiten auch weiterhin mit original Atari Hard-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ware (insbesondere Festplatten) auftreten, sollten folgende Punkte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bei den Festplatten überprüft werden.<BR>
+<BR>
+<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Von ATARI modifizierte Hardware<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Um die Datensicherheit zwischen den verschiedenen Computertypen und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Festplatte weiter zu erhöhen haben die ATARI Ingenieure fol-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gende Verbesserungsvorschläge erarbeitet:<TT>&nbsp;&nbsp;</TT>(ACSI Data Time Fix)</B><BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>1. MEGAFILE 30/60 (Ref. ECO Nr.1387)</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Tauschen Sie die 33 Ohm Widerstände R20-24 gegen 10 Ohm Typen aus.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie U25 (74LS132) durch einen 74F00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie U3 (74LS51) durch einen 74F51<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie U30 (74LS245) durch einen 74F245<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>2. MEGAFILE 20/SH205 (Ref. ECO Nr.1389)</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Tauschen Sie die 68 Ohm Widerstände R63,R64 gegen 10 Ohm Typen aus.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie U1 (74LS08) durch einen 74F08<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie U2 (74LS32) durch einen 74F32<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie U22 (74LS245) durch einen 74F245<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>3. MEGAFILE 44 (Ref. ECO Nr.1390)</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie das 33 Ohm Widerstands-Array RP1 gegen eines mit 10 Ohm<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie U4 (74LS132) durch einen 74F00<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ersetzen Sie U12 (74LS245) durch einen 74F245<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Problem mit dem ACSI DMA Chip, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Test- bzw. Diagnosekit von Atari, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TESTKIT.html">Previous</A>
+<A HREF="TESTKIT_3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sollte ein aussergewöhnlicher Fehler vorliegen der selbst bei gesteck-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tem Testmodul kein Bild auf den Monitor bringt oder der Rechner ständig<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen Reset macht, muß man sich ein Nullmodemkabel zurechtlöten,<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Pinbelegung gilt für 25er DSub Verbindungen! <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Stecker Rechner 1:<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>Stecker Rechner 2:<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 3 <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 2<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 7<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 7<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Stecker 1 wird dem toten Rechner in die RS232 Buchse gesteckt und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Stecker 2 in einen funktionsfähigen Rechner auf welchem ein VT 52<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Emulator oder ein Terminalprogramm gestartet sein muß (9600 Bit pro <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sekunde). Dann wird der tote Rechner eingeschaltet und jetzt müßte der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>andere Rechner eine oder mehrere Meldungen ausgeben. <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sobald das defekte System gestartet wird, werden die unteren 2Kbytes <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Bank 0 getestet. Dieser Speicherbereich wird vom Prozessor <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>benötigt. Liegt z.b. ein statischer Ramfehler vor, läßt sich normaler-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>weise das Betriebssystem nicht mehr starten, wobei auch die Bildschirm-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ausgabe gestört ist oder ganz ausfällt. <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es erscheinen u.a. folgende Fehlermeldungen:<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Error Message) 0000000000000000<TT>&nbsp;&nbsp;</TT>?000000000000000 Fehler Bit 15<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Error Message) 0000000000000000<TT>&nbsp;&nbsp;</TT>000000000000000? Fehler Bit 0 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Error Message) 0000000000000000<TT>&nbsp;&nbsp;</TT>????????00000000 Fehler Bit 8-15<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>z.b.: I1 Ram Data Line Error ????????00000000 <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Statt einem Fragezeichen kann auch eine 1 erscheinen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beim 260/520ST wird die Platine so hingelegt das die Schnittstellen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zu einem hin zeigen. <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I1 R D L E 0000000000000000<TT>&nbsp;&nbsp;</TT>0000000000000001 Fehler Bit 0 Bank 0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier ist der Ram-Chip (Bank0) defekt, der neben dem Kondensator sitzt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Joystickseite).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I1 R D L E 0000000000000000<TT>&nbsp;&nbsp;</TT>1000000000000000 Fehler Bit 15 Bank 0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier ist der Ram-Chip (Bank0) defekt, der unter der MMU also neben den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Adreßwiderständen sitzt.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I1 R D L E 0000000000000001<TT>&nbsp;&nbsp;</TT>0000000000000000 Fehler Bit 0 Bank 1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier ist der Ram-Chip (Bank1) defekt, der neben dem Kondensator sitzt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Joystickseite) allerdings auf den Huckepack aufgelöteten Rams eines <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>520 ST+ oder der entsprechende Chip auf einer Speichererweiterungs-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>platine.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I1 R D L E 1000000000000000<TT>&nbsp;&nbsp;</TT>0000000000000000 Fehler Bit 15 Bank 1 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier ist der Ram-Chip (Bank0) defekt, der neben dem Kondensator sitzt,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>allerdings auf den Huckepack aufgelöteten Rams eines 520 ST+ oder der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>entsprechende Chip auf einer Speichererweiterungsplatine.<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I1 RAM/data line error 0000000000000000 0000010000000000 000008<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Sollwert<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Istwert<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Adresse<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Da ist an Adresse 8 (der ersten RAM-Adresse, da davor ROM liegt) ein<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bit auf 1 anstatt auf 0.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TESTKIT_3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Test- bzw. Diagnosekit von Atari, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

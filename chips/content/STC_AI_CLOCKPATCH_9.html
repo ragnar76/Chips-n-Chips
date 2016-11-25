@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Clockpatch aus der ST-Computer Zeitschrift, Seite 9</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="STC_AI_CLOCKPATCH_8.html">Previous</A>
+<A HREF="STC_AI_CLOCKPATCH_10.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Versucht man den Falcon030 anders zu beschleunigen zum beispiel mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dem Auswechseln des 32.084988MHz Quarzes gegen einen anderen Quarz <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und springt der Computern danach garnicht mehr an, so kann es an der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>geringen Amplitude des Signales vom Q107 liegen. Hier sollte man den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Transistor Q107 auslöten und den Platz U65 links neben Q107 mit einer<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fassung versehen und dort einen Quarzoszillator einsetzen. Vorsicht,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>es gibt Quarzoszillatoren mit einem Pausen-/Impulsverhältnis von 60 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zu 40, 50 zu 50 und 40 zu 60, es muß/kann also durchaus sein das der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Rechner bereits mit einem Quarzoszillator problemlos äuft. Alternativ<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kann man das Ausgangssignal des Quarzoszillator noch mit einem maximal<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 Kiloohm Widerstand nach +5V verbinden und einem Kondensator zwischen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>33pf und 56pf gegen Masse legen, um einen höhere Amplitude (Signal-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>spannung) zu erreichen. Bootet der Rechner zwar mit einem höheren Takt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und bleibt dann mit einem weissen Bildschirm hängen nachdem die Floppy<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>aus ist und das Bootlogo noch nicht gezeichnet wurde, gibt es zwei <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Möglichkeiten für diese Ursache:<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>A: Der Zugriff auf den Soundchip ging schief, ein Busfehler war die <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>folge und die Motorola CPUs stellen nach zwei Busfehlern die Arbeit<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ein und signalisieren das dem restlichen Komponenten auf der Haupt-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>platine mit einem LOW-Signal auf der HALT-Leitung.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>B: Der Zugriff auf den Hauptspeicher ging schief, hier gibt es nur die<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>eine Möglichkeit es mit einer anderen ST-RAM Karte oder einem <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>anderen PS/2 SIMM Modul nochmal zu versuchen.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>C: Gepatchtes TOS verwenden, ab Systemstart werden die CPU und der <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Blitterchip auf 16MHz geschaltet, nicht jeder Blitterchip verkraf-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>tet problemlos den erhöhten Takt von bis zu 24MHz <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Alternativ kann man erstmal versuchen mit dem Lötpads unmittelbar vor<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dem Netzteil die Konfiguration zu ändern. <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>U46 Lötjumper 1 - Hauptspeicher Waitstate <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Geschlossen - 0 Waitstate<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Offen - 1 Waitstate<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>U46 Lötjumper 3 - Rom Waitstate <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>U46 Lötjumper 4 - Rom Waitstate<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Geschlossen<TT>&nbsp;&nbsp;</TT>Geschlossen<TT>&nbsp;&nbsp;</TT>- 0 Waitstate (100ns Eprom)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Geschlossen<TT>&nbsp;&nbsp;</TT>Offen<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>- 1 Waitstate (120ns Eprom)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Offen<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Geschlossen<TT>&nbsp;&nbsp;</TT>- 2 Waitstate (150ns Eprom)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Offen<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Offen<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>- Reserviert<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Und noch ein Tip für die Musiker! Läuft der Datentransfer über den <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI Port stabil und man ist auch noch Besitzer von Cubase Audio geht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>man weiter so vor: Cubase Audio bei erhöhtem Systemtakt mit einem <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DEF.ALL starten, welche bereits eine Aufnahme Position beinhaltet.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nun wird der Monitor geöffnet, wenn man hier schon Knackser sieht, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ist die Abstimmung der Gatterlaufzeit zwar schon gut, aber noch nicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>optimal. Sind im Monitor keine Knackser beziehungsweise Ausschläge zu<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sehen, sollte man nun den Position-Pointer mittels der Tasten 1 und 2<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Zehnertastatur wechselweise auf den Left- und Right Locator <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>setzen, der in der DEF.ALL vorinstalliert ist.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dabei werden mit der SCSI Festplatte Leseoperationen durchgeführt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ist bis hier alles in Ordnung, dann selektiere einen Audiotrack <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(nicht den mit der vorhandenen Aufnahme) und schalte diesen in den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Monitormodus (Info-Feld oder direkt im Monitor).<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="STC_AI_CLOCKPATCH_10.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Clockpatch aus der ST-Computer Zeitschrift, Seite 9<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

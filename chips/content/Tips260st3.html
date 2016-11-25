@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für 260/520/1040/MegaST, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="Tips260st2.html">Previous</A>
+<A HREF="Tips260st4.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Eine Farbe fehlt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Videochip und/oder Treibertransistoren. Am besten mit Oszilloskop<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>überprüfen<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Durchlaufende Streifen dem auf Bildschirm<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Defekter Glue und/oder TTL-Puffer wenn vorhanden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>HF-Ausgang von Modulator<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Modulator, Taktfrequenz. Signale mit Oszi durchmessen.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Computer bootet nicht von Floppydisk<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Netzteil, Floppy Controller (1772) und/oder DMA und/oder Soundchip.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn die <A HREF="LEUCHTDIODE.html">LED</A> nicht aufleuchtet der Motor sich aber dreht, den Sound-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>chip wechseln. Ruckt der Drehmotor nur kurz an, Floppy Controller<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(1772) wechseln.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Systemabsturz nach geladener Datei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Defekte Diskette, Floppycontroller und/oder DMA und/oder MMU<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Tastaturprobleme - Defekte Tastatur, <A HREF="6850_ACIA.html">MC6850</A> und/oder MFP 68901.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Nach dem Einschalten (auch beim Aus- und wieder Einschalten) liefert<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ein Tastendruck willkürliche Zeichen. Die Maus funktioniert aber ein-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wandfrei. Erst wenn man die Maus und Joystick abzieht, das Tastatur-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kabel ein paar Sekunden abzieht, funktioniert alles.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Elektrolytkondensator der den Reset in der Tastatur erzeugt <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dürfte der Übeltäter sein. Reset ist Pin 6 am Tastaturcontroller, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>da hängt ein Widerstand, eine Diode und eben der Elko 'dran.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Maus setzt ab und zu aus bzw. Ausfall der gesamten Tastatur oder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Tastaturklicken und der Mauszeiger (Biene) bewegt sich ständig.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Noise-Filter zur Tastatur und/oder Tastatur defekt.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MIDI-Probleme - Optokoppler PC900, <A HREF="6850_ACIA.html">MC6850</A> oder die Inverter <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(74LS04,74LS05) durchmessen<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RS-232 Probleme<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Defekter MFP 68901, und/oder Treiberbaustein (<A HREF="RS232_TREIBER.html">MC1488,MC1489</A>) und/<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder Soundchip und/oder +/-12 Spannungsversorgung.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Druckerprobleme - Defekter Soundchip und/oder MFP Chip, beziehungs-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>weise im folgenden Kapitel <A HREF="DRUCK_PROBLEME.html">Der Drucker will nicht drucken</A> nachlesen.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Macht der Rechner auch mit abgezogenen Laufwerk ständig einen Re-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>set, hebelt man mal den GLUE raus und reinigt die Fassung und die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Chipkontakte.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fehlermeldung im Desktop (GEM): Speicherplatz reicht für diese An-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wendung nicht aus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Verbogenes Beinchen im MMU-Sockel, MMU raushebeln und die Beinchen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>überprüfen bzw. gerade biegen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kopieren eines Programmes von A-A, A-B, B-A, B-B, danach beim<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Starten des kopierten Prg.s Fehlermeldung = TOS-Fehler 35.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Auf alle Fälle defekte CPU/DMA. 68000er CPU und/oder DMA-Chip<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wechseln.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Tips260st4.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für 260/520/1040/MegaST, Seite 3<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

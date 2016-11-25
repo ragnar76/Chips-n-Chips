@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Test- bzw. Diagnosekit von Atari, Seite 10</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TESTKIT_9.html">Previous</A>
+<A HREF="TESTKIT_11.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>F5= Write protected. Überprüfe die Diskette ob schreibgeschützt. <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ansonsten Pin 25 am 1772 ist WP überprüfen ob er auf LOW geht <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>wenn der Testlauf anfängt, wenn ja Controller (1772) austauschen<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ansonsten Laufwerk austauschen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>F6= Read compare error. Die Daten die gelesen werden sind nicht die <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>selben die geschrieben wurden. Überprüfe Laufwerk, Diskette, 1772<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>und DMA Controller.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>F7= DMA error. Erstmal DMA Controller wechseln wenn das nichts FDRQ<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin 21 und DRQ Pin 27 am 1772 überprüfen. Bleibt es konstannt auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>HIGH-Pegel drücke den Resetknopf und überprüfe das Signal MR am <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1772 Pin 13 ob es auf LOW liegt. Wenn nicht drücke nochmal Reset.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ist MR okay wechsel den 1772. <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>F8= DMA count error. MMU wechseln, bringt das nichts siehe F7.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>F9= <A HREF="ANHANG_GLOSSAR.html">CRC</A> error. Laufwerk oder Diskette defekt, ansonsten 1772 wechseln.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FA= Record not found. 1772 konnte Sektor nicht lesen. Defektes Lauf-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>werk, Diskette oder 1772.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FB= Lost data. Ist DMA Test okay, 1772 defekt.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FC= Side select error. Einseitiges Laufwerk oder Pin 21 am PSG <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>schaltet nicht um oder Laufwerk defekt.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>FD= Drive not ready. Defektes Laufwerk (Motor dreht nicht) oder 1772.<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Echtzeituhr Fehlercode:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>C0= Keine Uhr gefunden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>C1= Fehler beim inkrementieren des Datums/Uhrzeit<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Expansionslot Fehlercode: (Platine einstecken!)<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Stecke die Expansiontestplatine in den Sockel (MegaST, Falcon030)<BR>
+<BR>
+<IMG SRC="../images/chips_Index1139.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TESTKIT_11.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Test- bzw. Diagnosekit von Atari, Seite 10<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

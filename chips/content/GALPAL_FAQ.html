@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Unterschied zwischen PAL und GAL Chips</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="KENNUNGEN_5.html">Previous</A>
+<A HREF="galpal_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Programmierbare Logikbausteine</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Entwicklung digitaler Schaltungen hat sich in den letzten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Jahren sehr stark verändert. Der Entwurf einer Schaltung mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Standardbausteinen stellt den Entwickler immer wieder vor das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Problem, welche Funktionen mit welchen Bausteinen verwirklicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden. Oftmals sind Bausteine nur teilweise benutzt, was häufig<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bei der Komplexität heutiger Schaltungen zu Platzproblemen führt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei anderen Anwendungen müssen Teile der Schaltung veränderbar<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sein (z.B. Adressdekodierung). In vielen Fällen werden daher<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>programmierbare Logikbausteine (auch PLD = &quot;Programmable<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Logic Device&quot;) eingesetzt, die erst vom Anwender in geeigneter<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Weise programmiert werden.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>PAL-Bausteine</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die ersten Vertreter der PLD-Bausteine waren die PALs<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Programmable Array Logic). In einem PAL können Logikfunktionen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>direkt durch Anwendung von &quot;Summen-von-Produkten&quot; verwirklicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werden. Aus der boolschen Algebra ist bekannt, daß sich jede<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Logikfunktion auf diese Art und Weise darstellen läßt (de Morgan<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Theorem). Die Produkte werden dabei in UND-Gattern gebildet und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>über ODER-Gatter summiert. Die Komplexität einer Funktion wird<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>allein durch die Anzahl von Produkten (Produkt-Termen) bestimmt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es hat sich eine besondere Darstellungsform für PAL's entwickelt:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der innere Aufbau wird darin Form einer Matrix dargestellt. Die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Reihen der Matrix bilden die einzelnen Produkterme, die Spalten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Eingangssignale. Die Eingange stehen dabei invertiert und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nicht invertiert zur Verfügung. An den Kreuzungspunkten von Reihen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und Spalten ist je eine Sicherung angebracht (X). Diese werden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bei der Programmierung durch entsprechenden Strom weggebrannt,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wodurch die gewünschte Logikfunktion entsteht.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EINGÄNGE<TT>&nbsp;&nbsp;&nbsp;</TT>AUSGANG<TT>&nbsp;&nbsp;&nbsp;</TT>FUNKTION<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ausgang akt. high<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Ausgang akt. low<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>B<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>C<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>AND<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>C = A * B<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/C = /A*/B + A*/B + /A*B<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;</TT>NAND<TT>&nbsp;&nbsp;&nbsp;</TT>C = /A*/B + A*/B + /A*B<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/C = A * B<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>OR<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>C = A*/B + /A*B * A*B<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/C = /A */B<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;</TT>EX-OR<TT>&nbsp;&nbsp;</TT>C = A*/B * /A*B<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>/C = /A*/B + /A*B<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>0<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="galpal_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Unterschied zwischen PAL und GAL Chips, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

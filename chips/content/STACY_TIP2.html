@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips zur STACY, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="STACY_TIP.html">Previous</A>
+<A HREF="STACY_TIP3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CD-ROM, Wechselplatten oder sonstwas ist!), darf die ACSI ID 0 nur<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von der internen Festplatte belegt sein, die übrigen Gerätenummern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von 1-7 dann, können Sie nach Belieben selbst vergeben.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Soll jedoch von einem externen Gerät gebootet werden, so muß die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ACSI ID der internen Festplatte verstellt werden, hierzu muß aus-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schließlich die Stellung der DIP-Schalter auf der Hostadapterpla-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tine (welches sich unmittelbar seitlich an der Festplatte befindet)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>verstellt (geändert) werden, um eine andere Geräte-ID zwischen Null <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und DREI zu bekommen!<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Zum guten Schluß noch, die Geräteadressen:</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dip 1<TT>&nbsp;&nbsp;&nbsp;</TT>Dip 2<TT>&nbsp;&nbsp;&nbsp;</TT>Dip 3 --------- Dip-Schalter auf dem Hostadapter<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>nur ACSI-Unit 0 (Defaulteinstellung Atari)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ACSI-Unit 0 für die interne Festplatte<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ACSI-Unit 1 für die interne Festplatte<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ACSI-Unit 2 für die interne Festplatte<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ACSI-Unit 3 für die interne Festplatte<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Beschleunigerboard in die Stacy einbauen?</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dies ist ein sehr schwieriges Vorhaben, da alleine schon die Demon-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tage der Stacy für ungeübte schwierig ist! Zu allem Überfluß sitzt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>über der orignalen CPU auch noch das interne Schaltnetzteil, welches<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unter anderen die Versorgungsspannungen für das LC-Display erzeugt,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dadurch ist die Bauhöhe SEHR begrenzt.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Am besten, ist ein ICD ADSpeed (16 MHz) einzubauen. Wer das Wagnis<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nicht scheut, kann auch eine Turbo16 (16 MHz) einbauen, dies ist je-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>doch schon sehr problematisch. Einen HBS Beschleuniger (<A HREF="ADRESSE_H&N.html">Heyer</A> &amp; <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Neumann) kriegt man in der Stacy keinesfalls rein, da dieser schon<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>rein von den Abmessungen nicht passt und die Stromaufnahme zu hoch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ist.<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>RS232 Beschleuniger?</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ist normal kein Problem, da in der STACY wie im normalen ST ein <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MFP-Chip in DIL-Ausführung seinen Dienst tut (lediglich aus Strom-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>spargründen hier abundzu in HCMOS Ausführung)!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Eine größere Festplatte einbauen?</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ebenfalls kein Problem, es muß darauf geachtet werden, daß die neue<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Festplatte sich auf SCSI ID0 einstellen läßt und die Paritätsprü-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>fung muß abschaltbar sein. Das wichtigste, die 3,5-Zoll-Festplatte <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>darf nur 1 Zoll (25.4mm) hoch sein (von den Abmessungen).<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Ein Zweites Diskettenlaufwerk?</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ebenfalls kein Problem, intern ist alles dazu vorbereitet. Sie kön-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nen allerdings nach Einbau eines zweiten Diskettenlaufwerkes keine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3,5 Zoll Festplatte mehr intern betreiben!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="STACY_TIP3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips zur STACY, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

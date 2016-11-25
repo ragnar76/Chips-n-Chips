@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Probleme beim Betrieb von IDE-Festplatten</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="HD_BETRIEB.html">Previous</A>
+<A HREF="IDEOTEN_HD.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es gibt zwangsläufig einige Probleme beim Betrieb von IDE-Festplat-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ten an Atari-Computern, wobei es egal ist ob eine nachgerüstete AT-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BUS TOS-Card benutzt wird oder es sich um den Falcon030 handelt.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das erste Problem ist meist, wohin mit der Platte!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fakt ist, das AT-BUS Kabel darf laut Spezification nicht länger als<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>18 Zoll sein, also umgerechnet knappe 46 Zentimeter - die Beschrän-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kung kommt daher, das dieser AT-Bus nunmal kein richtiges Bussystem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ist!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das zweite Problem ist dann, daß sich die Festplatte nicht richtig<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ansprechen läßt. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier liegt das Problem einfach daran, das die Atari Computer einfach<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kein BIOS-SETUP wie ein PC braucht (Atari's sind halt nicht dumm und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wissen auch so wieviel Hauptspeicher vorhanden ist und zwar ohne das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>man es den Computern von Hand vorgeben muß)!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Viele IDE-Festplatten wollen vor dem ersten Zugriff (Bootversuch) <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mit den Geometriedaten (Sektoren pro Spur, Cylinderanzahl und Köpfe)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>instruiert werden, die nach dem Einbau durch das BIOS des PC's ermit-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>telt wurden und da ein Atari halt nunmal kein BIOS-SETUP hat, kann <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>diese Daten der Computer der Festplatte zwangsweise nicht übermitteln <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(egal welcher Computertyp und welche TOS-Version benutzt wird).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hierfür gibt es nur eine Methode, man weicht auf einen anderen Hard-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>disktreiber als den AHDI aus (also HDDRIVER oder HUSHI). Beide Hard-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>disktreiber bieten die Möglichkeit die Geometriedaten zu übermitteln<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(HUSHI, mittels eines im Lieferumfang beiliegenden Programmes im<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bootsector einer Diskette lim Laufwerk A) bzw. fest im Harddisktrei-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ber zu installieren (HDDRIVER, übernimmt dann die Geometriedaten der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Festplatte und spricht Sie dann mittels dieser Geometriedaten an).<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>IDE-Festplatten und Formatieren?</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sollte man besser sein lassen, es gibt einige Festplattenlaufwerke<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mit fehlerhafter Firmware die sich nach einem Formatieren nicht mehr<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder nicht mehr richtig ansprechen lassen. Wenn so etwas vorkommt,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dann kannst Du dem Hersteller gleich mächtig in den Hintern treten,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>denn laut dem ATA-Standard (AT-Bus Attachment) gibt es das Forma-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tierkommando und dann muß es die Festplatte auch korrekt ausführen!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei Festplatten wo schon der Hersteller selber sagt, daß sie nicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>formatiert werden dürfen, entsprechen also nicht dem Standard!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn eine IDE-Festplatte nicht formatiert werden darf, hat es aller-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dings auch einen Nachteil! Es gibt keine Möglichkeit wie z.b. bei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI-Festplatten auftretende defekte Sektoren direkt von der Fest-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>plattenelektronik beseitigen (ausmaskieren) zu lassen (Ist ein Sek-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tor auf einer nicht-formatierbaren IDE-Platte defekt ist, dann <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bleibt er es bis zum Tod der Festplatte auch)!<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>High-Level formatieren?</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>PC-Benutzer verstehen unter High-Level-Formatierung das Einrichten <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von Dateisystemen, also das Schreiben von Bootsektor, FAT und In-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>haltsverzeichnis! Unter DOS/Windows wird dies fälschlicherweise mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dem Befehl FORMAT (FORMAT.EXE oder FORMAT.COM) erledigt.<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="IDEOTEN_HD.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Probleme beim Betrieb von IDE-Festplatten, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

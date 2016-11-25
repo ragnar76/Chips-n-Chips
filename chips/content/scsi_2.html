@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Rund um den SCSI BUS, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SCSI_TEXT_FAQ.html">Previous</A>
+<A HREF="scsi_3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Targetroutinen sind Prozesse, die im Target ablaufen. Sie wurden<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>mit SCSI-2 eingeführt und können zum Beispiel für Diagnosezwecke<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>verwendet werden. Sie sind Herstellerspezifisch.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- Erweiterungen im MODE-SENSE bzw. MODE-SELECT-Kommando (Page-For-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>mat).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- SCSI1-Bandgeräte schreiben die gepufferten Daten nicht notwendi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>gerweise vor der Ausführung des REWIND-Kommandos...<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- SCSI 1 hatte aber ein entscheidendes Manko!<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Es ließ den Herstellern zuviel Freiraum bei der Schaffung Geräte-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>spezifischer Kommandos.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Es wurde dann das SCSI-1-CCS (CCS = Common Command Set) einge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>führt, welches dann die sogenannten Mode-Pages beinhaltete, wo-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>durch sich dann das Verhalten von Geräten einheitlich steuern<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>läßt.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- SCSI-1: Parity ist hier noch optional<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- SCSI-2: Parity ist hier Pflicht<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1986 setzte sich das X3T9.2-Komitee wieder zusammen, um eine Weiter-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>entwicklung von SCSI zu erarbeiten, die aber abwärtskompatibel sein<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sollte, damit SCSI-1- und SCSI-2-Geräte am selben Bus arbeiten kön-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nen. Das CCS (Common Command Set, erweiterter Kommandosatz) gab <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>damals schon die Marschrichtung an.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>- SCSI-2 hat jetzt 10 Gerätetypen, die jeweils eine eigene<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>&quot;Media Type&quot; Kennung besitzen. Jede dieser Gruppen hat einen ei-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>genen <A HREF="SCSI_COMMAND.html">Befehlssatz</A> und den muß ein SCSI-2 konformes Gerät unter-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>stützen.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es gibt folgende &quot;Media Types&quot;:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Direct Access Device<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>- Festplatten, Wechselplatten, Floppys<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sequential Access Device - Streamer, Bandlaufwerke<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Printer Devices<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>- Drucker und Plotter mit SCSI-BUS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="Prozessor_Devices.html">Prozessor Devices</A><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>- Alle Arten von Computern<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Table Area Network)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Write Once Devices<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>- WORM-Schreiber, CD-ROM Schreiber<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CD ROM Devices<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>- CD-ROMs<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>unter anderem legt SCSI-2 auch die<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>&quot;Audio READ&quot; Kommandos fest.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Photo-CD ist nicht enthalten, dies wird<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>über die sogenannten VENDOR-Kommandos<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Herstellerabhängige Befehle) abgewickelt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Scanner Devices<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>- Farbscanner, etc<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Optical Memory Devices<TT>&nbsp;&nbsp;&nbsp;</TT>- MO-Laufwerke, etc<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Medium Changer Devices<TT>&nbsp;&nbsp;&nbsp;</TT>- Jukeboxes (CD-Wechsler für Audiobetrieb)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Communication Devices<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>- Modems, Netzwerkadapter<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Du siehst also, daß es sich ausschliesslich um Erweiterungen in<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Software oder um optionale Hardware-Features handelt. Auch an<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einem TT kann man ohne Probleme SCSI-2-Geräte betreiben und aus-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nutzen!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CD-ROM Audiokommandos! Die Kommandos zum abspielen von Musik sind <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>genormt, leider unterstützen viele Hersteller diese nicht, weil sie<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nur optional und nicht mandatory (Pflicht) sind. Die Toshiba<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CD-ROM Laufwerke besitzen eigene Kommandos zur Audiosteuerung und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>benutzen die Normkommandos jedoch zusätzlich.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="scsi_3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Rund um den SCSI BUS, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

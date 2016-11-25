@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der VME Bus im MegaSTE und TT030, Seite 3</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="VME_BUS_2.html">Previous</A>
+<A HREF="VME_BUS_4.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BGOIN, BGG1N, BG2IN und BG3IN sind miteinander verbunden und über <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einen 1 Kiloohm Widerstand an +5V (Vcc) gelegt.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BBSy und BCLR sind ebenfalls über einen 1 Kiloohm Widerstand mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Vcc verbunden, werden aber auch nicht benutzt.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BG0OUT, BG1OUIT, BG2OUT und BG3OUT sind nicht angeschlossen (weder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>an die Mainboardhardware noch irgendwo an anderen VME Bus Anschlüs-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sen.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SYSCLK wird vom 16.1207953 MHz Takt (beim TT030) versorgt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SERCLK und SERDAT sind nicht vorhanden!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ACFAIL bleibt solange auf LOW-Pegel, solange die Versorgungsspan-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nungen (+5V, +12V sowie -12V) beim einschalten nicht korrekte Werte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>haben. ACFAIL wird 1 Millisekunde (!) vor verlassen der gültigen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Spannungsbereiche aktiviert, das Signal verfügt über einen 1 Kilo-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ohm Pullupwiderstand nach +5V (Vcc).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Adress Modifier 0, Adress Modifier 1, Adress Modifier 2 und Adress<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Modifier 4 sind über einen 1 Kiloohm Pullup-Widerstand mit +5V ver-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bunden, weiterhin ist das LWORD-Signal mit einem 1 Kiloohm Pullup-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Widerstand mit +5V verbunden (weil Atari nur einen 16Bit breiten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Datenbus verwendet hat).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BERR (Bus Error) und SYSRES (Systemreset) sind direkt mit der Main-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>boardhardware verschaltet. Nach 255 Zyklen bei 16 MHz und fehlenden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>DTACK Signal (nach der aktivierung von Adress Strobe (Adressen sind<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gültig) wird ein Bus Error generiert!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>IRQ 1 bis IRQ7 können verwendet werden und haben jeweils einen ei-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>genen 1 Kiloohm Pullup-Widerstand gegen +5V. IRQ3, IRQ5 sowie IRQ6<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kann auch vom Mainboard aktiviert werden! Ein Prioritätssignal der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ebene 7 kann durch ein SYSFAIL Signal vom Mainboard ausgelöst wer-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>den! IACK und IACKIN werden ebenfalls von der Mainboardhardware<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gesteuert (der TT030 bzw. MegaSTE ist der Master und daher der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Interrupthandler), das Signal IACKOUT wird jedoch nicht verwendet.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>VITA - VME bus International Trade Association<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>VITA<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>VITA<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10229 N. Scottsdale Road, Suite E<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>P.O. Box 192<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Scottsdale, AZ 85253, USA<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5300 AD Zaltbommel<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Tel: (602) 951-8866<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>The Netherlands<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>HTTP://www.vita.com<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>HTTP://www.busandboard.com<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der VME Bus (von den Firmen Motorola, Mostek, dem Verbund Philips/<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Signetics/Valvo und Thomson-EFCIS) hat seit seiner Vorstellung im <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Jahre 1981 auf der SYSTEMS in München sich schnell eingelebt in die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Rechnerarchitekturen. Der VMEbus ist eine weiterentwicklung des <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Versabus, den die Firma Motorola als 16/32 Bit Bussystems für die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MC68000 CPU seinerzeit entwickelte. Der VME Bus (VME steht für Versa<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bzw. Versatile Module Europe) besteht entweder aus Europaformat mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einem 96 poligen oder aus Doppeleuropaformatigen Steckkarten mit <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zwei 96 poligen Steckverbindern (welches sämtliche Signale wie <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Daten- und Adressbus, sowie den Steuersignalen und der Spannungsver-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sorgung enthalten).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="VME_BUS_4.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der VME Bus im MegaSTE und TT030, Seite 3<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

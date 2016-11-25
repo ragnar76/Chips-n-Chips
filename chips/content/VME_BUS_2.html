@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der VME Bus im MegaSTE und TT030, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="VME_BUS.html">Previous</A>
+<A HREF="VME_BUS_3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Bedeutung der Signale am VME Bus<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Adress 1 - Adress 23 (Out) = Adressbus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/ACFail (In) = Versorgungsspannungseinbruch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>AM0 - AM5 (Out) = Codierung des Datenzugriff<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/AS (Out) = Strobe-Impuls für gültige Adresse<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/BBsy (In) = Aktueller Master gibt Bus frei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/BClr (Out) = Busarbiter fordert Bus zurück<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/Berr (In) = Vom Slave statt DTACK bei Fehler<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/BG0In - /BG3In (In) = Daisy-Chain für BR0 - BR3<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/BG0Out - /BG3Out (Out) = Bus für Master frei<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/BR0 - /BR3 (In) = Busanforderung eines Masters<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Data 0 - Data 31 (Out/In) = System-Datenbus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/DS0 - /DS1 (Out) = Bereit für 8/16Bit Zugriff<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/DTack (In) = Daten vom Slave sind gültig<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/IAck (Out) = low/high -&gt; Int-ACK/Datenzyklus<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/IAckIn (In) = Daisy-Chain Interrupt-Anforderung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/IAckOut (Out) = Daisy-Chain INT-Bestätigung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/IRQ1 - IRQ7 (In) = Anforderung eines Interrupts<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/LWord (Out) = 32-Bit Zugriff (DS0, DS1, A1 = Low)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SerClk (Out) = Takt für serielle Daten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/SerDat (Out/In) = Serielle Datenleitung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/SysFail (Out) = Systemfehler aufgetreten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SysClk (Out) = 16MHz Takt zur Synchronisation<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/SysReset (Out) = System-Reset<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/Write (Out) = Schreib/Lesezugriff<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Der Adressraum beim MegaSTE</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>$A00000 bis $DEFFFF - A24 und D16 Platz<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>$DF0000 bis $DFFFFF - A16 und D16 Platz<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Der Adressraum im TT030</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>$FE000000 bis $FEFEFFFF - A24 und D16 Platz<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>$FEFF0000 bis $FEFFFFFF - A16 und D16 Platz <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die NOVA Grafikkarten belegen folgenden Adressraum und benutzen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>keinen Interrupt vom VME Bus:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MegaSTE: 0xa00000-0xdfffff<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>TT030: 0xfe900000-0xfedfffff<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falls mal das Bild unmotiviert wackeln sollte und nach einiger Zeit <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dann ganz weg ist, sollte man mal bei der VME Adapterplatine nach-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schauen ob nicht der Schutzlack abgekratzt ist und so die Adapter-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>karte unzulässig Kontakt mit dem VME Bus Blechhalter bekommt.<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die PAMsNet VME Bus Karte belegt folgenden Adressraum:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>0xFC00-0xECFF und 0xFFaF7F00-0xFFAF7FFF<BR>
+ <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Steckplatz ist mit einigen Einschränkungen kompatibel zur VME<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bus Spezifikation, die Einschränkungen sind folgende:<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Keine Bus Arbitration!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>BR0, BR1, BR2 und BR4 sind vorhanden und mit einem 1 Kiloohm Wider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stand mit +5V (Vcc) verbunden.<BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="VME_BUS_3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der VME Bus im MegaSTE und TT030, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

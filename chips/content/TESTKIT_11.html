@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Das Test- bzw. Diagnosekit von Atari, Seite 11</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="TESTKIT_10.html">Previous</A>
+<A HREF="TESTKIT_12.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beim ersten Test wird in das interne Ram geschrieben, falls ein<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fehler auftritt erscheint die Meldung EX0 bad<TT>&nbsp;&nbsp;</TT>bit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Überprüfe D0-D15, AS, LDS, UDS, und R/W<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beim zweiten Test wird ein Muster in das Ram geschrieben, falls ein<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fehler auftritt erscheint die Meldung EX1 external RAM<TT>&nbsp;&nbsp;</TT>error<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Überprüfe A1-A11<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>EX2 external RAM error Überprüfe A12-A23<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beim dritten Test werden die Interruptleitungen überprüft, falls ein<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fehler auftritt erscheint die Meldung EX3 INT3 error, EX4 INT5 error<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder EX5 INT7 error.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fehler code's die beim Einschalten erscheinen könnten:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I1= Ram data line is stuck. Ram fehler mit Angabe des Defekten Chips.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn auf einen Schlag 8 Ram's einer Bank als defekt gemeldet werden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kann auch ein Bustreiber zwischen der MMU und der betreffenden Ram-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bank defekt sein.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier ein Beispiel,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I1 RAM/data line error 0000000000000000 1111111100000000 000008<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier ist U33 (Mega ST) defekt (74LS373 oder 74HC373)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I1 RAM/data line error 0000000000000000 0000000011111111 000008<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hier ist U36 (Mega ST) defekt (74LS373 oder 74HC373)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es gibt pro Rechner nur jeweils 2 Chips vom Typ 74LS244 und 74LS373 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder die entsprechende HC-Ausführung davon.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Man kann den defekten Treiber recht einfach ermitteln, man nimmt <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>einfach ein Meßgerät und prüft den Pin 2 (256Kbit*1) oder Pin 1 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(1M*1) gegen Masse. Sollte dort nur eine Spannung von 0-1 Volt an-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>liegen, den Rechner ausschalten und vom betreffenden Ram zum Bus-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>treiber durchmessen und den gefundenen Bustreiber dann gegen einen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>neuen austauschen. Das war's.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I2= Ram disturbance. Ram fehler kann nicht genau lokalisiert werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I3= Ram addressing. Siehe I2.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I4= MMU error. Kein DTACK Signal bei Ramzugriff.(Pin 53 MMU, Pin 27 <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Blitter, Pin 10 CPU und Pin 31 am GLUE).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I5= Ram sizing error. Ramtest nicht erfolgreich, Größe kann nicht <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ermittelt wer den, wahrscheinlich MMU oder Bustreiber defekt.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="TESTKIT_12.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Das Test- bzw. Diagnosekit von Atari, Seite 11<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

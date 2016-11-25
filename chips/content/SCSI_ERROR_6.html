@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Fehlermeldungen aus dem SCSI Standardwerk, Seite 6</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="SCSI_ERROR_5.html">Previous</A>
+<A HREF="SCSI_ERROR_7.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>D - DIRECT ACCESS DEVICE (SBC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>device column key<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.T - SEQUENTIAL ACCESS DEVICE (SSC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-------------------<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>. L - PRINTER DEVICE (SSC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>blank = reserved<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>P - PROCESSOR DEVICE (SPC)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>not blank = allowed<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.W - WRITE ONCE READ MULTIPLE DEVICE (SBC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. R - READ ONLY (CD-ROM) DEVICE (MMC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>S - SCANNER DEVICE (SGC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.O - OPTICAL MEMORY DEVICE (SBC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. M - MEDIA CHANGER DEVICE (SMC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>C - COMMUNICATION DEVICE (SSC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.A - STORAGE ARRAY DEVICE (SCC)<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>.<TT>&nbsp;&nbsp;</TT>. E - ENCLOSURE SERVICES DEVICE (SES)<BR>
+ASC/ASCQ DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>Description<BR>
+-------<TT>&nbsp;&nbsp;</TT>------------<TT>&nbsp;&nbsp;</TT>----------------------------------------------------<BR>
+<BR>
+11h/01h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>W SO<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>READ RETRIES EXHAUSTED<BR>
+14h/00h<TT>&nbsp;&nbsp;</TT>DTL WRSO<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECORDED ENTITY NOT FOUND<BR>
+14h/01h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECORD NOT FOUND<BR>
+14h/05h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECORD NOT FOUND - RECOMMEND REASSIGNMENT<BR>
+14h/06h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECORD NOT FOUND - DATA AUTO-REALLOCATED<BR>
+15h/00h<TT>&nbsp;&nbsp;</TT>DTL WRSOM<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RANDOM POSITIONING ERROR<BR>
+17h/00h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WRSO<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH NO ERROR CORRECTION APPLIED<BR>
+17h/01h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WRSO<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH RETRIES<BR>
+17h/02h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH POSITIVE HEAD OFFSET<BR>
+17h/03h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH NEGATIVE HEAD OFFSET<BR>
+17h/04h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH RETRIES AND/OR CIRC APPLIED<BR>
+17h/05h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA USING PREVIOUS SECTOR ID<BR>
+17h/06h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITHOUT ECC - DATA AUTO-REALLOCATED<BR>
+17h/07h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITHOUT ECC - RECOMMEND REASSIGNMENT<BR>
+17h/08h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITHOUT ECC - RECOMMEND REWRITE<BR>
+17h/09h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITHOUT ECC - DATA REWRITTEN<BR>
+18h/00h<TT>&nbsp;&nbsp;</TT>DT<TT>&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH ERROR CORRECTION APPLIED<BR>
+18h/01h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH ERROR CORR. &amp; RETRIES APPLIED<BR>
+18h/02h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA - DATA AUTO-REALLOCATED<BR>
+18h/03h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH CIRC<BR>
+18h/04h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH L-EC<BR>
+18h/05h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA - RECOMMEND REASSIGNMENT<BR>
+18h/06h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>WR O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA - RECOMMEND REWRITE<BR>
+18h/07h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED DATA WITH ECC - DATA REWRITTEN<BR>
+1Eh/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;</TT>W<TT>&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RECOVERED ID WITH ECC CORRECTION<BR>
+2Ah/03h<TT>&nbsp;&nbsp;</TT>DTLPWRSOMCAE<TT>&nbsp;&nbsp;</TT>RESERVATIONS PREEMPTED<BR>
+36h/00h<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>L<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RIBBON, INK, OR TONER FAILURE<BR>
+37h/00h<TT>&nbsp;&nbsp;</TT>DTL WRSOMCAE<TT>&nbsp;&nbsp;</TT>ROUNDED PARAMETER<BR>
+3Bh/08h<TT>&nbsp;&nbsp;&nbsp;</TT>T<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>REPOSITION ERROR<BR>
+3Bh/09h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>READ PAST END OF MEDIUM<BR>
+3Bh/0Ah<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>S<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>READ PAST BEGINNING OF MEDIUM<BR>
+40h/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RAM FAILURE (SHOULD USE 40 NN)<BR>
+5Ch/00h<TT>&nbsp;&nbsp;</TT>D<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>O<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RPL STATUS CHANGE<BR>
+67h/05h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>REMOVE OF LOGICAL UNIT FAILED<BR>
+6Bh/01h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>REDUNDANCY LEVEL GOT BETTER<BR>
+6Bh/02h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>REDUNDANCY LEVEL GOT WORSE<BR>
+6Ch/00h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>REBUILD FAILURE OCCURRED<BR>
+6Dh/00h<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A<TT>&nbsp;&nbsp;&nbsp;</TT>RECALCULATE FAILURE OCCURRED<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="SCSI_ERROR_7.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Fehlermeldungen aus dem SCSI Standardwerk, Seite 6<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

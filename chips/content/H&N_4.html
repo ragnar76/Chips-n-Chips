@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Generelles zu H&amp;N-Produkten (Aixit), Seite4</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="H&N_3.html">Previous</A>
+<A HREF="MAGNUMTT.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Notes: MP0,MP1,MP2,MP3 are N/C on all x32 bit modules<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A9 is a N/C on 256k and 512k modules<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>A10 is a N/C on 256k, 512k, 1M and 4M modules<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>The Address Line A11 is mandatory by PS/2 SIMMs with 1K Refresh<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RAS1/RAS3 are N/C on 256k, 1M and 4M modules<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>DQx is Data In/Out Pin <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Der Jumper Standard Mode oder Special mode der AixTT Fastramkarte</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wie der Jumper (Position O oder N) steht, ist vollkommen egal.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Jumper ist zwar mit dem PLD AMD MACH210 verbunden, hat aber <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Logikmäßig keinen Einfluß auf die interne Verschaltung vom MACH210<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Chip (Dummyjumper, war nur während der Entwicklung von Bedeutung).<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Der ACSI Hostadapter HDP-Link</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der HDP-Link ist ein kleines zwischensteckerartiges Gerät welches<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf der ACSI Seite ein festmontiertes Kabel mit DMA-Stecker besitzt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ein 50poliger SCSI-Stecker (Centronics) ist auf der SCSI-Seite vor-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>handen und wird auf das erste Gerät aufgesteckt. Die Spannungsver-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sorgung findet über TERMPWR aus dem SCSI-Bus statt, eine Terminie-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>rung besitzt der HDP-Link nicht dafür generiert er aber das Parity<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bit. Er kann nur Klasse 0 Kommandos verschicken und ist daher nicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in der Lage bei z.b. Festplatten Sektoren oberhalb von 1024 Megabyte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>anzusprechen.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der HDP-Link 2 wurde leider nie vermarktet. Dieser hätte dann auch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die Sektoren oberhalb der 1024 Megabyte Grenze ansprechen können.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Zum H&amp;N Multiboard ein paar Dinge!</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Auf der 11.5x12 cm großen Platine für ST und MegaST Computer sind<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>folgende Anschlußmöglichkeiten vorhanden:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 Anschluß für maximal 2 IDE-Geräte (Platte(n) und CD ROM)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 ET-4000 Grafikkarte (Colormaster 12+, Color Image 5 mit -12V),<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Targa und Expert 6693B, weiterhin sollte man darauf achten, daß <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der ET-4000 Chip die Bezeichnung '6100' auf dem Chip trägt.)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2 Sockel für ein TOS 2.06 ROM<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2 Sockel für entweder 2x1MB, 2x2MB oder 2x4MB 30-pol-Standard-SIMM<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in 3, 8 und 9-Chip Version.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Im MegaST wird die Platine einfach auf den Mega-Bus gesteckt, und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>paßt auch ins normale Gehäuse.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zum benutzen des Alternate-RAMs, TOS 2.06 und der Grafikkarte ist <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nur das Anlöten von +5V und Masse erforderlich (in seltenen Fällen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>müssen +12 Volt und -12 Volt für den Einwandfreien Betrieb der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Grafikkarte zusätzlich gelegt werden). Verändert der RAMDAC die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bildschirmfarbe sowie er warm wird, bzw. wenn man ihn mit den Fin-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gern berührt braucht diese Grafikkarte eine -12 Volt Spannungsver-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sorgung!<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei der Verwendung von IDE-Geräten muß ein Anschluß des Boards mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pin 24 des DMA-Steckers verbunden werden und wenn man sein TOS um-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schaltbar haben möchte, ist eine Leitung nach Pin 20 von LO-0 oder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>HI-0 zu legen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sollte der Rechner beim Zugriff auf das Multiboard-RAM abstürzen, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sollte man sich mal um eine aktuelle Version des Festplattentreibers<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bemühen!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Generelles zu H&amp;N-Produkten (Aixit), Seite 4<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

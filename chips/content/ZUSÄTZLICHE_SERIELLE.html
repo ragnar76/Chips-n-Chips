@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Zusätzliche Serielle Schnittstelle am MegaSTE, TT030 und Falcon030</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="DIE_LÜFTERREGELUNG.html">Previous</A>
+<A HREF="LOETKOLBEN.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es gibt noch eine einfache Möglichkeit zu einer weiteren Seriellen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Schnittstelle zu kommen, vorausgesetzt der LAN-Port des MegaSTE,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Falcon030 oder TT030 ist noch nicht anderweitig belegt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die LAN-Schnittstelle arbeitet zwar mit symetrischer Signalüber-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tragung nach RS422/RS223, aber mit einem geeigneten Adapterkabel<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kann man durchaus z.B. ein Modem anschließen, denn die +-5V-Pegel<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>des LAN-Ports genügen auch der RS232-Norm.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mit dem unten dargestellten Adapterkabel kann man ein Modem am LAN<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Port betreiben:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mini-<A HREF="DIN.html">DIN</A><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>RS232/25-pol D-SUB Stecker<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>9-pol D-SUB<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Falcon030/TT030/MegaSTE)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Modem)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pin Name<TT>&nbsp;&nbsp;&nbsp;</TT>Beschreibung<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin Name<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;</TT>HSKo<TT>&nbsp;&nbsp;&nbsp;</TT>DTR-Signal vom SCC<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>--- 4+20 RTS<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>7 RTS<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;</TT>HSKi<TT>&nbsp;&nbsp;&nbsp;</TT>CTS-Signal zum SCC<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;</TT>CTS<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8 CTS<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;</TT>TXD-<TT>&nbsp;&nbsp;&nbsp;</TT>Sendedaten negiert<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;</TT>TXD<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 TXD<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;</TT>Ground Signal Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;</TT>Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>5 Ground<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;</TT>RXD-<TT>&nbsp;&nbsp;&nbsp;</TT>Empfangsdaten negiert<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;</TT>RXD<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 RXD<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>6<TT>&nbsp;&nbsp;</TT>TxD+<TT>&nbsp;&nbsp;&nbsp;</TT>Sendedaten nicht negiert<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>nirgendswo anlöten!<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;</TT>GPi<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>DCD-Signal zum SCC<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;</TT>DCD<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 DCD<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;</TT>RxD+<TT>&nbsp;&nbsp;&nbsp;</TT>Empfangsdaten nicht negiert ---<TT>&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;</TT>Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>5 Ground<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Anschluß an die Digitale Modelleisenbahn<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mini-<A HREF="DIN.html">DIN</A><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>6 Pin <A HREF="DIN.html">DIN</A> Stecker <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Falcon030/TT030/MegaSTE)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>(Märklin Interface)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pin Name<TT>&nbsp;&nbsp;&nbsp;</TT>Beschreibung<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Pin Name<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;</TT>HSKo<TT>&nbsp;&nbsp;&nbsp;</TT>DTR-Signal vom SCC<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>nirgendswo anlöten! <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;</TT>HSKi<TT>&nbsp;&nbsp;&nbsp;</TT>CTS-Signal zum SCC<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;</TT>CTS <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;</TT>TXD-<TT>&nbsp;&nbsp;&nbsp;</TT>Sendedaten negiert<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;</TT>RXD <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;</TT>Ground Signal Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>3 + 6 Ground <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;</TT>RXD-<TT>&nbsp;&nbsp;&nbsp;</TT>Empfangsdaten negiert<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;</TT>TXD <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>6<TT>&nbsp;&nbsp;</TT>TxD+<TT>&nbsp;&nbsp;&nbsp;</TT>Sendedaten nicht negiert<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>nirgendswo anlöten!<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;</TT>GPi<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>DCD-Signal zum SCC<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>---<TT>&nbsp;&nbsp;</TT>nirgendswo anlöten! <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;</TT>RxD+<TT>&nbsp;&nbsp;&nbsp;</TT>Empfangsdaten nicht negiert ---<TT>&nbsp;&nbsp;</TT>3 + 6 Ground <BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das pinout der 8-poligen Mini-<A HREF="DIN.html">DIN</A>-Buchse (in Aufsicht):<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>--***--<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B> Am Mini-<A HREF="DIN.html">DIN</A> Stecker muß außer Pin 4 unbe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>/ 8<TT>&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;</TT>6 \<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>dingt noch Pin 8 auf Masse gelegt werden, damit der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>|5<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;</TT>3|<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>symmetrische Eingang des LAN-Port ein definiertes <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>\<TT>&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;</TT>/<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Eingangssignal bekommt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>-------<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das Ganze funktioniert mit Hardware-Handshake in beiden Richtungen,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wenn man den HSMODAxx-SCC-Treiber benutzt. Dieser setzt das RTS/CTS<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Handshaking transparent in ein DTR/CTS-Handshaking um und ermög-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>licht Bitraten bis zu 230400 Bit/s (nicht beim Märklin/Arnold Digi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>talinterface!). <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B> Beim TT030 und MegaSTE muß per entsprechenden Bit (Bit 7 -<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>I/O Port A) vom Soundchip umgeschaltet werden von RS232 auf LAN An-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schlußbuchse! Sollte es probleme beim Datenempfang geben, so müssen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die beiden 100 Ohm Widerstände im Signalweg der Empfangsleitungen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>durch Drahtbrücken ersetzt werden!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="HAGENUK_SPD.html">Die Belegung für das Verbindungskabel zur Hagenuk Speed Dragon</A><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Zusätzliche Serielle Schnittstelle am MegaSTE, TT030 und <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>dem Falcon030, Seite 1 <BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

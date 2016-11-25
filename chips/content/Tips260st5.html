@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für 260/520/1040/MegaST, Seite 5</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="Tips260st4.html">Previous</A>
+<A HREF="Tips260st6.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Rechner läuft nicht mit Beschleunigerkarte</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn es ein älterer Mega ST ist, prüfe, ob sich da RAMs drauf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>befinden, die langsamer als 150 ns sind. Ich habe mal Rechner mit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Matsushita-RAMs und AT&amp;T RAMs (&quot;die Goldenen&quot;) gehabt, da waren<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unten links (bei normale Draufsicht auf die Platine) vier 170 ns<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RAMs - ist sehr häufig so gewesen, scheint eine ganze Serie zu sein<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Damit geht NICHTS. Du mußt diese gegen 150er oder schnellere aus-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tauschen!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Oft sind miese Bustreiber das Problem und zwar die 74LS373 und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>74LS244. Wenn alle von <A HREF="ADRESSE_MOTOROLA.html">Motorola</A> sind, gibt's eigentlich nie Pro-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bleme. Bei anderen Firmen (insbesondere <A HREF="ADRESSE_SGS.html">SGS</A> Thomson) mußt Du sie<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tauschen, dann am besten gleich gegen schnellere Typen. Hier schwö-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ren einige auf HCT, andere auf ACT. Ich verwende meist HCT, weil<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die einfacher zu bekommen sind und habe damit bisher jeden Computer<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zum laufen bekommen. Evtl. langt es, die 373er auszutauschen, wenn<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>das nicht hilft, dann auch die 244er.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zusätzlich gibt es wenige Rechner, die Probleme machen, wenn die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Puffer-ICs für die MAD-Leitungen nur 74 LS 244er sind. Bei neueren<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Mega STs sind dort 74 F 244 eingebaut, bei älteren die LS-Typen.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Warum blinkt die Floppy-<A HREF="LEUCHTDIODE.html">LED</A> dauernd auf ?</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ganz einfach, der Computer prüft im VBL nach, ob die eingelegte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diskette gewechselt wurde. Dazu muß das Laufwerk kurzfristig akti-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>viert werden (Floppy-<A HREF="LEUCHTDIODE.html">LED</A> blinkt kurz auf). Dieses Blinken ist je<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nach Computer/Floppylaufwerk und TOS Version verschiedenen hell<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(von gar nicht bis sehr gut bei Tageslicht) zu sehen.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Trotz AJAX Floppycontroller macht der Floppybetrieb Schwierigkeiten</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es kann auch mit einem AJAX im HD Modus zu Problemen kommen,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>da der Treiber (7406 - sechs-fach Inverter mit open Collector) in<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Schreibleitung bei höheren Taktraten Probleme bekommt den Pe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gel auf LOW zu ziehen. Besonders macht sich dieses Problem bemerk-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bar, wenn man dann auch noch mit ED-Laufwerken arbeitet. Dann <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>reicht die Zeit des LOW-Impulses nicht mehr aus, um von der Lauf-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>werkslogik sauber erkannt zu werden. Ein weiterer Knackpunkt ist <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der in der Schreibleitung, hinter dem 7406, liegende Serienwider-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stand von 47 Ohm. Er bedämpft die Leitung so stark, daß der LOW-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pegel nicht mehr tief genug runter gezogen wird. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Abhilfe schafft hier nur ein kleinerer Serienwiderstand von ca. <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>10 Ohm es vergrößern sich hierbei aber leider die Leitungsreflexio-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nen) und an Stelle des 7406 einen 74F04 oder 74ACT04. Dann erhält <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>man am Laufwerk ein relativ gutes Digitalsignal, welches ja auch <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vom FDC geliefert werden sollte.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es folgt nun eine Liste mit der Bezeichnung des entsprechenden ICs<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und des Widerstands in den verschiedenen Rechnern.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><U>Rechner<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>Platinen-Nr.<TT>&nbsp;&nbsp;&nbsp;</TT>7406N -- Pin zum<TT>&nbsp;&nbsp;&nbsp;</TT>Widerstand</U><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>520ST<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>C070231<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U8 -- Pin 10<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R100<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1040STF<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>C070460<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U8 -- Pin 10<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R67<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1040STF<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>C103173<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U14 -- Pin 10<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R25<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MEGA ST<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>C103277<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U26 -- Pin 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R46<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1040STE<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>C4003290<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U305A -- Pin 2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R308<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>MEGA STE<TT>&nbsp;&nbsp;&nbsp;</TT>CA400677<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U406 -- Pin 4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R428<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>TT030<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U405 -- Pin 4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>R409 <BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Tips260st6.html">weiterblättern</A> <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für 260/520/1040/MegaST, Seite 5<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

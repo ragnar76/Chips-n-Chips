@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für 260/520/1040/MegaST, Seite 2</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="260ST_TIP.html">Previous</A>
+<A HREF="Tips260st3.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Bildschirmflimmern</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei verschiedenen älteren Systemen kann nach einer gewissen Zeit<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ein Bildschirmflimmern auftreten. Dieser Fehler tritt in einem be-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stimmten Temperaturbereich auf. Beim Austauschen von Videoshifter<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und MMU wird dieser Bereich nur verschoben. Um Abhilfe zu schaffen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wird ein Kondensator im Wert von 5-10pf (Picofarad) an Pin 39 vom<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Videoshifter gegen Masse gelötet.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wer sagt mir, woher es kommt, daß bei Plattenzugriffen der graue<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hintergrund des Monitorbildes leicht flackert ?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RESET-Signal am DMA-Ausgang über einen <A HREF="TTL_7407.html">7407</A> (kein LS!) mit 1 kOhm<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gegen 5 Volt verstärken, dann treten diese Effekte nicht mehr auf.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei Flimmern, Grieseln oder <A HREF="sternenbildung.html">Sternenbildung</A> auf dem Schirm ?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>An Pin 36 (16 MHz out) des Videochips einen Kondensator von 10-120pF<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gegen Masse einlöten. Der Wert muß ausprobiert werden!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Senkrechte Streifen auf dem Desktop ?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kondensator an Shifter Pin 38 (ChipSelect) mit 330pF gegen GND.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Unregelmäßiges Aufblitzen des Monitorbildes ?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kondensator 330pF an Pin 11 (Load) des Shifters gegen GND.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Autoswitch <A HREF="ADRESSE_OVERSCAN.html">OverScan</A> Bild flackert bei DMA-Zugriffen?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Testweise einen 8.2pF (Picofarad) Kondensator auf der OverScanpla-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tine von der 2 MHz-Taktleitung des Soundchips an Masse anlöten!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Einige Shifterserien (Videochips) wollen anscheinend zuerst nicht<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mitspielen bei einem höher getakteten Board. Das sieht dann so aus,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>daß der Bildschirm permanent in 16 Pixelbreite hin und her springt.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Abhilfe bringt hier ein 100 nF Kondensator von Pin 40 an Pin 1 des<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Shifters.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kurze Erklärung: Bei Verwendung von Quarzoszillatoren bleibt der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eine Eingang des Oszillatoreinganges des Shifters unbeschaltet bis<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf einen Pull-Down Widerstand von 10 KOhm nach Masse. Dieser Ein-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gang fängt an zu schwingen bei Takten größer 40 MHz (an Pin 2 des<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Shifters). Mit Hilfe des Kondensators ist das Versetzen des Bild-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schirmes weg.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Um das Verzocken des Shifters beim Autoswitch-<A HREF="ADRESSE_OVERSCAN.html">OverScan</A> bei höher ge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>takteten Boards zu vermeiden, sollte man anstelle des 2 MHz Taktes,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der aus dem 4024 (Pin 5) kommt und an Pin 11 des 74HC574 geht, den <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>alten 2 MHz Takt des Glue (PLCC Pin 54) nehmen um damit den 574 zu<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>steuern, eventuell die 2 MHz mit einem kleinen C nach Masse beschal-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ten. Aufgrund der Boardbeschleunigung läuft dieser Takt auch um den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>entsprechenden Faktor schneller und es ist ein synchrones umschalten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>möglich, da alle internen Videovorgänge im ST auf diesen Takt syn-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>chronisiert werden. Dies bringt auch bei der normalen Auflösung etwas.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Schwarzer Bildschirm - Defekter Glue und/oder Videochip (Shifter)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Weißer Bildschirm<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Defekter Glue und/oder Videochip und/oder MMU und/oder DMA und/oder<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>68000 CPU, Zugriff auf die TOS-<A HREF="rom_abfackeln.html">ROM</A>s fehlerhaft oder sind die gar-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nicht gesteckt!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Punkte/Streifen auf Bildschirm<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Defektes Ram und/oder MMU und/oder Videochip.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Tips260st3.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für 260/520/1040/MegaST, Seite 2<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der MC88915 Low skew CMOS Phase locked loop clock driver</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="MC_68060_2.html">Previous</A>
+<A HREF="PROZ_EMU.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der MC88915 Low skew CMOS <A HREF="PLL.html">Phase locked loop</A> clock driver<BR>
+<BR>
+<BR>
+<IMG SRC="../images/chips_Index1304.png" ALIGN="TOP">
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der MC88915 besitzt 5 Ausgänge (Q0 bis Q4) mit einer Drift von <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>kleiner 500 Picosekunden gegenüber dem SYNC Eingang.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Teiler für die Eingang- bzw. Ausgangssignal ist auf 1 zu 2, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 zu 1 oder auf 2 zu 1 einstellbar.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Eingangsfrequenz reicht von 5 Megaherz bis zu 2X_Q FMAX specs,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>das heißt (2X_Q maximal 160 Megaherz in der MC88915FN160 Version).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Alle Ausgänge können +-35 Milliampere an CMOS oder TTL Lasten trei-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ben, die Eingänge sind TTL kompatibel.<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Verwendung findet der MC88915 zum Beispiel bei den 68040 und 68060 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CPUs von Motorola. Aus einem Takt von 16 MHz beispielsweise lassen <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sich so recht einfach die benötigten Taktfrequenzen von 16 und 32MHz<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>für den Bustakt und den CPU Takt (BCLK und PCLK) gewinnen die dann<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auch gleich die richtigen Parameter für einen sicheren Betrieb der<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>angeschlossenen CPU aufweisen.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Der MC88915 Low skew CMOS phase-locked loop clock driver<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

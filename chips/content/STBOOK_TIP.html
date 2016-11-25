@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für den STBook</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="STBook_2.html">Previous</A>
+<A HREF="STBOOK_TIP_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Beim ST-Book gibt es neben dem RESET-Taster eine weitere Möglich-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>keit, um abgestürzte Boards wieder zu aktivieren. Zunächst den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>AKKU entnehmen und das Netzteil-Kabel abziehen. Dann drücken und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>halten Sie die SLEEP-Taste. Zusätzlich drücken und halten Sie die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>blaue POWER-Taste. Nach 10-15 Sekunden loslassen und das Board<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sollte wieder bootfähig sein.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn 4 Bomben beim STBook auf dem Display erscheinen, liegt das da-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ran, das daß TOS weder ein Diskettenlaufwerk noch eine bootbare <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Festplatte vorfindet. Abhilfe: Ein Diskettenlaufwerk oder eine ACSI<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(DMA) Festplatte anschließen (sofern vorhanden) oder die Festplatte<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ausbauen und an einem Atari ST mit AT BUS Karte oder einem Falcon030<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>anschließen und die Festplatte neu installieren (Harddisktreiber).<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Allerdings kann ein BUG im STBook TOS das Booten von ACSI Festplatten<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>unmöglich machen, dazu müßte dann ersteinmal das TOS gepatcht werden!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die TOS Adresse ist $E00000 und am Offset $E00ABC muß dann die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>folgende Sequenz geptacht werden:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Alt: $3839,$0000,$08E4,$5244,$33C4,$0000,$08E4,$0C3B,$00FF,$4008<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Neu: $3838,$08E4,$5244,$31C4,$08E4,$41FA,$000C,$0C30,$00FF,$4000<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Die Anschlußbuchsen am STBook</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Akku hat nur zwei Kontaktplatten für die Federn: wenn das<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Typenschild hinten auf dem Book lesbar ist, liegen die drei Fah-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nen darunter. Die linke ist am Book-Akku unbenutzt, die mittlere<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hat &quot;+&quot;, die rechte &quot;-&quot; als Aufschrift. Am Batterie-Pack ist die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mittlere unbenutzt und die linke hat &quot;+&quot;.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn der Akku seine Kapazität verliert passt folgender Ersatztyp:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>NiCd-Power Pack 9,6 Volt mit 0,8 Ampere (Bestellnummer 255793-99)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Preis 29,85 DM, Conrad Elektronik, Klaus-Conrad-Straße 1, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>92240 Hirschau, Telefon 0180/5312111, Telefax 0180/5312110<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Orange Led des Akkus geht bei ca. 8.6 Volt an (und bei 9.0 Volt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wieder aus). Die Grüne Powerled geht bei 7.5 Volt aus (und bei 7.6 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Volt wieder an).<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Er hat zwar weniger Kapazität als das Original, passt aber von den<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mechanischen Abmessungen her bestens und die Ladeschaltung im Netz-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>teil kommt mit ihm auch zurecht. Das Gehäuse bekommt man so auf: <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Gaaanz vorsichtig auf der Seite mit den Kontakten anfangen, denn <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hinter den Kontaktblechen sind Stege, die diese halten und noch <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>benötigt werden. Diese Stege sind nur an einer der beiden Gehäuse-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schalen fest, wirken aber sehr zerbrechlich.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wer lieber Einzelzellen nehmen will, die Ersatzakkus haben folgende<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Daten: Durchmesser 17mm und höchstens 49mm Länge mit etwa 1200 mAh <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Kapazität und Lötfahnenanschluß. Nicht vergessen die Übertemperatur<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Sicherung wieder einzubauen, dieses etwa 5x5x30 mm große Etwas im <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Metallgehäuse mit 2 Anschlußdrähten, welches nach 4 Zellen im <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>original Akku in Reihe zum Rest geschaltet ist! <BR>
+ <BR>
+<IMG SRC="../images/chips_Index1431.png" ALIGN="TOP">
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><U>Midi Out/Thru</U><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><U>Midi In</U><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1 THRU Transmit Data<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>1 nicht belegt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2 Shield Ground<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 nicht belegt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3 THRU Loop Return<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 nicht belegt<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4 OUT Transmit Data<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4 IN Receive Data<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5 OUT Loop Return<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>5 IN Loop Return<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="STBOOK_TIP_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für den STBook, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

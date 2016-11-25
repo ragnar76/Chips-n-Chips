@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für den MegaSTE, Seite 4</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="Megastetip3.html">Previous</A>
+<A HREF="MEGAE_HA_TIP.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Anschluß einer externen Festplatte am MegaSTE bei gleichzeitigem</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Betrieb der internen Festplatte (innerhalb der Butterdose)</B><BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Also, ab Werk ist die interne Festplatte immer auf ACSI ID0 einge-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stellt! Will man also eine oder mehrere Geräte extern betreiben (wo-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bei es egal ist, ob das oder die externen Geräte nun Festplatten, <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CD-ROM, Wechselplatten oder sonstwas ist!), darf die ACSI ID 0 nur<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von der internen Festplatte belegt sein, die übrigen Gerätenummern<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von 1-7 dann, können Sie nach belieben selbst vergeben.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Soll jedoch von einem externen Gerät gebootet werden, so muß die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ACSI ID der internen Festplatte verstellt werden, hierzu muß aus-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>schließlich die Stellung der DIP-Schalter auf der Hostadapterpla-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>tine (welches sich unmittelbar hinter der Festplatte befindet) ver-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>stellt (geändert) werden, um eine andere Geräte-ID zwischen Null <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und DREI zu bekommen!<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Zum guten Schluß noch, die Geräteadressen:<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Dip 1<TT>&nbsp;&nbsp;&nbsp;</TT>Dip 2<TT>&nbsp;&nbsp;&nbsp;</TT>Dip 3 --------- Dip-Schalter auf dem Hostadapter<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ACSI-Unit 0 (Defaulteinstellung Atari)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ACSI-Unit 1 für die interne Festplatte<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>on<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ACSI-Unit 2 für die interne Festplatte<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>off<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ACSI-Unit 3 für die interne Festplatte<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SCSI Geräte am original Hostadapter dürfen keinesfalls eine Arbi-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>trierung verlangen und der Paritycheck muß ausgeschaltet sein.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Weiterhin muß das Gerät auf die SCSI ID NULL eingestellt sein und<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>wenn jetzt nichts geht, dann und nur dann sollten die Terminatoren<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gesteckt werden bzw. aktiviert werden durch stecken des Jumper wenn<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>das SCSI Gerät über aktive Terminatoren verfügt.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Und hier die <A HREF="ACSI_MSTE_BUCHSE.html">Pinbelegung der 30 Pin Buchsenleiste</A> am Hostadapter.<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für dem MegaSTE, Seite 4<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

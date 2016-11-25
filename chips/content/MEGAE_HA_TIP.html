@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der Hostadapter im MegaSTE und der STACY</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="Megastetip4.html">Previous</A>
+<A HREF="Megaste_ha_tip2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+ <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>MegaSTE (Rev.3) und STACY (Rev.2) interner SCSI-Hostadapter<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>CA200535-001<TT>&nbsp;&nbsp;</TT>= SCSI Controllerplatine, identisch mit C103561-001 Rev. 3<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>C103705-002<TT>&nbsp;&nbsp;&nbsp;</TT>= PAL-Chip ACSI $4F32 (U9)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>C103706-002<TT>&nbsp;&nbsp;&nbsp;</TT>= PAL-Chip SCSI $7026 (U11)<BR>
+<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>J1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>= <A HREF="ACSI_MSTE_BUCHSE.html">ACSI-DMA</A> Buchsenleiste für Steckverbindung zum Mainboard<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>J2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>= <A HREF="MSTE_SCSI.html">Stiftleiste</A> des SCSI-Ports (SCSI ID NULL) <BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RP1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>= Serienwiderstände für ACSI-DMA<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RP2<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>= Serienwiderstände für ACSI-DMA<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RP3<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>= 1 Kiloohm Pull-Up Widerstandsarray für SCSI-Port<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>RP4<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>= 1 Kiloohm Pull-Up Widerstandsarray für SCSI-Port<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SW1<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>= <A HREF="ACSI_ID_MSTE.html">Dip-Schalter</A> für Geräte-ID auf ACSI-Seite!<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Es heißt, man solle bei SCSI-Platten im MegaSTE und der STACY die <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Terminatoren entfernen, um einen sicheren Betrieb zu ermöglichen. Da<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die meisten Platten aber auch mit eingesteckten Terminatoren (zumin-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dest zunächst) problemlos laufen, werden sie dann auch gerne dringe-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>lassen.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Daß die Terminatoren abgezogen werden müssen, steht übrigens auch<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in der Einbauanleitung von ATARI!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wie ich jetzt feststellen mußte, ist dies falsch, da auf dem SCSI<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hostadapter keine richtigen Treiber sind, sondern zwei 74HC374<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und ein 74HC240, die die volle Treiberleistung aufbringen müssen.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Diese sind aber bei eingesteckten Terminatoren (auf der Fest-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>platte) völlig überlastet und können daher unter Umständen bald<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>&quot;abrauchen&quot; (diesmal wörtlich gemeint). Ich kenne einige MegaSTEs,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>in denen es offenbar auch nach längerem Betrieb keine Probleme<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>gegeben hat, andererseits habe ich gerade einen bekommen, bei dem<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die drei ICs schon nach etwa 3 Wochen Betrieb defekt waren.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Also lieber die Terminatoren herausnehmen! Außerdem sollte man es<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>vermeiden das SCSI-Kabel auf der Platte falschherum einzustecken,<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ATARI hat auf dem Host-Adapter den Pin 26 auf GND gelegt, welcher<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>laut SCSI-Norm eigentlich OFFEN (nicht belegt) sein sollte - im<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Ernstfall (diesmal wörtlich genommen) gibt es Rauchzeichen auf<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Platine kurz nach dem einschalten!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Achtung:</B> Der Original-Hostadapter kann KEIN <A HREF="MSTE_HOSTADAPTER.html">Parity</A>, daher MUSS<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>zwingend die Paritätsüberprüfung der angeschlossenen<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Festplatte bereits VOR dem Einbau abgeschaltet werden,<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>entweder per Jumper oder bei neueren Modellen per Soft-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>ware!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die MAXTOR-Festplatten vom Typ 7213, 7245, 7290 UND 7345 funktio-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>nieren im MEGA STE und der STACY nur dann am original ATARI Host-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>adapter, wenn die Resetleitung (Pin 40) unterbrochen wird!<BR>
+<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Megaste_ha_tip2.html">Deutsche Version</A><TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Megaste_ha_tip2_englisch.html">Englische Version</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der Hostadapter im MegaSTE und der STACY, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

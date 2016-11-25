@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Reparaturtips für 260/520/1040/MegaST</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="MEGAST_2.html">Previous</A>
+<A HREF="Tips260st2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Die Echtzeituhr beim MegaST geht falsch?</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hinten rechts am MegaST ist eine kleine Klappe. Dort liegen die<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Batterien oder Akkus, welche den Uhrchip bei abgeschaltetem Rechner<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mit Spannung versorgen. Einfach mal nachschauen, ob die Batterien<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder Akkus leer sind und wenn ja, logischerweise gegen geladene<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Akkus oder neuwertige Batterien austauschen!<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Die Speicheraufrüstung beim MegaST2 auf 4MB Ram</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hat man eine Platinenversion erwischt, bei der links neben den vor-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>handenen RAMs Lötlöcher sind, braucht man nur Sockel in die Lötlö-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>cher oder die 16 DRAM Bausteine vom Typ 511000 oder AT&amp;T M411024HP <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(Organisation: 1MBit*1)s einzulöten. Anschließend müssen noch drei 33<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>oder 68 Ohm Widerstände eingelötet werden (je nach Orignalbestückung<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>von Atari aus, das wären dann R71, R72 und R74!): einer in der Reihe<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>R68, R66, R70 wo zwei Lötpunkte sichtbar sind) und je einer an der <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>linken und rechten Seite von R65. Hat man jedoch eine Platinenversion<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>erwischt, bei der keine Lötpunkte vorhanden sind, kann man die RAMs <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>auf die vorhandenen RAMs auflöten oder sockeln. Es müssen alle Pins <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>außer Pin 3 und Pin 16 mit den unteren RAMs verbunden werden. Die Pin<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3 beider Rambänke werden miteinander verbunden und mit einer Stich-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>leitung mit dem oberen Widerstand, der bei R65 liegt, verbunden und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zwar mit dem Ende, welches zu dem RAMs hinzeigt. Von der linken Ram-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>bank den Pin 16 aller RAMs mit dem Widerstand verbinden, welcher in<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>der Reihe 68, R66 und R70 liegt. Von Pin 16 der RAMs der rechten <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Rambank geht eine Verbindung zum unteren Widerstand, der bei R65 <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>liegt. Das war's!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Oder man nimmt eine <A HREF="MAGNUM_ST.html">MagnumST Karte für alle ST Computer</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="PS2_SPEICHERERWEITERUNG.html">4 Megabyte Speichererweiterung im Eigenbau</A><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><B>Spielt der Blitter verrückt?</B><BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Fehlerhafter Bildschirmaufbau bzw. Absturz, wenn man die Menuzeile<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>erreicht, kann ein defekter Blitterchip sein, wenn vorhanden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wenn der Rechner ein MegaST ist und auf der CPU sitzt huckepack<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>eine kleine Platine, kann es auch möglich sein, daß eine <A HREF="Leiterbahn.html">Leiterbahn</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zum Piggypack (74LS74) keinen richtigen Kontakt hat.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Wird der Piggypack entfernt, muß auf der Rückseite der Platine<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>die unterbrochene <A HREF="Leiterbahn.html">Leiterbahn</A> (innerhalb der 2 Pinreihen der CPU)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>geflickt werden!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Blitterfehler sind daran zu erkennen, daß der Rechner ohne Grund<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>beim Berühren der Menüleiste bombt oder Streifen aufbaut. Abhilfe:<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>erstmal einen Ramtest machen und, wenn der erfolgreich ist (RAMs<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>okay), mal den Blitter rausnehmen und die zwei Lötaugen, die un-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>terhalb und seitlich rechts des Blitters auf der Platine vorhanden<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>sind, schließen. Ist dann kein Müll mehr sichtbar, ist der Blitter<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>defekt und sollte ersetzt werden, <A HREF="KATZE_IM_SACK.html">aber nicht die Katze im Sack kaufen</A>!<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Bei Anschluß einer Festplatte oder Laserdrucker stürzt das System<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>ab oder kann nicht booten. Filter an PIN 12 des DMA-Ports im Rechner<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>defekt oder fehlt völlig. Das Reset-Signal wird mit Hilfe eines<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT><A HREF="LM555.html">NE556</A> oder TL7705 erzeugt. Störspitzen können dadurch in den Rechner<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zurückgelangen und erzeugen einen undefinierten Reset. Als Folge<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>dessen, kann in der SH205 der Treiber des Reset-Eingangs (74LS123)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>zerstört werden.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="Tips260st2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Reparaturtips für 260/520/1040/MegaST, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

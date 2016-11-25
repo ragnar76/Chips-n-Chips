@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Die Fehlermeldungen von Seagate Festplatten</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="DURCHGANGSPRÜFER.html">Previous</A>
+<A HREF="sg_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+Following is a list of the different failure codes for your SCSI-Drives.<BR>
+Please be aware that any flash, other than one, means that the drive<BR>
+needs to be sent in for repair.<BR>
+The repair depot for EUROPE is in Amsterdam and can be reached via<BR>
+telephone at (0)31-20-6533539 or via FAX at (0)31-20-6530890.<BR>
+<BR>
+<BR>
+_Onboard Drive Diagnostics_<BR>
+<BR>
+At power-on the drive will execute a series of diagnostic tests. Any <BR>
+failure will be indicated by a series of <A HREF="LEUCHTDIODE.html">LED</A> flashes. The first failure<BR>
+will be preserved. Any power-up failure will result in sense code 29H,<BR>
+an internal controller error and an additional power-on diagnostic code<BR>
+in sense byte one. The drive is ready to read/write if no error codes are<BR>
+received within 20 seconds. The failure codes and the test sequence <BR>
+follow:<BR>
+<BR>
+*Microprocessor/Internal Memory Test:* Failure is indicated by one flash<BR>
+and an additional sense code (byte one) of 31H.<BR>
+<BR>
+*Microprocessor ROM Checksum Test:* Failure is indicated by two flashes<BR>
+and an additional sense code of 32H.<BR>
+<BR>
+*Controller Chip Test:* Failure to initialize correctly is indicated by<BR>
+three flashes and an additional sense code of 33H.<BR>
+<BR>
+*Controller Program RAM Test:* Failure is indicated by four flashes and<BR>
+an additional sense code of 84H (?; evtl. Fruckdehler)<BR>
+<BR>
+*Data Buffer RAM Test:* Failure is indicated by five flashes and an<BR>
+additional sense code of 35H.<BR>
+<BR>
+*Spindle Speed Test:* If the drive is unable to reach and maintain correct<BR>
+spindle speed, six flashes will be returned with an additional sense code<BR>
+of 36H.<BR>
+<BR>
+*Read Operating System Microcode From Drive:* If the controller is unable<BR>
+to read the operating system from the drive, eight flashes are returned <BR>
+with an additional sense code of 88H (?; s.o.). If the controller reads<BR>
+the operating system records, but determines that they are invalid, nine<BR>
+flashes are returned with an additional sense code of 89H.<BR>
+<BR>
+<BR>
+_Incoming Inspection_<BR>
+<BR>
+This product family supports a self-test routine that Seagate recommends<BR>
+for incoming inspection. This test may be run after the unit has<BR>
+sucessfully passed the power-on diagnostics.<BR>
+<BR>
+_Enabling the Offline Self-Test Routines_<BR>
+<BR>
+To enable the test, short the following pins to ground at the SCSI<BR>
+connector: 2, 12, 16 and 32.<BR>
+<BR>
+The self-test has three parts. They will cycle in order until power or a<BR>
+grounding jumper is removed, or until 10 complete passes.<BR>
+<BR>
+The <A HREF="LEUCHTDIODE.html">LED</A> will remain on during the test and will turn *off* if an error is<BR>
+detected or a jumper is removed. The <A HREF="LEUCHTDIODE.html">LED</A> will flash continuously if 10<BR>
+passes are completed without error.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="sg_2.html">weiterblättern</A> <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Die Fehlermeldungen von Seagate, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

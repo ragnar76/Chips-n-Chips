@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>PRESENCE_DETECT</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFF80;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<BR>
+ Die Presence Detect Pins am PS/2 SIM-Modul.<BR>
+<BR>
+ IBM als Patentinhaber von PS/2 schreibt PD1 bis PD5, der <BR>
+ rest der Hersteller schreibt PD1 bis PD5 oder halt PD0 <BR>
+ bis PD4 (je nach eigenem Gutdünken, Sonnenstand, Mond-<BR>
+ finsternis, etc. .....).<BR>
+<BR>
+ PD5 wird nur bei Modulen des Typs verwendet:<BR>
+ 4M*32, x36, x40 (ECC-Optimized-SIMM)<BR>
+ 8M*32, x36, x40 (ECC-Optimized-SIMM)<BR>
+ Dann ist Pin 48 (/ECC) auch auf Vss Pegel.<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>

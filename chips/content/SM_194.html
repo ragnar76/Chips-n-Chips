@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+	
+	
+	<HEAD>
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<TITLE>Der ATARI Monitor SM194</TITLE>
+		<STYLE TYPE="text/css">
+			<!--
+			A:LINK, A:VISITED
+			{
+				color: #0000FF;
+			}
+			BODY
+			{
+				background-color: #FFFFFF;
+				color: #000000;
+				font-family: Arial;
+			}
+			-->
+		</STYLE>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</HEAD>
+
+
+	<body>
+<div class="container">
+
+<A HREF="PTC_1426.html">Previous</A>
+<A HREF="SM_194_2.html">Next</A>
+<A HREF="Main.html">TOC</A>
+<BR><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>SM194 (only Viking Mono Karte for MegaST Bus Expansion Slot)<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Picture tube/Bildröhre: 19 Zoll<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Max. resolution/Auflösung: 1280*960 Pixel<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Triple pitch/Schlitzmaske: n.a.<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Pixeltakt: 110 MHz<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Line/Zeilenfrequenz: 66 KHz<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Raster/Bildwiederholfrequenz: 66 Hz<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Power consumption/Stromaufnahme: &lt;100W (typical 64 Watt)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Video input/Eingang: ECL<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Hersteller: Fa. <A HREF="ADRESSE_MONITERM.html">Moniterm</A><BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Der Adreßraum der Viking Karte liegt ab 0xC00000 im Speicher und <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>hat AFAIK 256 Kilobyte Speicher ONboard!<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>In den leeren PLCC Sockel kann man bei bedarf noch eine MC68881 FPU<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>mit 16 MHz einsetzen.<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Fehlermöglichkeiten beim SM 194 Monitor<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Spannung<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Normaler Widerstand<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Testen<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>9V<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>4,3 MOhm (ohne Videoplatine)<TT>&nbsp;&nbsp;</TT>Schaltnetzteil<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>20 (mit Videoplatine)<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>sowie Diode D8 und<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Widerstand R220<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>25V<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>2 KOhm<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>U2, U3, Schaltnetz-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>teildioden, Gleich-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>richter<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>40V<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>3 bis 4 MOhm<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Schaltnetzteildiode D10<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>100V<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>7,3 MOhm<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Q7, T2<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;</TT>120V<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>14 MOhm<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Hochspannung, Ablenk-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>einheit<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1200V<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8 bis 9 MOhm<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Hochspannung, Ablenk-<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>einheit, Q5, D5<BR>
+ <BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Schaltnetzteil defekt?<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Check U1 (UC3842), V1 (1KOhm Poti), Q1 MOSFET (JN80A), Transformator<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>und die Ausgangsdioden (D13 - 1N1752, D14 - 1N1763)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Potentiometer 1 regelt alle Gleichspannungen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Potentiometer 2 regelt die Hochspannungen<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Check T2 (Flyback Transformator), Q7 (MJH16010A), Dioden D32/D37<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>(sitzen auf dem VCX Deflection Board)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>9 Volt Spannungsversorgung defekt, Poti V5 (Vertical Center) über-<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>prüfen (sitzt auf dem VCX Deflection Board)<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Die Belegung der Videobuchse am Monitor<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1<TT>&nbsp;&nbsp;</TT>+ ECL Video<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>6<TT>&nbsp;&nbsp;</TT>- ECL Video<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>2<TT>&nbsp;&nbsp;</TT>+ ECL Return<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>7<TT>&nbsp;&nbsp;</TT>- ECL Return<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>3<TT>&nbsp;&nbsp;</TT>HSync<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>8<TT>&nbsp;&nbsp;</TT>Sync Return (Ground)<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>4<TT>&nbsp;&nbsp;</TT>VSync<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>9<TT>&nbsp;&nbsp;</TT>Ground für minus 9 Volt an Pin 5<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>5<TT>&nbsp;&nbsp;</TT>minus 9 Volt für ECL Logik auf der Viking Karte<BR>
+<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>Das Verbindungskabel zwischen der Grafikkarte und dem Monitor ist<BR>
+<TT>&nbsp;&nbsp;&nbsp;</TT>1:1 verschaltet.<BR>
+<BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT><A HREF="SM_194_2.html">weiterblättern</A><BR>
+<TT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TT>Kapitel Der ATARI Monitor SM194, Seite 1<BR>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</HTML>
